@@ -65,7 +65,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hOl-qR-udj">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addCellWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WfI-mQ-V8Z"/>
                                 </connections>
