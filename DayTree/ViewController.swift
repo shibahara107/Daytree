@@ -23,7 +23,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var entryArray = [[Any]]()
     
     var dateArray: [String] = ["↑First Day↑"]
-
+    
+    var dateString: String = ""
+    
+    var selectedDateText: String = ""
+    var selectedContentText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateTableView.delegate = self
         dateTableView.dataSource = self
         
-        entryArray.append(["0320","SpringCamp"])
+        entryArray.append(["Date","Content"])
     }
 
     
@@ -39,6 +44,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //addButtonが押された際呼び出される
    @IBAction func addCell(sender: AnyObject) {
         print("追加")
+    
+    let date = Date()
+
     
     //textの表示はalertのみ。ActionSheetだとtextfiledを表示させようとすると
     //落ちます。
@@ -57,6 +65,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                     handler:{
                                                         (action:UIAlertAction!) -> Void in
                                                         print("Save")
+                                                        
+                                                        print(date)
                                                         
                                                         let dataText = alert.textFields![0].text! as String
                                                         let contentText = alert.textFields![1].text! as String
@@ -84,6 +94,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     alert.addAction(defaultAction)
 
     alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+        
+//        // サイズ設定
+//        alert.textFields![1].frame.size.width = self.view.frame.width * 2 / 3
+//        alert.textFields![1].frame.size.height = 48
+//        
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM.dd"
+        //現在時刻を文字列で取得
+        self.dateString = formatter.string(from: date)
+        
+        text.text = self.dateString
+        
         //対象UITextFieldが引数として取得できる
         text.placeholder = "Date"
     })
@@ -163,19 +186,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = dateTableView.viewWithTag(2) as! UILabel
-        label1.text = "\(entryArray[indexPath.row][0])"
+        label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
         
         // Tag番号 ３ で UILabel インスタンスの生成
         let entry = dateTableView.viewWithTag(3) as! UILabel
-        entry.text = "\(entryArray[indexPath.row][1])"
+        entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
         
         return cell
     }
     
-    /// セルが選択された時に呼ばれるデリゲートメソッド
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //Cellが選択された場合
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        //[indexPath.row]から日付を探し値を設定
+        selectedDateText = "\(entryArray[indexPath.row][0])"
+        
+        selectedContentText = "\(entryArray[indexPath.row][1])"
+
+        //CellViewControllerへ遷移するためにSegueを呼び出す
+        performSegue(withIdentifier: "toCellViewController",sender: nil)
+        
+        
         print("セル番号：\(entryArray[indexPath.row][0]) セルの内容：\(entryArray[indexPath.row][1]) ")
+
+
     }
+    
+    //Segue準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toCellViewController") {
+            let subVC: CellViewController = (segue.destination as? CellViewController)!
+            //CellViewControllerのselectedDateTextに選択された値を設定する
+            subVC.selectedDate = selectedDateText
+            subVC.selectedContent = selectedContentText
+        }
+    }
+    
+    
+    @IBAction func returnTableView(segue: UIStoryboardSegue) {}
+
+    
 
 
 }
