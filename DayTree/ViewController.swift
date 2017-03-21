@@ -192,6 +192,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let entry = dateTableView.viewWithTag(3) as! UILabel
         entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
         
+        let label2 = dateTableView.viewWithTag(4) as! UILabel
+        label2.text = "No.\(entryArray.count - indexPath.row)"
+        
         return cell
     }
     
