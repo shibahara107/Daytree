@@ -115,10 +115,10 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
-				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A111E4DD26700E82D0B /* AppDelegate.swift */,
 				92428A131E4DD26700E82D0B /* ViewController.swift */,
 				923D8A411E80F08B00981375 /* CellViewController.swift */,
+				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
 				92428A1D1E4DD26700E82D0B /* Info.plist */,
