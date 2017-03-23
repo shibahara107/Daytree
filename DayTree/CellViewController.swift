@@ -74,7 +74,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     /// 画像ファイルの保存先パスを生成します（ドキュメントフォルダ直下固定）。
     var imagePath: String {
         let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-        let path = doc.appendingPathComponent("img1.jpg") // OK!
+        let path = doc.appendingPathComponent("green.png") // OK!
         print(path) // "path/to/foo/test.txt"
         
         return path
@@ -88,6 +88,8 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         cellNumberLabel.text = selectedNumber
         
         imageFromCameraRoll.contentMode = .scaleAspectFit
+        self.imageFromCameraRoll.layer.borderColor = UIColor.gray.cgColor
+        self.imageFromCameraRoll.layer.borderWidth = 1
 
 
         
@@ -106,7 +108,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //ライブラリから写真を選択する
         func pickImageFromLibrary() {
             
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {    //追記
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
                 
                 //写真ライブラリ(カメラロール)表示用のViewControllerを宣言しているという理解
                 let controller = UIImagePickerController()
@@ -166,7 +168,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageFromCameraRoll.contentMode = .scaleToFill
             imageFromCameraRoll.image = pickedImage
-//            
+//
 //            let image = pickedImage
 //            let data = UIImageJPEGRepresentation(image, 0.9)
 //            data.writeToFile(imagePath, atomically: true)

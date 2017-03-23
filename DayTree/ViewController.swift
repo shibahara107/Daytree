@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var editButton: UIButton!
     
     // section毎の画像配列
-    var imgArray: [String] = ["img0.jpg"]
+    var imgArray: [String] = ["green.png"]
     
     var entryArray = [[Any]]()
     
@@ -51,6 +51,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.dateTableView.setContentOffset(CGPoint(x:0 , y: 45), animated: true)
         
         entryArray.append(["Date","Content"])
+        entryArray.append(["Date2","Content2"])
+
     }
 
     
@@ -251,7 +253,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if "\(entryArray[entryArray.count - indexPath.row-1][0])" == searchBar.text! {
                 
                 // img = UIImage(named:"\(imgArray[indexPath.row])")
-                let img = UIImage(named:"img1.jpg")
+                let img = UIImage(named:"green.png")
                 // Tag番号 1 で UIImageView インスタンスの生成
                 let imageView = dateTableView.viewWithTag(1) as! UIImageView
                 imageView.image = img
@@ -271,7 +273,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             
             // img = UIImage(named:"\(imgArray[indexPath.row])")
-            let img = UIImage(named:"img1.jpg")
+            let img = UIImage(named:"green.png")
             // Tag番号 1 で UIImageView インスタンスの生成
             let imageView = dateTableView.viewWithTag(1) as! UIImageView
             imageView.image = img

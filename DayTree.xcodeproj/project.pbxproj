@@ -23,6 +23,8 @@
 		92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A441E4DDD3800E82D0B /* img5.jpg */; };
 		92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A451E4DDD3800E82D0B /* img6.jpg */; };
 		92428A4E1E4DDD3800E82D0B /* img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A461E4DDD3800E82D0B /* img7.jpg */; };
+		92EBC52A1E834A1E005C858F /* NoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EBC5291E834A1E005C858F /* NoImage.png */; };
+		92EBC52C1E834CA4005C858F /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EBC52B1E834CA4005C858F /* green.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		92428A441E4DDD3800E82D0B /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
 		92428A451E4DDD3800E82D0B /* img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img6.jpg; sourceTree = "<group>"; };
 		92428A461E4DDD3800E82D0B /* img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img7.jpg; sourceTree = "<group>"; };
+		92EBC5291E834A1E005C858F /* NoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NoImage.png; path = ../../../Desktop/NoImage.png; sourceTree = "<group>"; };
+		92EBC52B1E834CA4005C858F /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../../../Desktop/green.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
+				92EBC52B1E834CA4005C858F /* green.png */,
+				92EBC5291E834A1E005C858F /* NoImage.png */,
 				92428A111E4DD26700E82D0B /* AppDelegate.swift */,
 				92428A131E4DD26700E82D0B /* ViewController.swift */,
 				923D8A411E80F08B00981375 /* CellViewController.swift */,
@@ -269,7 +275,9 @@
 				92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */,
 				92428A4A1E4DDD3800E82D0B /* img3.jpg in Resources */,
 				92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */,
+				92EBC52C1E834CA4005C858F /* green.png in Resources */,
 				92428A191E4DD26700E82D0B /* Assets.xcassets in Resources */,
+				92EBC52A1E834A1E005C858F /* NoImage.png in Resources */,
 				92428A491E4DDD3800E82D0B /* img2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
