@@ -13,11 +13,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var searchResults:[Any] = []
-    var searchBar = UISearchBar()
 
-    
-//    var fruits = ["Apple", "Orange", "Grape"]
-    
     @IBOutlet var dateTableView: UITableView!
     
     @IBOutlet var addButton: UIButton!
@@ -26,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // section毎の画像配列
     var imgArray: [String] = ["green.png"]
     
-    var entryArray = [[Any]]()
+    var entryArray = [[String]]()
     
     var dateArray: [String] = ["↑First Day↑"]
     
@@ -36,22 +32,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedContentText: String = ""
     var selectedNumberText: String = ""
     
+    var searchBar: UISearchBar!
+    var filtered: [String] = []
+    var searchActive : Bool = false
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
         
-        searchBar.searchBarStyle = UISearchBarStyle.default
-        searchBar.showsSearchResultsButton = false
-        searchBar.placeholder = "Search"
+        setupSearchBar()
+        searchBar.delegate = self
         
         dateTableView.delegate = self
         dateTableView.dataSource = self
         
         self.dateTableView.setContentOffset(CGPoint(x:0 , y: 45), animated: true)
         
-        entryArray.append(["Date","Content"])
-        entryArray.append(["Date2","Content2"])
+        entryArray.append(["Date","San Francisco"])
+        entryArray.append(["Date2","New York"])
 
     }
 
@@ -125,72 +125,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         text.placeholder = "What happened?"
         
     })
-
-//    //textfieldの追加
-//    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-//    })
-//    //実行した分textfieldを追加される。
-//    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-//    })
-    present(alert, animated: true, completion: nil)
-    
-//    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-//        //対象UITextFieldが引数として取得できる
-//        text.placeholder = "Date"
-//    })
-//    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-//        text.placeholder = "What happened?"
-//        
-//    })
-    
-//        // myItemsに追加.
-//        imgArray.append("img0.jpg")
-//        entryArray.append("2017/03/19")
     
         // TableViewを再読み込み.
         dateTableView.reloadData()
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-//        if searchBar.text != "" {
-//            cell.textLabel!.text = "\(searchResults[indexPath.row])"
-//        } else {
-//            cell.textLabel!.text = "\(entryArray[indexPath.row])"
-//        }
-//        
-//        return cell
-//    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
     
-    // 検索ボタンが押された時に呼ばれる
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.view.endEditing(true)
-        searchBar.showsCancelButton = true
-        self.searchResults = entryArray
-//        self.searchResults = entryArray.filter{
-//            // 大文字と小文字を区別せずに検索
-//            true
-//        }
-//        self.dateTableView.reloadData()
+        searchActive = false;
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchActive = true
+        
+        if entryArray[1].contains(searchText) {
+            
+            
+
+        } else {
+            
+        }
         self.dateTableView.reloadData()
     }
+
+
     
-    // キャンセルボタンが押された時に呼ばれる
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        self.view.endEditing(true)
-        searchBar.text = ""
-        self.dateTableView.reloadData()
-    }
+
     
-    // テキストフィールド入力開始前に呼ばれる
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        searchBar.showsCancelButton = true
-        return true
-    }
     
     
     //Cellを挿入または削除しようとした際に呼び出される
@@ -216,6 +189,43 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    private func setupSearchBar() {
+        if let navigationBarFrame = navigationController?.navigationBar.bounds {
+            let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
+            searchBar.delegate = self
+            searchBar.placeholder = "Search"
+            searchBar.showsCancelButton = true
+            searchBar.autocapitalizationType = UITextAutocapitalizationType.none
+            searchBar.keyboardType = UIKeyboardType.default
+            navigationItem.titleView = searchBar
+            navigationItem.titleView?.frame = searchBar.frame
+            self.searchBar = searchBar
+            searchBar.becomeFirstResponder()
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func dateTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filtered.count
+        }
+        return entryArray[1].count;
+    }
+    
+    private func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
+        if(searchActive){
+            cell.textLabel?.text = filtered[indexPath.row]
+        } else {
+            cell.textLabel?.text = entryArray[1][indexPath.row];
+        }
+        
+        return cell;
+    }
+    
     /// セルの個数を指定するデリゲートメソッド（必須）
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entryArray.count
@@ -229,29 +239,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // セルに表示する値を設定する
        // cell.textLabel!.text = fruits[indexPath.row]
-        
     
 
-//        // img = UIImage(named:"\(imgArray[indexPath.row])")
-//        let img = UIImage(named:"img1.jpg")
-//        // Tag番号 1 で UIImageView インスタンスの生成
-//        let imageView = dateTableView.viewWithTag(1) as! UIImageView
-//        imageView.image = img
-//        
-//        // Tag番号 ２ で UILabel インスタンスの生成
-//        let label1 = dateTableView.viewWithTag(2) as! UILabel
-//        label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
-//        
-//        // Tag番号 ３ で UILabel インスタンスの生成
-//        let entry = dateTableView.viewWithTag(3) as! UILabel
-//        entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
-//        
-//        let label2 = dateTableView.viewWithTag(4) as! UILabel
-//        label2.text = "No.\(entryArray.count - indexPath.row)"
         
-        if searchBar.text != "" {
-            if "\(entryArray[entryArray.count - indexPath.row-1][0])" == searchBar.text! {
-                
                 // img = UIImage(named:"\(imgArray[indexPath.row])")
                 let img = UIImage(named:"green.png")
                 // Tag番号 1 で UIImageView インスタンスの生成
@@ -269,28 +259,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let label2 = dateTableView.viewWithTag(4) as! UILabel
                 label2.text = "No.\(entryArray.count - indexPath.row)"
                 
-            }
-        } else {
-            
-            // img = UIImage(named:"\(imgArray[indexPath.row])")
-            let img = UIImage(named:"green.png")
-            // Tag番号 1 で UIImageView インスタンスの生成
-            let imageView = dateTableView.viewWithTag(1) as! UIImageView
-            imageView.image = img
-            
-            // Tag番号 ２ で UILabel インスタンスの生成
-            let label1 = dateTableView.viewWithTag(2) as! UILabel
-            label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
-            
-            // Tag番号 ３ で UILabel インスタンスの生成
-            let entry = dateTableView.viewWithTag(3) as! UILabel
-            entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
-            
-            let label2 = dateTableView.viewWithTag(4) as! UILabel
-            label2.text = "No.\(entryArray.count - indexPath.row)"
-            
-        }
-        
+
         return cell
     }
     
