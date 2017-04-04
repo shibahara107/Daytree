@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Photos
 
 
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var searchResults:[Any] = []
-
+    
     @IBOutlet var dateTableView: UITableView!
     
     @IBOutlet var addButton: UIButton!
@@ -33,14 +34,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedNumberText: String = ""
     
     var searchBar: UISearchBar!
-    var filtered: [String] = []
+    var filtered: [[String]] = []
     var searchActive : Bool = false
     
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         
         setupSearchBar()
         searchBar.delegate = self
@@ -52,86 +53,89 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         entryArray.append(["Date","San Francisco"])
         entryArray.append(["Date2","New York"])
-
+        
     }
-
     
-
+    
+    
     //addButtonが押された際呼び出される
-   @IBAction func addCell(sender: AnyObject) {
+    @IBAction func addCell(sender: AnyObject) {
         print("追加")
-    
-    let date = Date()
-
-    
-    //textの表示はalertのみ。ActionSheetだとtextfiledを表示させようとすると
-    //落ちます。
-    let alert:UIAlertController = UIAlertController(title:"Entry",
-                                                    message: "What happened today?",
-                                                    preferredStyle: UIAlertControllerStyle.alert)
-    
-    let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
-                                                   style: UIAlertActionStyle.cancel,
-                                                   handler:{
-                                                    (action:UIAlertAction!) -> Void in
-                                                    print("Cancel")
-    })
-    let defaultAction:UIAlertAction = UIAlertAction(title: "Save",
-                                                    style: UIAlertActionStyle.default,
-                                                    handler:{
+        
+        let date = Date()
+        
+        
+        //textの表示はalertのみ。ActionSheetだとtextfiledを表示させようとすると
+        //落ちます。
+        let alert:UIAlertController = UIAlertController(title:"Entry",
+                                                        message: "What happened today?",
+                                                        preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
+                                                       style: UIAlertActionStyle.cancel,
+                                                       handler:{
                                                         (action:UIAlertAction!) -> Void in
-                                                        print("Save")
-                                                        
-                                                        
-                                                        let dataText = alert.textFields![0].text! as String
-                                                        let contentText = alert.textFields![1].text! as String
+                                                        print("Cancel")
+        })
+        let defaultAction:UIAlertAction = UIAlertAction(title: "Save",
+                                                        style: UIAlertActionStyle.default,
+                                                        handler:{
+                                                            (action:UIAlertAction!) -> Void in
+                                                            print("Save")
                                                             
-                                                        self.entryArray.append([dataText,contentText])
-                                                        
-//                                                        let textFields:Array<UITextField>? =  alert.textFields?[0] as Array<UITextField>?
-//                                                        if textFields != nil {
-//                                                            for textField:UITextField in textField.Array {
-//                                                                
-//                                                                self.entryArray.append(textField.text!)
-//                                                                self.imgArray.append("img0.jpg")
-//                                                                
-                                                                // TableViewを再読み込み.
-                                                                self.dateTableView.reloadData()
-//
-//                                                                //各textにアクセス
-//                                                                print(textField.text)
-//                                                            }
-//                                                        }
-
-    })
-                                                        
-    alert.addAction(cancelAction)
-    alert.addAction(defaultAction)
-
-    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+                                                            
+                                                            let dataText = alert.textFields![0].text! as String
+                                                            let contentText = alert.textFields![1].text! as String
+                                                            
+                                                            self.entryArray.append([dataText,contentText])
+                                                            
+                                                            //                                                        let textFields:Array<UITextField>? =  alert.textFields?[0] as Array<UITextField>?
+                                                            //                                                        if textFields != nil {
+                                                            //                                                            for textField:UITextField in textField.Array {
+                                                            //
+                                                            //                                                                self.entryArray.append(textField.text!)
+                                                            //                                                                self.imgArray.append("img0.jpg")
+                                                            //
+                                                            // TableViewを再読み込み.
+                                                            self.dateTableView.reloadData()
+                                                            //
+                                                            //                                                                //各textにアクセス
+                                                            //                                                                print(textField.text)
+                                                            //                                                            }
+                                                            //                                                        }
+                                                            
+        })
         
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy.MM.dd"
-        //現在時刻を文字列で取得
-        self.dateString = formatter.string(from: date)
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
         
-        text.text = self.dateString
+        alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+            
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy.MM.dd"
+            //現在時刻を文字列で取得
+            self.dateString = formatter.string(from: date)
+            
+            text.text = self.dateString
+            
+            //対象UITextFieldが引数として取得できる
+            text.placeholder = "Date"
+        })
+        alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
+            text.placeholder = "What happened?"
+            
+        })
         
-        //対象UITextFieldが引数として取得できる
-        text.placeholder = "Date"
-    })
-    alert.addTextField(configurationHandler: {(text:UITextField!) -> Void in
-        text.placeholder = "What happened?"
+        // アラート表示
+        self.present(alert, animated: true, completion: nil)
         
-    })
-    
         // TableViewを再読み込み.
         dateTableView.reloadData()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true;
+        searchActive = false;
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -140,29 +144,60 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false;
+        self.searchBar.endEditing(true)
+        searchBar.text = ""
+        self.dateTableView.reloadData()
     }
     
+    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    //        searchActive = false;
+    //    }
+    
+    // 検索ボタンが押された時に呼ばれる
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        print("nagata")
         searchActive = true
         
-        if entryArray[1].contains(searchText) {
+        for i in entryArray {
             
-            
-
-        } else {
+            if i[1].contains(searchBar.text!) {
+                
+                filtered.append(i)
+                
+            } else {
+                
+            }
             
         }
         self.dateTableView.reloadData()
     }
-
-
     
-
+    //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    //
+    //        searchActive = true
+    //
+    //        filtered = []
+    //
+    //        for i in entryArray {
+    //
+    //            if i[1].contains(searchText) {
+    //
+    //                filtered.append(i)
+    //
+    //            } else {
+    //
+    //            }
+    //
+    //        }
+    //
+    //
+    //        self.dateTableView.reloadData()
+    
+    
+    
+    
+    
+    
     
     
     
@@ -176,14 +211,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let dispatchTime: DispatchTime = DispatchTime.now() + 0.7
             DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
                 self.dateTableView.reloadData()
-                print("dalay")
+                print("delay")
             })
             
             print("Delete")
             
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -208,58 +243,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 1
     }
     
-    func dateTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filtered.count
-        }
-        return entryArray[1].count;
-    }
-    
-    private func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
-        if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row]
-        } else {
-            cell.textLabel?.text = entryArray[1][indexPath.row];
-        }
-        
-        return cell;
-    }
     
     /// セルの個数を指定するデリゲートメソッド（必須）
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filtered.count
+        }
         return entryArray.count
+        
     }
     
     /// セルに値を設定するデータソースメソッド（必須）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell")! as UITableViewCell;
+        if(searchActive){
+            // cell.textLabel?.text = filtered[indexPath.row][1];
+        } else {
+            // cell.textLabel?.text = entryArray[indexPath.row][1];
+        }
+        
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        
         // セルに表示する値を設定する
-       // cell.textLabel!.text = fruits[indexPath.row]
-    
-
+        // cell.textLabel!.text = fruits[indexPath.row]
         
-                // img = UIImage(named:"\(imgArray[indexPath.row])")
-                let img = UIImage(named:"green.png")
-                // Tag番号 1 で UIImageView インスタンスの生成
-                let imageView = dateTableView.viewWithTag(1) as! UIImageView
-                imageView.image = img
-                
-                // Tag番号 ２ で UILabel インスタンスの生成
-                let label1 = dateTableView.viewWithTag(2) as! UILabel
-                label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
-                
-                // Tag番号 ３ で UILabel インスタンスの生成
-                let entry = dateTableView.viewWithTag(3) as! UILabel
-                entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
-                
-                let label2 = dateTableView.viewWithTag(4) as! UILabel
-                label2.text = "No.\(entryArray.count - indexPath.row)"
-                
-
+        
+        
+        // img = UIImage(named:"\(imgArray[indexPath.row])")
+        // Tag番号 1 で UIImageView インスタンスの生成
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        // Tag番号 ２ で UILabel インスタンスの生成
+        let label1 = cell.viewWithTag(2) as! UILabel
+        label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
+        
+        // Tag番号 ３ で UILabel インスタンスの生成
+        let entry = cell.viewWithTag(3) as! UILabel
+        entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
+        
+        let label2 = cell.viewWithTag(4) as! UILabel
+        label2.text = "No.\(entryArray.count - indexPath.row)"
+        
+        
         return cell
     }
     
@@ -268,17 +294,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //[indexPath.row]から日付を探し値を設定
         selectedDateText = "\(entryArray[entryArray.count - indexPath.row-1][0])"
         
-        selectedContentText = "\(entryArray[entryArray.count - indexPath.row-1 ][1])"
+        selectedContentText = "\(entryArray[entryArray.count - indexPath.row-1][1])"
         
         selectedNumberText = "No.\(entryArray.count - indexPath.row)"
-
+        
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)
         
         
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
-
-
+        
+        
     }
     
     //Segue準備

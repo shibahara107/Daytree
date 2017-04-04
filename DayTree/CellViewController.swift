@@ -55,8 +55,12 @@ extension String {
         return ns.appendingPathExtension(str)
     }
 }
-
-
+extension Data {
+    @discardableResult
+    func write(toFile: String, atomically: Bool) -> Bool {
+        return (try? self.write(to: URL(fileURLWithPath: toFile), options: atomically ? .atomic : [])) != nil
+    }
+}
 class CellViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var cellDateLabel: UILabel!
@@ -71,89 +75,38 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
     @IBOutlet var cameraRoll: UIButton!
     
-    /// 画像ファイルの保存先パスを生成します（ドキュメントフォルダ直下固定）。
-    var imagePath: String {
-        let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-        let path = doc.appendingPathComponent("green.png") // OK!
-        print(path) // "path/to/foo/test.txt"
-        
-        return path
-    }
+    var imageName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         cellDateLabel.text = selectedDate
         cellContentTextField.text = selectedContent
         cellNumberLabel.text = selectedNumber
         
         imageFromCameraRoll.contentMode = .scaleAspectFit
-        self.imageFromCameraRoll.layer.borderColor = UIColor.gray.cgColor
-        self.imageFromCameraRoll.layer.borderWidth = 1
-
-
+        //        self.imageFromCameraRoll.layer.borderColor = UIColor.gray.cgColor
+        //        self.imageFromCameraRoll.layer.borderWidth = 1
+        
+        
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
-        func pressCameraRoll(sender: AnyObject) {
-            
-        }
-        
-        
-        //ライブラリから写真を選択する
-        func pickImageFromLibrary() {
-            
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-                
-                //写真ライブラリ(カメラロール)表示用のViewControllerを宣言しているという理解
-                let controller = UIImagePickerController()
-                
-                //おまじないという認識で今は良いと思う
-                controller.delegate = self
-                
-                //新しく宣言したViewControllerでカメラとカメラロールのどちらを表示するかを指定
-                //以下はカメラロールの例
-                //.Cameraを指定した場合はカメラを呼び出し(シミュレーター不可)
-                controller.sourceType = UIImagePickerControllerSourceType.photoLibrary
-                
-                //新たに追加したカメラロール表示ViewControllerをpresentViewControllerにする
-                self.present(controller, animated: true, completion: nil)
-            }
-        }
-        
-        
-        
-        }
+    }
     
     //カメラロールボタンを押した時
     @IBAction func cameraRoll(sender: AnyObject) {
         self.pickImageFromLibrary()  //ライブラリから写真を選択する
         
     }
-         //写真を選択した時に呼ばれる
-         //:param: picker:おまじないという認識で今は良いと思う
-         //:param: didFinishPickingMediaWithInfo:おまじないという認識で今は良いと思う
-    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo: [String: AnyObject]) {
-            
-            //このif条件はおまじないという認識で今は良いと思う
-        if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
-                
-                //didFinishPickingMediaWithInfo通して渡された情報(選択された画像情報が入っている？)をUIImageにCastする
-                //そしてそれを宣言済みのimageViewへ放り込む
-            imageFromCameraRoll.image = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
-        }
-            
-            //写真選択後にカメラロール表示ViewControllerを引っ込める動作
-        picker.dismiss(animated: true, completion: nil)
-    }
     
-
-// ライブラリから写真を選択する
+    
+    // ライブラリから写真を選択する
     func pickImageFromLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let controller = UIImagePickerController()
@@ -164,34 +117,60 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     // 写真を選択した時に呼ばれる
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageFromCameraRoll.contentMode = .scaleToFill
+            imageFromCameraRoll.contentMode = .scaleAspectFit
             imageFromCameraRoll.image = pickedImage
-//
-//            let image = pickedImage
-//            let data = UIImageJPEGRepresentation(image, 0.9)
-//            data.writeToFile(imagePath, atomically: true)
-//            print("save: \(imagePath)")
-//        }
+            
+            if info[UIImagePickerControllerOriginalImage] != nil {
+                // 画像のパスを取得
+                _ = info[UIImagePickerControllerReferenceURL] as? NSURL
+            }
+            
+            //            let image = pickedImage
+            //            let data = UIImageJPEGRepresentation(image, 0.9)
+            //            data.writeToFile(imagePath, atomically: true)
+            //            print("save: \(imagePath)")
         }
         
         picker.dismiss(animated: true, completion: nil)
     }
-
-
+    func getDocumentsURL() -> NSURL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return documentsURL as NSURL
+    }
+    
+    
+    func fileInDocumentsDirectory(filename: String) -> String {
+    
+        let fileURL = getDocumentsURL().appendingPathComponent(filename)
+        return fileURL!.path
+    
+    }
+    
+    func saveImage (image: UIImage, path: String ) -> Bool{
+        //pngで保存する場合
+        let pngImageData = UIImagePNGRepresentation(image)
+        // jpgで保存する場合
+        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)
+        let result = pngImageData?.write(toFile: path, atomically: true)
+        //    let result = pngImageData!.writeToFile(path, atomically: true)
+        
+        return result
+    }
+    
 }
 
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
