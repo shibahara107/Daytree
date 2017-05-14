@@ -20,6 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var addButton: UIButton!
     @IBOutlet var editButton: UIButton!
     
+    @IBOutlet weak var imageFromCameraRoll: UIImageView!
+
+    
     // section毎の画像配列
     var imgArray: [String] = ["green.png"]
     
@@ -53,6 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         entryArray.append(["Date","San Francisco"])
         entryArray.append(["Date2","New York"])
+
         
     }
     
@@ -104,6 +108,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                             //                                                            }
                                                             //                                                        }
                                                             
+                                                            
+                                                            imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: entryArray[0]))
+
         })
         
         alert.addAction(cancelAction)
@@ -272,7 +279,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // img = UIImage(named:"\(imgArray[indexPath.row])")
         // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.image = imageFromCameraRoll.image
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = cell.viewWithTag(2) as! UILabel
@@ -304,6 +311,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
         
+        
+    }
+    
+    func getDocumentsURL() -> NSURL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return documentsURL as NSURL
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            print("missing image at: \(path)")
+        }
+        return image
+    }
+    
+    //入る場所を指定してる
+    func fileInDocumentsDirectory(filename: String) -> String {
+        
+        let fileURL = getDocumentsURL().appendingPathComponent(filename)
+        return fileURL!.path
         
     }
     

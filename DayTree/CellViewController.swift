@@ -84,6 +84,8 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         cellContentTextField.text = selectedContent
         cellNumberLabel.text = selectedNumber
         
+        imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: selectedDate))
+        
         imageFromCameraRoll.contentMode = .scaleAspectFit
         //        self.imageFromCameraRoll.layer.borderColor = UIColor.gray.cgColor
         //        self.imageFromCameraRoll.layer.borderWidth = 1
@@ -92,7 +94,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -121,16 +123,9 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageFromCameraRoll.contentMode = .scaleAspectFit
             imageFromCameraRoll.image = pickedImage
+
+            saveImage(image: pickedImage, path: fileInDocumentsDirectory(filename: selectedDate))
             
-            if info[UIImagePickerControllerOriginalImage] != nil {
-                // 画像のパスを取得
-                _ = info[UIImagePickerControllerReferenceURL] as? NSURL
-            }
-            
-            //            let image = pickedImage
-            //            let data = UIImageJPEGRepresentation(image, 0.9)
-            //            data.writeToFile(imagePath, atomically: true)
-            //            print("save: \(imagePath)")
         }
         
         picker.dismiss(animated: true, completion: nil)
@@ -140,7 +135,14 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return documentsURL as NSURL
     }
     
-    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            print("missing image at: \(path)")
+        }
+        return image
+    }
+    //入る場所を指定してる
     func fileInDocumentsDirectory(filename: String) -> String {
     
         let fileURL = getDocumentsURL().appendingPathComponent(filename)
@@ -148,16 +150,15 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     }
     
-    func saveImage (image: UIImage, path: String ) -> Bool{
+    //保存
+    func saveImage (image: UIImage, path: String ){
         //pngで保存する場合
         let pngImageData = UIImagePNGRepresentation(image)
-        // jpgで保存する場合
-        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)
-        let result = pngImageData?.write(toFile: path, atomically: true)
+        pngImageData?.write(toFile: path, atomically: true)
         //    let result = pngImageData!.writeToFile(path, atomically: true)
-        
-        return result
     }
+    
+    
     
 }
 
