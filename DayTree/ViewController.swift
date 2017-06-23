@@ -21,14 +21,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var editButton: UIButton!
     
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
+    
+    let userDefaults = UserDefaults.standard
 
     
     // section毎の画像配列
     var imgArray: [String] = ["green.png"]
     
     var entryArray = [[String]]()
-    
-    var dateArray: [String] = ["↑First Day↑"]
     
     var dateString: String = ""
     
@@ -54,12 +54,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.dateTableView.setContentOffset(CGPoint(x:0 , y: 45), animated: true)
         
-        entryArray.append(["Date","San Francisco"])
-        entryArray.append(["Date2","New York"])
+        userDefaults.array(forKey: "Key")
+        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
 
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        self.dateTableView.reloadData()
+
+    }
     
     
     //addButtonが押された際呼び出される
@@ -91,27 +97,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                             let dataText = alert.textFields![0].text! as String
                                                             let contentText = alert.textFields![1].text! as String
                                                             
-                                                            self.entryArray.append([dataText,contentText])
+                                                            self.entryArray.append([dataText,contentText,])
+                                                            self.userDefaults.set(self.entryArray, forKey: "Key")
+
                                                             
-                                                            //                                                        let textFields:Array<UITextField>? =  alert.textFields?[0] as Array<UITextField>?
-                                                            //                                                        if textFields != nil {
-                                                            //                                                            for textField:UITextField in textField.Array {
-                                                            //
-                                                            //                                                                self.entryArray.append(textField.text!)
-                                                            //                                                                self.imgArray.append("img0.jpg")
-                                                            //
-                                                            // TableViewを再読み込み.
+
                                                             self.dateTableView.reloadData()
-                                                            //
-                                                            //                                                                //各textにアクセス
-                                                            //                                                                print(textField.text)
-                                                            //                                                            }
-                                                            //                                                        }
+                                                      
                                                             
-                                                            
-                                                            imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: entryArray[0]))
 
         })
+        
+        dateTableView.reloadData()
+
         
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
@@ -142,15 +140,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
+        searchActive = false
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
+        searchActive = false
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
+        searchActive = false
         self.searchBar.endEditing(true)
         searchBar.text = ""
         self.dateTableView.reloadData()
@@ -176,36 +174,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }
+        
+        for i in entryArray {
+            
+            if i[0].contains(searchBar.text!) {
+                
+                filtered.append(i)
+                
+            } else {
+                
+            }
+            
+        }
+
+        
         self.dateTableView.reloadData()
     }
-    
-    //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    //
-    //        searchActive = true
-    //
-    //        filtered = []
-    //
-    //        for i in entryArray {
-    //
-    //            if i[1].contains(searchText) {
-    //
-    //                filtered.append(i)
-    //
-    //            } else {
-    //
-    //            }
-    //
-    //        }
-    //
-    //
-    //        self.dateTableView.reloadData()
-    
-    
-    
-    
-    
-    
-    
     
     
     //Cellを挿入または削除しようとした際に呼び出される
@@ -213,7 +197,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // 削除のとき
         if editingStyle == .delete {
-            entryArray.remove(at: indexPath.row)
+            entryArray.remove(at: entryArray.count - indexPath.row-1)
             tableView.deleteRows(at: [indexPath], with: .fade)
             let dispatchTime: DispatchTime = DispatchTime.now() + 0.7
             DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
@@ -222,7 +206,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             })
             
             print("Delete")
-            
+            self.userDefaults.set(self.entryArray, forKey: "Key")
         }
     }
     
@@ -242,7 +226,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationItem.titleView = searchBar
             navigationItem.titleView?.frame = searchBar.frame
             self.searchBar = searchBar
-            searchBar.becomeFirstResponder()
+//            searchBar.becomeFirstResponder()
         }
     }
     
@@ -263,11 +247,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     /// セルに値を設定するデータソースメソッド（必須）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        var temporaryArray = [[String]]()
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell")! as UITableViewCell;
         if(searchActive){
-            // cell.textLabel?.text = filtered[indexPath.row][1];
+            temporaryArray = filtered
         } else {
-            // cell.textLabel?.text = entryArray[indexPath.row][1];
+            temporaryArray = entryArray 
         }
         
         // セルを取得する
@@ -276,22 +262,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-        // img = UIImage(named:"\(imgArray[indexPath.row])")
         // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.image = imageFromCameraRoll.image
+        imageView.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0]))
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = cell.viewWithTag(2) as! UILabel
-        label1.text = "\(entryArray[entryArray.count - indexPath.row-1][0])"
+        label1.text = "\(temporaryArray[temporaryArray.count - indexPath.row-1][0])"
         
         // Tag番号 ３ で UILabel インスタンスの生成
         let entry = cell.viewWithTag(3) as! UILabel
-        entry.text = "\(entryArray[entryArray.count - indexPath.row-1][1])"
+        entry.text = "\(temporaryArray[temporaryArray.count - indexPath.row-1][1])"
         
         let label2 = cell.viewWithTag(4) as! UILabel
-        label2.text = "No.\(entryArray.count - indexPath.row)"
-        
+        label2.text = "No.\(temporaryArray.count - indexPath.row)"
         
         return cell
     }

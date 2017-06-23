@@ -77,6 +77,8 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var imageName: String = ""
     
+    let userdefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,7 +106,6 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     //カメラロールボタンを押した時
     @IBAction func cameraRoll(sender: AnyObject) {
         self.pickImageFromLibrary()  //ライブラリから写真を選択する
-        
     }
     
     
@@ -142,6 +143,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         return image
     }
+    
     //入る場所を指定してる
     func fileInDocumentsDirectory(filename: String) -> String {
     
