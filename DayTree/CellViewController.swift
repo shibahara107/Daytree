@@ -77,10 +77,16 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var imageName: String = ""
     
-    let userdefaults = UserDefaults.standard
+    let userDefaults = UserDefaults.standard
+    
+    var entryArray = [[String]]()
+    var indexPathRow: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        selectedContent = entryArray[indexPathRow][1]
         
         cellDateLabel.text = selectedDate
         cellContentTextField.text = selectedContent
@@ -95,6 +101,11 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        entryArray[indexPathRow][1] = cellContentTextField.text
+        self.userDefaults.set(self.entryArray, forKey: "Key")
     }
 
     override func didReceiveMemoryWarning() {

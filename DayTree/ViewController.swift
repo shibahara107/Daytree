@@ -35,10 +35,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedDateText: String = ""
     var selectedContentText: String = ""
     var selectedNumberText: String = ""
-    
+
     var searchBar: UISearchBar!
     var filtered: [[String]] = []
     var searchActive : Bool = false
+    
+    var number: Int = 0
     
     
     override func viewDidLoad() {
@@ -56,7 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         userDefaults.array(forKey: "Key")
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
-
         
     }
     
@@ -162,6 +163,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("nagata")
         searchActive = true
+        
+        filtered.removeAll()
         
         for i in entryArray {
             
@@ -292,10 +295,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)
         
+        number = entryArray.count - indexPath.row-1
         
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
-        
-        
+    
     }
     
     func getDocumentsURL() -> NSURL {
@@ -327,6 +330,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             subVC.selectedDate = selectedDateText
             subVC.selectedContent = selectedContentText
             subVC.selectedNumber = selectedNumberText
+            subVC.indexPathRow = number
         }
     }
     
