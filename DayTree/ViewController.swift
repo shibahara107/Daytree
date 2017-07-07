@@ -40,8 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var filtered: [[String]] = []
     var searchActive : Bool = false
     
-    var number: Int = 0
-    
+    var number: Int = 0    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -292,10 +291,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         selectedNumberText = "No.\(entryArray.count - indexPath.row)"
         
+        number = entryArray.count - indexPath.row-1
+        
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)
-        
-        number = entryArray.count - indexPath.row-1
         
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
     
@@ -330,7 +329,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             subVC.selectedDate = selectedDateText
             subVC.selectedContent = selectedContentText
             subVC.selectedNumber = selectedNumberText
-            subVC.indexPathRow = number
+            subVC.number0 = number
         }
     }
     

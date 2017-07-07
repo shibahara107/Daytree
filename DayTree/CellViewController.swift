@@ -80,13 +80,13 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let userDefaults = UserDefaults.standard
     
     var entryArray = [[String]]()
-    var indexPathRow: Int = 0
+    var number0: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
-        selectedContent = entryArray[indexPathRow][1]
+        selectedContent = entryArray[number0][1]
         
         cellDateLabel.text = selectedDate
         cellContentTextField.text = selectedContent
@@ -104,7 +104,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        entryArray[indexPathRow][1] = cellContentTextField.text
+        entryArray[number0][1] = cellContentTextField.text
         self.userDefaults.set(self.entryArray, forKey: "Key")
     }
 
