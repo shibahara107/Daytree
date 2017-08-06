@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var filtered: [[String]] = []
     var searchActive : Bool = false
     
-    var number: Int = 0    
+    var number: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +103,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                             
 
                                                             self.dateTableView.reloadData()
+                                                            
+                                                            let vc = self.storyboard!.instantiateViewController(withIdentifier: "treeView")
+                                                            vc.modalTransitionStyle = .crossDissolve
+                                                            self.present(vc, animated: true, completion: nil)
+
                                                       
                                                             
 
@@ -211,7 +216,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.userDefaults.set(self.entryArray, forKey: "Key")
         }
     }
-    
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
