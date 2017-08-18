@@ -10,8 +10,9 @@ import UIKit
 
 class TreeViewController: UIViewController {
 
-    
+    @IBOutlet var treeImageView: UIImageView!
     @IBOutlet var treeButton: UIButton!
+    @IBOutlet var resetTag: UIButton!
     
     var currentTreeTag: Int = 0
     
@@ -19,11 +20,11 @@ class TreeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(currentTreeTag)
+
 
         // Do any additional setup after loading the view.
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,15 +33,28 @@ class TreeViewController: UIViewController {
     }
     
     @IBAction func showTree(sender: AnyObject) {
+        if self.currentTreeTag < 32 {
         UIView.animate(withDuration: 2.0) { () -> Void in
             self.userdefaults.integer(forKey: "Tree")
             self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
             self.currentTreeTag = self.currentTreeTag + 1
+            print(self.currentTreeTag)
             let treeImageView = self.view.viewWithTag(self.currentTreeTag) as! UIImageView
             treeImageView.alpha = 1.0
             self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+            }
+        }else{
+            
         }
     }
+    
+    @IBAction func resetCurrentTreeTag() {
+        self.userdefaults.integer(forKey: "Tree")
+        self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+        self.currentTreeTag = 1
+        self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+        print(self.currentTreeTag)
+        }
     
     /*
     // MARK: - Navigation
