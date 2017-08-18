@@ -18,9 +18,22 @@ class TreeViewController: UIViewController {
     
     let userdefaults = UserDefaults.standard
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.userdefaults.integer(forKey: "Tree")
+        self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+        print(currentTreeTag)
+        for _ in 0...Int(currentTreeTag) {
+            
+        }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.userdefaults.integer(forKey: "Tree")
+        self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
         print(currentTreeTag)
 
 
