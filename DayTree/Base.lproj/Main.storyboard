@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tree View Controller-->
+        <!--Item-->
         <scene sceneID="c90-53-H5y">
             <objects>
                 <viewController storyboardIdentifier="treeView" id="Xzu-ie-f4Z" customClass="TreeViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,6 +242,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="h7o-NW-fbE"/>
                     <connections>
                         <outlet property="resetTag" destination="oPZ-72-I1a" id="BDf-77-dgB"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
@@ -252,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="-524.8875562218891"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
@@ -273,7 +274,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHe-VK-kzF" id="BfY-69-ycV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-sw-3Xy">
@@ -310,6 +311,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iIU-Fk-aVZ"/>
                     <navigationItem key="navigationItem" id="7vq-Kf-MS3">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="eyF-Wg-sVi">

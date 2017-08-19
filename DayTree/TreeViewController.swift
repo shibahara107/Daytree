@@ -21,24 +21,24 @@ class TreeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.appearTreeTag =
-        
-        self.userdefaults.integer(forKey: "Tree")
+        self.appearTreeTag = 0
+            
+            self.userdefaults.integer(forKey: "Tree")
         self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
         print(currentTreeTag)
         if self.currentTreeTag > 0 {
-        for _ in 0...Int(currentTreeTag) - 1 {
-            if self.currentTreeTag < 38 {
-                UIView.animate(withDuration: 2.0) { () -> Void in
-                    self.appearTreeTag = self.appearTreeTag + 1
-                    print("appearTreeTag:", self.appearTreeTag)
-                    let treeImageView = self.view.viewWithTag(self.appearTreeTag) as! UIImageView
-                    treeImageView.alpha = 1.0
+            for _ in 0...Int(currentTreeTag) - 1 {
+                if self.currentTreeTag < 38 {
+                    UIView.animate(withDuration: 2.0) { () -> Void in
+                        self.appearTreeTag = self.appearTreeTag + 1
+                        print("appearTreeTag:", self.appearTreeTag)
+                        let treeImageView = self.view.viewWithTag(self.appearTreeTag) as! UIImageView
+                        treeImageView.alpha = 1.0
+                    }
+                }else {
+                    break
                 }
-            }else {
-                break
             }
-        }
         }else {
             
         }
@@ -54,6 +54,10 @@ class TreeViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,6 +101,8 @@ class TreeViewController: UIViewController {
         self.currentTreeTag = 0
         self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
         print(self.currentTreeTag)
+        self.appearTreeTag = 0
+        print("appearTreeTag:", appearTreeTag)
     }
     
     /*
