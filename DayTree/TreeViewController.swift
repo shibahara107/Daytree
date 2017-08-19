@@ -9,34 +9,50 @@
 import UIKit
 
 class TreeViewController: UIViewController {
-
+    
     @IBOutlet var treeImageView: UIImageView!
     @IBOutlet var treeButton: UIButton!
     @IBOutlet var resetTag: UIButton!
     
     var currentTreeTag: Int = 0
+    var appearTreeTag: Int = 0
     
     let userdefaults = UserDefaults.standard
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.appearTreeTag =
+        
         self.userdefaults.integer(forKey: "Tree")
         self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
         print(currentTreeTag)
-        for _ in 0...Int(currentTreeTag) {
+        if self.currentTreeTag > 0 {
+        for _ in 0...Int(currentTreeTag) - 1 {
+            if self.currentTreeTag < 38 {
+                UIView.animate(withDuration: 2.0) { () -> Void in
+                    self.appearTreeTag = self.appearTreeTag + 1
+                    print("appearTreeTag:", self.appearTreeTag)
+                    let treeImageView = self.view.viewWithTag(self.appearTreeTag) as! UIImageView
+                    treeImageView.alpha = 1.0
+                }
+            }else {
+                break
+            }
+        }
+        }else {
             
         }
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.userdefaults.integer(forKey: "Tree")
         self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
-        print(currentTreeTag)
-
-
+        print("viewDidLoad:", currentTreeTag)
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,32 +63,32 @@ class TreeViewController: UIViewController {
     
     @IBAction func showTree(sender: AnyObject) {
         if self.currentTreeTag < 31 {
-        UIView.animate(withDuration: 2.0) { () -> Void in
-            self.userdefaults.integer(forKey: "Tree")
-            self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
-            self.currentTreeTag = self.currentTreeTag + 1
-            print(self.currentTreeTag)
-            let treeImageView = self.view.viewWithTag(self.currentTreeTag) as! UIImageView
-            treeImageView.alpha = 1.0
-            self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
-            }
-        }else if self.currentTreeTag < 38 {
-        UIView.animate(withDuration: 2.0) { () -> Void in
-            self.userdefaults.integer(forKey: "Tree")
-            self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
-            self.currentTreeTag = self.currentTreeTag + 1
-            print(self.currentTreeTag)
-            let greenImageView = self.view.viewWithTag(self.currentTreeTag) as! UIImageView
-            greenImageView.alpha = 1.0
-            self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
-            }
-            }else {
+            UIView.animate(withDuration: 2.0) { () -> Void in
                 self.userdefaults.integer(forKey: "Tree")
                 self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
-                self.currentTreeTag = 0
-                self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+                self.currentTreeTag = self.currentTreeTag + 1
                 print(self.currentTreeTag)
+                let treeImageView = self.view.viewWithTag(self.currentTreeTag) as! UIImageView
+                treeImageView.alpha = 1.0
+                self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
             }
+        }else if self.currentTreeTag < 38 {
+            UIView.animate(withDuration: 2.0) { () -> Void in
+                self.userdefaults.integer(forKey: "Tree")
+                self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+                self.currentTreeTag = self.currentTreeTag + 1
+                print(self.currentTreeTag)
+                let greenImageView = self.view.viewWithTag(self.currentTreeTag) as! UIImageView
+                greenImageView.alpha = 1.0
+                self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+            }
+        }else {
+            self.userdefaults.integer(forKey: "Tree")
+            self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+            self.currentTreeTag = 0
+            self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+            print(self.currentTreeTag)
+        }
     }
     
     func resetCurrentTreeTag() {
@@ -81,16 +97,16 @@ class TreeViewController: UIViewController {
         self.currentTreeTag = 0
         self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
         print(self.currentTreeTag)
-        }
+    }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
