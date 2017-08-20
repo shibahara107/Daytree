@@ -46,6 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+//        imageFromCameraRoll.layer.masksToBounds = true
+//        imageFromCameraRoll.layer.cornerRadius = imageFromCameraRoll.frame.height/2
         
         setupSearchBar()
         searchBar.delegate = self
@@ -57,6 +59,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         userDefaults.array(forKey: "Key")
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        
+        let color2 = UIColor(rgb: 0x00A651)
+        navigationController?.navigationBar.barTintColor = color2
+        navigationController?.navigationBar.tintColor = UIColor.white
         
     }
     
@@ -103,14 +109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                             
 
                                                             self.dateTableView.reloadData()
-                                                            
-                                                            let vc = self.storyboard!.instantiateViewController(withIdentifier: "treeView")
-                                                            vc.modalTransitionStyle = .crossDissolve
-                                                            self.present(vc, animated: true, completion: nil)
-
-                                                      
-                                                            
-
+                                                        
         })
         
         dateTableView.reloadData()
@@ -226,6 +225,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let navigationBarFrame = navigationController?.navigationBar.bounds {
             let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
             searchBar.delegate = self
+            searchBar.barTintColor = UIColor.white
             searchBar.placeholder = "Search"
             searchBar.showsCancelButton = true
             searchBar.autocapitalizationType = UITextAutocapitalizationType.none
@@ -271,7 +271,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0]))
+        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
+           imageView.image = image
+        } else {
+            imageView.image = UIImage(named: "DefaultEntry2.png")
+        }
+        cell.viewWithTag(1)!.layer.masksToBounds = true
+        cell.viewWithTag(1)!.layer.cornerRadius = cell.viewWithTag(1)!.frame.height/2
         
         // Tag番号 ２ で UILabel インスタンスの生成
         let label1 = cell.viewWithTag(2) as! UILabel
