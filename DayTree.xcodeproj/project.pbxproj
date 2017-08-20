@@ -54,6 +54,7 @@
 		92BB79F41F492204000A55F1 /* DefaultEntry2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F31F492204000A55F1 /* DefaultEntry2.png */; };
 		92BB79F61F49220E000A55F1 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F51F49220E000A55F1 /* Add.png */; };
 		92BB79F81F492741000A55F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB79F71F492741000A55F1 /* Extensions.swift */; };
+		92BB79FA1F4936AA000A55F1 /* ANGLE.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F91F4936AA000A55F1 /* ANGLE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		92BB79F31F492204000A55F1 /* DefaultEntry2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultEntry2.png; path = ../../../Desktop/DefaultEntry2.png; sourceTree = "<group>"; };
 		92BB79F51F49220E000A55F1 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Add.png; path = ../../../Desktop/Add.png; sourceTree = "<group>"; };
 		92BB79F71F492741000A55F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		92BB79F91F4936AA000A55F1 /* ANGLE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ANGLE.png; path = ../../../Desktop/ANGLE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
+				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
 				92BB79F51F49220E000A55F1 /* Add.png */,
 				92BB79F31F492204000A55F1 /* DefaultEntry2.png */,
 				92BB79F11F491F14000A55F1 /* Camera2.png */,
@@ -353,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BB79FA1F4936AA000A55F1 /* ANGLE.png in Resources */,
 				923176281F36E04B002FE288 /* Blue0.png in Resources */,
 				92BB79F21F491F14000A55F1 /* Camera2.png in Resources */,
 				923176351F36E68A002FE288 /* Green3.png in Resources */,

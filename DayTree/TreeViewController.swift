@@ -95,7 +95,7 @@ class TreeViewController: UIViewController {
         }
     }
     
-    func resetCurrentTreeTag() {
+    @IBAction func resetCurrentTreeTag() {
         self.userdefaults.integer(forKey: "Tree")
         self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
         self.currentTreeTag = 0

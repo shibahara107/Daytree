@@ -14,6 +14,7 @@ import Photos
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var searchResults:[Any] = []
+    var currentTreeTag: Int = 0
     
     @IBOutlet var dateTableView: UITableView!
     
@@ -23,8 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
     
     let userDefaults = UserDefaults.standard
+    let userdefaults = UserDefaults.standard
 
-    
     // section毎の画像配列
     var imgArray: [String] = ["green.png"]
     
@@ -105,11 +106,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                                             
                                                             self.entryArray.append([dataText,contentText,])
                                                             self.userDefaults.set(self.entryArray, forKey: "Key")
-
                                                             
-
                                                             self.dateTableView.reloadData()
-                                                        
+                                                            
+                                                            self.userdefaults.integer(forKey: "Tree")
+                                                            self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+                                                            self.currentTreeTag = self.currentTreeTag + 1
+                                                            print(self.currentTreeTag)
+                                                            self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+                                                            
         })
         
         dateTableView.reloadData()
