@@ -25,6 +25,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="9rJ-Na-ho4">
+                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White.png" translatesAutoresizingMaskIntoConstraints="NO" id="iir-Fd-D90">
                                 <rect key="frame" x="0.0" y="174" width="325" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,18 +235,44 @@
                                     <action selector="resetCurrentTreeTag" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="qfT-xv-Hf7"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainFog.png" translatesAutoresizingMaskIntoConstraints="NO" id="fyU-MX-9pD">
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Uc-W8k">
+                                <rect key="frame" x="162" y="68" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Lue-U4-0AI"/>
+                                    <action selector="stopRain" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="yzN-4a-cWQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iza-Xy-OkE">
+                                <rect key="frame" x="160" y="35" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="makeRain" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="yIt-Ne-DZF"/>
+                                    <action selector="setupParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="XCq-mV-LFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trees" id="h7o-NW-fbE"/>
                     <connections>
+                        <outlet property="rainButton" destination="iza-Xy-OkE" id="0b4-p5-9JU"/>
+                        <outlet property="rainFogImageView" destination="fyU-MX-9pD" id="jD2-nc-yW2"/>
+                        <outlet property="rainSkyImageView" destination="9rJ-Na-ho4" id="sF1-aw-idq"/>
                         <outlet property="resetTag" destination="oPZ-72-I1a" id="BDf-77-dgB"/>
+                        <outlet property="stopRainButton" destination="3pH-Uc-W8k" id="2dp-Wx-rgu"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eje-kn-Ut2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="-546"/>
+            <point key="canvasLocation" x="1076" y="-546.47676161919048"/>
         </scene>
         <!--Entries-->
         <scene sceneID="tne-QT-ifu">
@@ -265,7 +295,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHe-VK-kzF" id="BfY-69-ycV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-sw-3Xy">
@@ -466,6 +496,8 @@
         <image name="Green7.png" width="500" height="699"/>
         <image name="Green8.png" width="500" height="465"/>
         <image name="LightTree.png" width="500" height="1676"/>
+        <image name="RainFog.png" width="1000" height="1781"/>
+        <image name="RainSky.png" width="1000" height="1781"/>
         <image name="Sky.png" width="500" height="891"/>
         <image name="White.png" width="500" height="227"/>
     </resources>
