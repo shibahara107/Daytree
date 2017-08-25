@@ -23,9 +23,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
     
+    @IBOutlet var IntroButton: UIButton!
+    
     let userDefaults = UserDefaults.standard
     let userdefaults = UserDefaults.standard
-
+    
     // section毎の画像配列
     var imgArray: [String] = ["green.png"]
     
@@ -36,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedDateText: String = ""
     var selectedContentText: String = ""
     var selectedNumberText: String = ""
-
+    
     var searchBar: UISearchBar!
     var filtered: [[String]] = []
     var searchActive : Bool = false
@@ -47,8 +49,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        imageFromCameraRoll.layer.masksToBounds = true
-//        imageFromCameraRoll.layer.cornerRadius = imageFromCameraRoll.frame.height/2
+        //        imageFromCameraRoll.layer.masksToBounds = true
+        //        imageFromCameraRoll.layer.cornerRadius = imageFromCameraRoll.frame.height/2
         
         setupSearchBar()
         searchBar.delegate = self
@@ -71,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
         self.dateTableView.reloadData()
-
+        
     }
     
     
@@ -118,7 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
         
         dateTableView.reloadData()
-
+        
         
         alert.addAction(cancelAction)
         alert.addAction(defaultAction)
@@ -197,7 +199,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }
-
+        
         
         self.dateTableView.reloadData()
     }
@@ -220,7 +222,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.userDefaults.set(self.entryArray, forKey: "Key")
         }
     }
-        
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -238,7 +240,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationItem.titleView = searchBar
             navigationItem.titleView?.frame = searchBar.frame
             self.searchBar = searchBar
-//            searchBar.becomeFirstResponder()
+            //            searchBar.becomeFirstResponder()
         }
     }
     
@@ -265,7 +267,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(searchActive){
             temporaryArray = filtered
         } else {
-            temporaryArray = entryArray 
+            temporaryArray = entryArray
         }
         
         // セルを取得する
@@ -277,7 +279,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
         if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
-           imageView.image = image
+            imageView.image = image
         } else {
             imageView.image = UIImage(named: "DefaultEntry2.png")
         }
@@ -313,7 +315,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "toCellViewController",sender: nil)
         
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
-    
+        
     }
     
     func getDocumentsURL() -> NSURL {
@@ -335,6 +337,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let fileURL = getDocumentsURL().appendingPathComponent(filename)
         return fileURL!.path
         
+    }
+    @IBAction func IntroView() {
+        self.performSegue(withIdentifier: "toIntroView", sender: nil)
     }
     
     //Segue準備

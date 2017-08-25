@@ -42,6 +42,7 @@ class IntroViewController: UIViewController, EAIntroDelegate {
     
     func introDidFinish(_ introView: EAIntroView!, wasSkipped: Bool) {
         print("Finished")
+        self.dismiss(animated: false, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

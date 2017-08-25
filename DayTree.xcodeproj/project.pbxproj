@@ -53,13 +53,15 @@
 		925D1DD61F4FB694002E1CF7 /* Intro3.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DD21F4FB694002E1CF7 /* Intro3.png */; };
 		925D1DD71F4FB694002E1CF7 /* Intro4.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DD31F4FB694002E1CF7 /* Intro4.png */; };
 		925D1DDB1F4FC775002E1CF7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */; };
+		925D1DDD1F4FE626002E1CF7 /* IntroButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DDC1F4FE626002E1CF7 /* IntroButton.png */; };
+		925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */; };
+		925D1DF71F4FFC2B002E1CF7 /* entryTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF21F4FFC2B002E1CF7 /* entryTabSelected.png */; };
+		925D1DF81F4FFC2B002E1CF7 /* entryTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF31F4FFC2B002E1CF7 /* entryTabUnselected.png */; };
+		925D1DF91F4FFC2B002E1CF7 /* settingsTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */; };
+		925D1DFA1F4FFC2B002E1CF7 /* settingsTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF51F4FFC2B002E1CF7 /* settingsTabUnselected.png */; };
+		925D1DFB1F4FFC2B002E1CF7 /* treeTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF61F4FFC2B002E1CF7 /* treeTabUnselected.png */; };
 		925FFF731E91EA0C002F8223 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF721E91EA0C002F8223 /* green.png */; };
 		925FFF751E91EA13002F8223 /* NoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF741E91EA13002F8223 /* NoImage.png */; };
-		92AF67F21F4EC2D30089BB8A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AF67ED1F4EC2D30089BB8A /* Default-568h@2x.png */; };
-		92AF67F31F4EC2D30089BB8A /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AF67EE1F4EC2D30089BB8A /* Default-667h@2x.png */; };
-		92AF67F41F4EC2D30089BB8A /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AF67EF1F4EC2D30089BB8A /* Default-736h@3x.png */; };
-		92AF67F51F4EC2D30089BB8A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AF67F01F4EC2D30089BB8A /* Default.png */; };
-		92AF67F61F4EC2D30089BB8A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AF67F11F4EC2D30089BB8A /* Default@2x.png */; };
 		92BB79EE1F491CFB000A55F1 /* Daytree2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79ED1F491CFB000A55F1 /* Daytree2.png */; };
 		92BB79F01F491F08000A55F1 /* Back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79EF1F491F08000A55F1 /* Back2.png */; };
 		92BB79F21F491F14000A55F1 /* Camera2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F11F491F14000A55F1 /* Camera2.png */; };
@@ -147,13 +149,15 @@
 		925D1DD21F4FB694002E1CF7 /* Intro3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Intro3.png; path = ../../../Desktop/Intro3.png; sourceTree = "<group>"; };
 		925D1DD31F4FB694002E1CF7 /* Intro4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Intro4.png; path = ../../../Desktop/Intro4.png; sourceTree = "<group>"; };
 		925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		925D1DDC1F4FE626002E1CF7 /* IntroButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IntroButton.png; path = ../../../Desktop/IntroButton.png; sourceTree = "<group>"; };
+		925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTabBarController.swift; sourceTree = "<group>"; };
+		925D1DF21F4FFC2B002E1CF7 /* entryTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = entryTabSelected.png; path = ../../../Desktop/entryTabSelected.png; sourceTree = "<group>"; };
+		925D1DF31F4FFC2B002E1CF7 /* entryTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = entryTabUnselected.png; path = ../../../Desktop/entryTabUnselected.png; sourceTree = "<group>"; };
+		925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsTabSelected.png; path = ../../../Desktop/settingsTabSelected.png; sourceTree = "<group>"; };
+		925D1DF51F4FFC2B002E1CF7 /* settingsTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsTabUnselected.png; path = ../../../Desktop/settingsTabUnselected.png; sourceTree = "<group>"; };
+		925D1DF61F4FFC2B002E1CF7 /* treeTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treeTabUnselected.png; path = ../../../Desktop/treeTabUnselected.png; sourceTree = "<group>"; };
 		925FFF721E91EA0C002F8223 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		925FFF741E91EA13002F8223 /* NoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoImage.png; sourceTree = "<group>"; };
-		92AF67ED1F4EC2D30089BB8A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		92AF67EE1F4EC2D30089BB8A /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		92AF67EF1F4EC2D30089BB8A /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		92AF67F01F4EC2D30089BB8A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		92AF67F11F4EC2D30089BB8A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		92BB79ED1F491CFB000A55F1 /* Daytree2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Daytree2.png; path = ../../../Desktop/Daytree2.png; sourceTree = "<group>"; };
 		92BB79EF1F491F08000A55F1 /* Back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back2.png; path = ../../../Desktop/Back2.png; sourceTree = "<group>"; };
 		92BB79F11F491F14000A55F1 /* Camera2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Camera2.png; path = ../../../Desktop/Camera2.png; sourceTree = "<group>"; };
@@ -249,6 +253,12 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
+				925D1DF21F4FFC2B002E1CF7 /* entryTabSelected.png */,
+				925D1DF31F4FFC2B002E1CF7 /* entryTabUnselected.png */,
+				925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */,
+				925D1DF51F4FFC2B002E1CF7 /* settingsTabUnselected.png */,
+				925D1DF61F4FFC2B002E1CF7 /* treeTabUnselected.png */,
+				925D1DDC1F4FE626002E1CF7 /* IntroButton.png */,
 				925D1DD01F4FB694002E1CF7 /* Intro1.png */,
 				925D1DD11F4FB694002E1CF7 /* Intro2.png */,
 				925D1DD21F4FB694002E1CF7 /* Intro3.png */,
@@ -294,9 +304,9 @@
 				925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */,
 				923D8A411E80F08B00981375 /* CellViewController.swift */,
 				925655391F358FE2005B5852 /* TreeViewController.swift */,
+				925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
-				92AF67EC1F4EC2D30089BB8A /* Defaults */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
 				92428A1D1E4DD26700E82D0B /* Info.plist */,
 				92428A3F1E4DDD3800E82D0B /* img0.jpg */,
@@ -327,18 +337,6 @@
 				92428A331E4DD26700E82D0B /* Info.plist */,
 			);
 			path = DayTreeUITests;
-			sourceTree = "<group>";
-		};
-		92AF67EC1F4EC2D30089BB8A /* Defaults */ = {
-			isa = PBXGroup;
-			children = (
-				92AF67ED1F4EC2D30089BB8A /* Default-568h@2x.png */,
-				92AF67EE1F4EC2D30089BB8A /* Default-667h@2x.png */,
-				92AF67EF1F4EC2D30089BB8A /* Default-736h@3x.png */,
-				92AF67F01F4EC2D30089BB8A /* Default.png */,
-				92AF67F11F4EC2D30089BB8A /* Default@2x.png */,
-			);
-			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,38 +466,38 @@
 				925D1DD71F4FB694002E1CF7 /* Intro4.png in Resources */,
 				923176371F36E68A002FE288 /* Green1.png in Resources */,
 				92428A4E1E4DDD3800E82D0B /* img7.jpg in Resources */,
-				92AF67F61F4EC2D30089BB8A /* Default@2x.png in Resources */,
 				923176231F36E04B002FE288 /* Blue5.png in Resources */,
+				925D1DFA1F4FFC2B002E1CF7 /* settingsTabUnselected.png in Resources */,
 				923176121F36E028002FE288 /* Sky.png in Resources */,
 				92E122581F4D128100304727 /* rain2.sks in Resources */,
 				923176361F36E68A002FE288 /* Green2.png in Resources */,
-				92AF67F31F4EC2D30089BB8A /* Default-667h@2x.png in Resources */,
 				923176201F36E04B002FE288 /* Blue8.png in Resources */,
 				92428A4B1E4DDD3800E82D0B /* img4.jpg in Resources */,
 				92BB79F61F49220E000A55F1 /* Add.png in Resources */,
 				92428A471E4DDD3800E82D0B /* img0.jpg in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
 				925D1DD51F4FB694002E1CF7 /* Intro2.png in Resources */,
-				92AF67F51F4EC2D30089BB8A /* Default.png in Resources */,
 				923176331F36E68A002FE288 /* Green6.png in Resources */,
-				92AF67F41F4EC2D30089BB8A /* Default-736h@3x.png in Resources */,
 				923176221F36E04B002FE288 /* Blue6.png in Resources */,
 				92EDF91F1F4A7A8100FA3A37 /* RainFog.png in Resources */,
 				92428A1C1E4DD26700E82D0B /* LaunchScreen.storyboard in Resources */,
 				923176311F36E68A002FE288 /* Green8.png in Resources */,
+				925D1DF71F4FFC2B002E1CF7 /* entryTabSelected.png in Resources */,
 				923176321F36E68A002FE288 /* Green7.png in Resources */,
+				925D1DF91F4FFC2B002E1CF7 /* settingsTabSelected.png in Resources */,
 				923D8A451E810C1200981375 /* Main.storyboard in Resources */,
 				923176381F36E68A002FE288 /* Green0.png in Resources */,
 				92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */,
 				92428A4A1E4DDD3800E82D0B /* img3.jpg in Resources */,
 				92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */,
-				92AF67F21F4EC2D30089BB8A /* Default-568h@2x.png in Resources */,
 				92EDF91E1F4A7A8100FA3A37 /* RainSky.png in Resources */,
 				925D1DD61F4FB694002E1CF7 /* Intro3.png in Resources */,
 				923176141F36E032002FE288 /* LightTree.png in Resources */,
 				923176161F36E040002FE288 /* DarkTree.png in Resources */,
 				923176271F36E04B002FE288 /* Blue1.png in Resources */,
 				923176261F36E04B002FE288 /* Blue2.png in Resources */,
+				925D1DF81F4FFC2B002E1CF7 /* entryTabUnselected.png in Resources */,
+				925D1DDD1F4FE626002E1CF7 /* IntroButton.png in Resources */,
 				923176251F36E04B002FE288 /* Blue3.png in Resources */,
 				925655381F358F86005B5852 /* treeClear.png in Resources */,
 				925FFF751E91EA13002F8223 /* NoImage.png in Resources */,
@@ -509,6 +507,7 @@
 				92BB79EE1F491CFB000A55F1 /* Daytree2.png in Resources */,
 				92BB79F41F492204000A55F1 /* DefaultEntry2.png in Resources */,
 				925FFF731E91EA0C002F8223 /* green.png in Resources */,
+				925D1DFB1F4FFC2B002E1CF7 /* treeTabUnselected.png in Resources */,
 				92BB79F01F491F08000A55F1 /* Back2.png in Resources */,
 				923176101F36E020002FE288 /* White.png in Resources */,
 				92428A191E4DD26700E82D0B /* Assets.xcassets in Resources */,
@@ -677,6 +676,7 @@
 			files = (
 				92BB79F81F492741000A55F1 /* Extensions.swift in Sources */,
 				923D8A421E80F08B00981375 /* CellViewController.swift in Sources */,
+				925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */,
 				925D1DDB1F4FC775002E1CF7 /* IntroViewController.swift in Sources */,
 				92428A141E4DD26700E82D0B /* ViewController.swift in Sources */,
 				9256553A1F358FE2005B5852 /* TreeViewController.swift in Sources */,
