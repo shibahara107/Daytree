@@ -217,7 +217,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60u-hr-vBp">
                                 <rect key="frame" x="164" y="102" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="show"/>
                                 <connections>
                                     <action selector="showTreeWithSender:" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Yjj-wz-73w"/>
                                 </connections>
@@ -230,7 +230,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-72-I1a">
                                 <rect key="frame" x="164" y="130" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="reset"/>
                                 <connections>
                                     <action selector="resetCurrentTreeTag" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="qfT-xv-Hf7"/>
                                 </connections>
@@ -239,19 +239,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Uc-W8k">
-                                <rect key="frame" x="162" y="68" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Uc-W8k">
+                                <rect key="frame" x="337" y="28" width="29" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="BrightButton.png"/>
                                 <connections>
                                     <action selector="closeParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Lue-U4-0AI"/>
                                     <action selector="stopRain" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="yzN-4a-cWQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iza-Xy-OkE">
-                                <rect key="frame" x="160" y="35" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iza-Xy-OkE">
+                                <rect key="frame" x="8" y="28" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="RainButton.png"/>
                                 <connections>
                                     <action selector="makeRain" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="yIt-Ne-DZF"/>
                                     <action selector="setupParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="XCq-mV-LFq"/>
@@ -295,7 +295,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHe-VK-kzF" id="BfY-69-ycV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-sw-3Xy">
@@ -363,7 +363,7 @@
         <!--Item-->
         <scene sceneID="iam-0c-hYl">
             <objects>
-                <viewController storyboardIdentifier="settingsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eBi-gG-rhp" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eBi-gG-rhp" customClass="SettingsViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="89i-0M-ZVr"/>
                         <viewControllerLayoutGuide type="bottom" id="OFT-xK-39P"/>
@@ -371,13 +371,45 @@
                     <view key="view" contentMode="scaleToFill" id="eSb-gH-VvE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SettingsScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-bu-qym">
+                                <rect key="frame" x="0.0" y="-37" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79g-62-3PO">
+                                <rect key="frame" x="112" y="378" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ShareButton.png"/>
+                                <connections>
+                                    <action selector="share" destination="eBi-gG-rhp" eventType="touchUpInside" id="4lM-6m-Xr6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuW-N1-dCp">
+                                <rect key="frame" x="213" y="378" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="HelpButton.png"/>
+                                <connections>
+                                    <segue destination="HQt-lX-reg" kind="show" identifier="toIntroView2" id="q3Q-BD-x3q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjS-Nt-Zyk">
+                                <rect key="frame" x="111" y="475" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AuthorButton.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-lM-aQY">
+                                <rect key="frame" x="213" y="476" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ThanksButton.png"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Y4k-Jv-Uof"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynp-4e-xbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-550"/>
+            <point key="canvasLocation" x="2012" y="-550.07496251874068"/>
         </scene>
         <!--Cell View Controller-->
         <scene sceneID="ryL-Fg-Xrl">
@@ -524,6 +556,7 @@
     </scenes>
     <resources>
         <image name="Add.png" width="500" height="500"/>
+        <image name="AuthorButton.png" width="200" height="200"/>
         <image name="Back2.png" width="100" height="134"/>
         <image name="Blue1.png" width="500" height="829"/>
         <image name="Blue2.png" width="500" height="1192"/>
@@ -532,6 +565,7 @@
         <image name="Blue6.png" width="500" height="376"/>
         <image name="Blue7.png" width="500" height="699"/>
         <image name="Blue8.png" width="500" height="465"/>
+        <image name="BrightButton.png" width="100" height="100"/>
         <image name="Camera2.png" width="100" height="86"/>
         <image name="DarkTree.png" width="500" height="1667"/>
         <image name="Daytree2.png" width="1000" height="1778"/>
@@ -543,10 +577,18 @@
         <image name="Green6.png" width="500" height="376"/>
         <image name="Green7.png" width="500" height="699"/>
         <image name="Green8.png" width="500" height="465"/>
+        <image name="HelpButton.png" width="200" height="200"/>
         <image name="LightTree.png" width="500" height="1676"/>
+        <image name="RainButton.png" width="100" height="100"/>
         <image name="RainFog.png" width="1000" height="1781"/>
         <image name="RainSky.png" width="1000" height="1781"/>
+        <image name="SettingsScreen.png" width="1000" height="1781"/>
+        <image name="ShareButton.png" width="200" height="200"/>
         <image name="Sky.png" width="500" height="891"/>
+        <image name="ThanksButton.png" width="200" height="200"/>
         <image name="White.png" width="500" height="227"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="q3Q-BD-x3q"/>
+    </inferredMetricsTieBreakers>
 </document>

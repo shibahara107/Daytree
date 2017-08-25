@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		33CD4AD349C82F6DE594F0BB /* Pods_DayTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8619713DED6921AA6406FB63 /* Pods_DayTree.framework */; };
 		8EA0A365C2CDC600BA26019F /* Pods_DayTreeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3506DD321FEAF9BEF51F98A9 /* Pods_DayTreeTests.framework */; };
+		922A6B3E1F508AA900963B04 /* AuthorButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B381F508AA900963B04 /* AuthorButton.png */; };
+		922A6B3F1F508AA900963B04 /* BrightButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B391F508AA900963B04 /* BrightButton.png */; };
+		922A6B401F508AA900963B04 /* HelpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B3A1F508AA900963B04 /* HelpButton.png */; };
+		922A6B411F508AA900963B04 /* RainButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B3B1F508AA900963B04 /* RainButton.png */; };
+		922A6B421F508AA900963B04 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B3C1F508AA900963B04 /* ShareButton.png */; };
+		922A6B431F508AA900963B04 /* ThanksButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B3D1F508AA900963B04 /* ThanksButton.png */; };
+		922A6B451F508E9E00963B04 /* SettingsScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 922A6B441F508E9E00963B04 /* SettingsScreen.png */; };
 		923176101F36E020002FE288 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 9231760F1F36E020002FE288 /* White.png */; };
 		923176121F36E028002FE288 /* Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 923176111F36E028002FE288 /* Sky.png */; };
 		923176141F36E032002FE288 /* LightTree.png in Resources */ = {isa = PBXBuildFile; fileRef = 923176131F36E032002FE288 /* LightTree.png */; };
@@ -60,6 +67,7 @@
 		925D1DF91F4FFC2B002E1CF7 /* settingsTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */; };
 		925D1DFA1F4FFC2B002E1CF7 /* settingsTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF51F4FFC2B002E1CF7 /* settingsTabUnselected.png */; };
 		925D1DFB1F4FFC2B002E1CF7 /* treeTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925D1DF61F4FFC2B002E1CF7 /* treeTabUnselected.png */; };
+		925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */; };
 		925FFF731E91EA0C002F8223 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF721E91EA0C002F8223 /* green.png */; };
 		925FFF751E91EA13002F8223 /* NoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF741E91EA13002F8223 /* NoImage.png */; };
 		92BB79EE1F491CFB000A55F1 /* Daytree2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79ED1F491CFB000A55F1 /* Daytree2.png */; };
@@ -99,6 +107,13 @@
 		4F5449FC280A79518A1552F6 /* Pods-DayTreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeTests/Pods-DayTreeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8619713DED6921AA6406FB63 /* Pods_DayTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9052B390CA62DDE1A2DA21CD /* Pods-DayTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTree/Pods-DayTree.release.xcconfig"; sourceTree = "<group>"; };
+		922A6B381F508AA900963B04 /* AuthorButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AuthorButton.png; path = ../../../Desktop/AuthorButton.png; sourceTree = "<group>"; };
+		922A6B391F508AA900963B04 /* BrightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrightButton.png; path = ../../../Desktop/BrightButton.png; sourceTree = "<group>"; };
+		922A6B3A1F508AA900963B04 /* HelpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HelpButton.png; path = ../../../Desktop/HelpButton.png; sourceTree = "<group>"; };
+		922A6B3B1F508AA900963B04 /* RainButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RainButton.png; path = ../../../Desktop/RainButton.png; sourceTree = "<group>"; };
+		922A6B3C1F508AA900963B04 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = ../../../Desktop/ShareButton.png; sourceTree = "<group>"; };
+		922A6B3D1F508AA900963B04 /* ThanksButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThanksButton.png; path = ../../../Desktop/ThanksButton.png; sourceTree = "<group>"; };
+		922A6B441F508E9E00963B04 /* SettingsScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsScreen.png; path = ../../../Desktop/SettingsScreen.png; sourceTree = "<group>"; };
 		9231760F1F36E020002FE288 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White.png; path = ../../../Desktop/White.png; sourceTree = "<group>"; };
 		923176111F36E028002FE288 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sky.png; path = ../../../Desktop/Sky.png; sourceTree = "<group>"; };
 		923176131F36E032002FE288 /* LightTree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LightTree.png; path = ../../../Desktop/LightTree.png; sourceTree = "<group>"; };
@@ -156,6 +171,7 @@
 		925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsTabSelected.png; path = ../../../Desktop/settingsTabSelected.png; sourceTree = "<group>"; };
 		925D1DF51F4FFC2B002E1CF7 /* settingsTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsTabUnselected.png; path = ../../../Desktop/settingsTabUnselected.png; sourceTree = "<group>"; };
 		925D1DF61F4FFC2B002E1CF7 /* treeTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treeTabUnselected.png; path = ../../../Desktop/treeTabUnselected.png; sourceTree = "<group>"; };
+		925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		925FFF721E91EA0C002F8223 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		925FFF741E91EA13002F8223 /* NoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoImage.png; sourceTree = "<group>"; };
 		92BB79ED1F491CFB000A55F1 /* Daytree2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Daytree2.png; path = ../../../Desktop/Daytree2.png; sourceTree = "<group>"; };
@@ -253,6 +269,13 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
+				922A6B441F508E9E00963B04 /* SettingsScreen.png */,
+				922A6B381F508AA900963B04 /* AuthorButton.png */,
+				922A6B391F508AA900963B04 /* BrightButton.png */,
+				922A6B3A1F508AA900963B04 /* HelpButton.png */,
+				922A6B3B1F508AA900963B04 /* RainButton.png */,
+				922A6B3C1F508AA900963B04 /* ShareButton.png */,
+				922A6B3D1F508AA900963B04 /* ThanksButton.png */,
 				925D1DF21F4FFC2B002E1CF7 /* entryTabSelected.png */,
 				925D1DF31F4FFC2B002E1CF7 /* entryTabUnselected.png */,
 				925D1DF41F4FFC2B002E1CF7 /* settingsTabSelected.png */,
@@ -305,6 +328,7 @@
 				923D8A411E80F08B00981375 /* CellViewController.swift */,
 				925655391F358FE2005B5852 /* TreeViewController.swift */,
 				925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */,
+				925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
@@ -462,6 +486,7 @@
 				92BB79F21F491F14000A55F1 /* Camera2.png in Resources */,
 				92EDF9231F4A847400FA3A37 /* rainDrops.png in Resources */,
 				923176351F36E68A002FE288 /* Green3.png in Resources */,
+				922A6B3E1F508AA900963B04 /* AuthorButton.png in Resources */,
 				923176341F36E68A002FE288 /* Green4.png in Resources */,
 				925D1DD71F4FB694002E1CF7 /* Intro4.png in Resources */,
 				923176371F36E68A002FE288 /* Green1.png in Resources */,
@@ -480,6 +505,8 @@
 				923176331F36E68A002FE288 /* Green6.png in Resources */,
 				923176221F36E04B002FE288 /* Blue6.png in Resources */,
 				92EDF91F1F4A7A8100FA3A37 /* RainFog.png in Resources */,
+				922A6B421F508AA900963B04 /* ShareButton.png in Resources */,
+				922A6B3F1F508AA900963B04 /* BrightButton.png in Resources */,
 				92428A1C1E4DD26700E82D0B /* LaunchScreen.storyboard in Resources */,
 				923176311F36E68A002FE288 /* Green8.png in Resources */,
 				925D1DF71F4FFC2B002E1CF7 /* entryTabSelected.png in Resources */,
@@ -489,8 +516,10 @@
 				923176381F36E68A002FE288 /* Green0.png in Resources */,
 				92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */,
 				92428A4A1E4DDD3800E82D0B /* img3.jpg in Resources */,
+				922A6B431F508AA900963B04 /* ThanksButton.png in Resources */,
 				92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */,
 				92EDF91E1F4A7A8100FA3A37 /* RainSky.png in Resources */,
+				922A6B401F508AA900963B04 /* HelpButton.png in Resources */,
 				925D1DD61F4FB694002E1CF7 /* Intro3.png in Resources */,
 				923176141F36E032002FE288 /* LightTree.png in Resources */,
 				923176161F36E040002FE288 /* DarkTree.png in Resources */,
@@ -500,12 +529,14 @@
 				925D1DDD1F4FE626002E1CF7 /* IntroButton.png in Resources */,
 				923176251F36E04B002FE288 /* Blue3.png in Resources */,
 				925655381F358F86005B5852 /* treeClear.png in Resources */,
+				922A6B411F508AA900963B04 /* RainButton.png in Resources */,
 				925FFF751E91EA13002F8223 /* NoImage.png in Resources */,
 				925D1DD41F4FB694002E1CF7 /* Intro1.png in Resources */,
 				923176211F36E04B002FE288 /* Blue7.png in Resources */,
 				923176241F36E04B002FE288 /* Blue4.png in Resources */,
 				92BB79EE1F491CFB000A55F1 /* Daytree2.png in Resources */,
 				92BB79F41F492204000A55F1 /* DefaultEntry2.png in Resources */,
+				922A6B451F508E9E00963B04 /* SettingsScreen.png in Resources */,
 				925FFF731E91EA0C002F8223 /* green.png in Resources */,
 				925D1DFB1F4FFC2B002E1CF7 /* treeTabUnselected.png in Resources */,
 				92BB79F01F491F08000A55F1 /* Back2.png in Resources */,
@@ -681,6 +712,7 @@
 				92428A141E4DD26700E82D0B /* ViewController.swift in Sources */,
 				9256553A1F358FE2005B5852 /* TreeViewController.swift in Sources */,
 				92428A121E4DD26700E82D0B /* AppDelegate.swift in Sources */,
+				925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
