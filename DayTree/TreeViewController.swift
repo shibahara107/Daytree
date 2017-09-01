@@ -15,9 +15,11 @@ class TreeViewController: UIViewController {
     @IBOutlet var treeButton: UIButton!
     @IBOutlet var resetTag: UIButton!
     @IBOutlet var rainButton: UIButton!
+    @IBOutlet var cloudsButton: UIButton!
     @IBOutlet var stopRainButton: UIButton!
     @IBOutlet var rainSkyImageView: UIImageView!
     @IBOutlet var rainFogImageView: UIImageView!
+    @IBOutlet var snowFogImageView: UIImageView!
     
     var currentTreeTag: Int = 0
     var appearTreeTag: Int = 0
@@ -126,12 +128,32 @@ class TreeViewController: UIViewController {
         }
     }
     
+    @IBAction func makeSnow(){
+        UIView.animate(withDuration: 2.0) { () -> Void in
+            _ = UIImage (named: "rainSky.png")
+            self.rainSkyImageView.alpha = 1.0
+            _ = UIImage (named: "snowFog.png")
+            self.snowFogImageView.alpha = 1.0
+        }
+        
+    }
+    @IBAction func makeClouds() {
+        UIView.animate(withDuration: 2.0) { () -> Void in
+            _ = UIImage(named: "rainSky.png")
+            self.rainSkyImageView.alpha = 1.0
+            _ = UIImage(named: "rainFog.png")
+            self.rainFogImageView.alpha = 1.0
+        }
+    }
+    
     @IBAction func stopRain() {
         UIView.animate(withDuration: 2.0) { () -> Void in
             _ = UIImage(named: "rainSky.png")
             self.rainSkyImageView.alpha = 0.0
             _ = UIImage(named: "rainFog.png")
             self.rainFogImageView.alpha = 0.0
+            _ = UIImage(named: "snowFog.png")
+            self.snowFogImageView.alpha = 0.0
         }
     }
     
@@ -163,9 +185,9 @@ class TreeViewController: UIViewController {
     
     @IBAction func closeParticle() {
         UIView.animate(withDuration: 2.0) { () -> Void in
-
-        self.scene.removeAllChildren()
-        
+            
+            self.scene.removeAllChildren()
+            
         }
     }
     
