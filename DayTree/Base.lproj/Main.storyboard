@@ -217,7 +217,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60u-hr-vBp">
                                 <rect key="frame" x="164" y="102" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show"/>
                                 <connections>
                                     <action selector="showTreeWithSender:" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Yjj-wz-73w"/>
                                 </connections>
@@ -227,14 +226,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-72-I1a">
-                                <rect key="frame" x="164" y="130" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="reset"/>
-                                <connections>
-                                    <action selector="resetCurrentTreeTag" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="qfT-xv-Hf7"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainFog.png" translatesAutoresizingMaskIntoConstraints="NO" id="fyU-MX-9pD">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,7 +256,6 @@
                         <outlet property="rainButton" destination="iza-Xy-OkE" id="0b4-p5-9JU"/>
                         <outlet property="rainFogImageView" destination="fyU-MX-9pD" id="jD2-nc-yW2"/>
                         <outlet property="rainSkyImageView" destination="9rJ-Na-ho4" id="sF1-aw-idq"/>
-                        <outlet property="resetTag" destination="oPZ-72-I1a" id="BDf-77-dgB"/>
                         <outlet property="stopRainButton" destination="3pH-Uc-W8k" id="2dp-Wx-rgu"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
                     </connections>
@@ -396,6 +386,9 @@
                                 <rect key="frame" x="111" y="475" width="51" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AuthorButton.png"/>
+                                <connections>
+                                    <action selector="showReviewAlert" destination="eBi-gG-rhp" eventType="touchUpInside" id="jgy-3Z-qXP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-lM-aQY">
                                 <rect key="frame" x="213" y="476" width="50" height="50"/>

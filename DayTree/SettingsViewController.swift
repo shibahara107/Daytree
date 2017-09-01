@@ -8,6 +8,7 @@
 
 import UIKit
 import Accounts
+import StoreKit
 
 class SettingsViewController: UIViewController {
     
@@ -22,6 +23,35 @@ class SettingsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showReviewAlert() {
+        let alert = UIAlertController(title: "Review",
+                                      message: "Thank you for using DayTree. We'd love to hear your feedback!",
+                                      preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel,
+                                         handler: nil)
+        alert.addAction(cancelAction)
+        
+        let reviewAction = UIAlertAction(title: "Review",
+                                         style: .default,
+                                         handler: {
+                                            (action:UIAlertAction!) -> Void in
+                                                // iOS 10.3未満の処理
+                                            if let url = URL(string: "itms-apps://itunes.apple.com/app/id{アプリのID}?action=write-review") {
+                                                if #available(iOS 10.0, *) {
+                                                    UIApplication.shared.open(url, options: [:])
+                                                }
+                                                else {
+                                                    UIApplication.shared.openURL(url)
+                                                }
+                                            }
+        })
+        
+        alert.addAction(reviewAction)
     }
     
     @IBAction func IntroView() {
