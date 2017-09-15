@@ -9,9 +9,7 @@
 import UIKit
 import Photos
 
-
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ViewController: UIViewController {
     
     var searchResults:[Any] = []
     var currentTreeTag: Int = 0
@@ -150,6 +148,75 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateTableView.reloadData()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func getDocumentsURL() -> NSURL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return documentsURL as NSURL
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            print("missing image at: \(path)")
+        }
+        return image
+    }
+    
+    //入る場所を指定してる
+    func fileInDocumentsDirectory(filename: String) -> String {
+        
+        let fileURL = getDocumentsURL().appendingPathComponent(filename)
+        return fileURL!.path
+        
+    }
+    
+    @IBAction func IntroView() {
+        self.performSegue(withIdentifier: "toIntroView", sender: nil)
+    }
+    
+    //Segue準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toCellViewController") {
+            let subVC: CellViewController = (segue.destination as? CellViewController)!
+            //CellViewControllerのselectedDateTextに選択された値を設定する
+            subVC.selectedDate = selectedDateText
+            subVC.selectedContent = selectedContentText
+            subVC.selectedNumber = selectedNumberText
+            subVC.number0 = number
+        }
+    }
+    
+    
+    @IBAction func returnTableView(segue: UIStoryboardSegue) {}
+}
+
+extension ViewController : UITableViewDelegate {
+    // MARK: - This is UITableViewDelegate
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    /// セルの個数を指定するデリゲートメソッド（必須）
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive) {
+            return filtered.count
+        }
+        return entryArray.count
+        
+    }
+    
+    
+}
+
+extension ViewController : UISearchBarDelegate {
+    // MARK: - This is UISearchBarDelegate
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = false
     }
@@ -204,6 +271,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.dateTableView.reloadData()
     }
     
+    func setupSearchBar() {
+        if let navigationBarFrame = navigationController?.navigationBar.bounds {
+            let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
+            searchBar.delegate = self
+            searchBar.barTintColor = UIColor.white
+            searchBar.placeholder = "Search"
+            searchBar.showsCancelButton = true
+            searchBar.autocapitalizationType = UITextAutocapitalizationType.none
+            searchBar.keyboardType = UIKeyboardType.default
+            navigationItem.titleView = searchBar
+            navigationItem.titleView?.frame = searchBar.frame
+            self.searchBar = searchBar
+            //            searchBar.becomeFirstResponder()
+        }
+    }
+    
+}
+
+extension ViewController : UITableViewDataSource {
+    // MARK: - This is UITableViewDataSource
     
     //Cellを挿入または削除しようとした際に呼び出される
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -221,41 +308,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("Delete")
             self.userDefaults.set(self.entryArray, forKey: "Key")
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    private func setupSearchBar() {
-        if let navigationBarFrame = navigationController?.navigationBar.bounds {
-            let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
-            searchBar.delegate = self
-            searchBar.barTintColor = UIColor.white
-            searchBar.placeholder = "Search"
-            searchBar.showsCancelButton = true
-            searchBar.autocapitalizationType = UITextAutocapitalizationType.none
-            searchBar.keyboardType = UIKeyboardType.default
-            navigationItem.titleView = searchBar
-            navigationItem.titleView?.frame = searchBar.frame
-            self.searchBar = searchBar
-            //            searchBar.becomeFirstResponder()
-        }
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    /// セルの個数を指定するデリゲートメソッド（必須）
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filtered.count
-        }
-        return entryArray.count
-        
     }
     
     /// セルに値を設定するデータソースメソッド（必須）
@@ -299,7 +351,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-    
+
     //Cellが選択された場合
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         //[indexPath.row]から日付を探し値を設定
@@ -317,45 +369,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
         
     }
-    
-    func getDocumentsURL() -> NSURL {
-        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        return documentsURL as NSURL
-    }
-    
-    func loadImageFromPath(path: String) -> UIImage? {
-        let image = UIImage(contentsOfFile: path)
-        if image == nil {
-            print("missing image at: \(path)")
-        }
-        return image
-    }
-    
-    //入る場所を指定してる
-    func fileInDocumentsDirectory(filename: String) -> String {
-        
-        let fileURL = getDocumentsURL().appendingPathComponent(filename)
-        return fileURL!.path
-        
-    }
-    
-    @IBAction func IntroView() {
-        self.performSegue(withIdentifier: "toIntroView", sender: nil)
-    }
-    
-    //Segue準備
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toCellViewController") {
-            let subVC: CellViewController = (segue.destination as? CellViewController)!
-            //CellViewControllerのselectedDateTextに選択された値を設定する
-            subVC.selectedDate = selectedDateText
-            subVC.selectedContent = selectedContentText
-            subVC.selectedNumber = selectedNumberText
-            subVC.number0 = number
-        }
-    }
-    
-    
-    @IBAction func returnTableView(segue: UIStoryboardSegue) {}
-}
 
+
+}
