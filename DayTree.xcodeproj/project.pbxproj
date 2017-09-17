@@ -59,6 +59,9 @@
 		9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2311F59754D005147F5 /* treeTabUnselected.png */; };
 		9224D2621F59754D005147F5 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2321F59754D005147F5 /* White.png */; };
 		923176311F36E68A002FE288 /* Green8.png in Resources */ = {isa = PBXBuildFile; fileRef = 923176291F36E68A002FE288 /* Green8.png */; };
+		923934931F6E4A350046BA14 /* frozen-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934921F6E4A350046BA14 /* frozen-planet.png */; };
+		923934951F6E4D150046BA14 /* better-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934941F6E4D150046BA14 /* better-planet.png */; };
+		923934971F6E71F60046BA14 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934961F6E71F60046BA14 /* PlanetViewController.swift */; };
 		923D8A421E80F08B00981375 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D8A411E80F08B00981375 /* CellViewController.swift */; };
 		923D8A451E810C1200981375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923D8A431E810C1200981375 /* Main.storyboard */; };
 		92428A121E4DD26700E82D0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92428A111E4DD26700E82D0B /* AppDelegate.swift */; };
@@ -161,6 +164,9 @@
 		9224D2311F59754D005147F5 /* treeTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeTabUnselected.png; sourceTree = "<group>"; };
 		9224D2321F59754D005147F5 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		923176291F36E68A002FE288 /* Green8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Green8.png; path = ../../../Desktop/Green8.png; sourceTree = "<group>"; };
+		923934921F6E4A350046BA14 /* frozen-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frozen-planet.png"; path = "Image/frozen-planet.png"; sourceTree = SOURCE_ROOT; };
+		923934941F6E4D150046BA14 /* better-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "better-planet.png"; path = "Image/better-planet.png"; sourceTree = SOURCE_ROOT; };
+		923934961F6E71F60046BA14 /* PlanetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 		923D8A411E80F08B00981375 /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		923D8A441E810C1200981375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92428A0E1E4DD26700E82D0B /* DayTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				9224D2031F59754D005147F5 /* Add.png */,
+				923934921F6E4A350046BA14 /* frozen-planet.png */,
+				923934941F6E4D150046BA14 /* better-planet.png */,
 				9224D2041F59754D005147F5 /* AuthorButton.png */,
 				9224D2051F59754D005147F5 /* Back2.png */,
 				9224D2061F59754D005147F5 /* Blue0.png */,
@@ -349,6 +357,7 @@
 				925655391F358FE2005B5852 /* TreeViewController.swift */,
 				925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */,
 				925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */,
+				923934961F6E71F60046BA14 /* PlanetViewController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
@@ -521,8 +530,10 @@
 				92428A4B1E4DDD3800E82D0B /* img4.jpg in Resources */,
 				9224D23E1F59754D005147F5 /* Blue8.png in Resources */,
 				9224D2491F59754D005147F5 /* Green3.png in Resources */,
+				923934931F6E4A350046BA14 /* frozen-planet.png in Resources */,
 				9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */,
 				92428A471E4DDD3800E82D0B /* img0.jpg in Resources */,
+				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
 				9224D25E1F59754D005147F5 /* snowFog.png in Resources */,
@@ -731,6 +742,7 @@
 			files = (
 				92BB79F81F492741000A55F1 /* Extensions.swift in Sources */,
 				923D8A421E80F08B00981375 /* CellViewController.swift in Sources */,
+				923934971F6E71F60046BA14 /* PlanetViewController.swift in Sources */,
 				925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */,
 				925D1DDB1F4FC775002E1CF7 /* IntroViewController.swift in Sources */,
 				92428A141E4DD26700E82D0B /* ViewController.swift in Sources */,

@@ -9,6 +9,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Planet View Controller-->
+        <scene sceneID="4FL-Yz-jTN">
+            <objects>
+                <viewController storyboardIdentifier="planetViewController" id="zBX-p4-T68" customClass="PlanetViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9bM-14-VdH"/>
+                        <viewControllerLayoutGuide type="bottom" id="D2U-YV-Xxl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5i-4G-SkF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frozen-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzT-gM-vfu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="better-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="g5w-y3-8Ci">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-jd-VjH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backToView" destination="zBX-p4-T68" eventType="touchUpInside" id="uWB-Pj-weE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKD-62-jyM">
+                                <rect key="frame" x="136" y="494" width="102" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="betterPlanetImageView" destination="g5w-y3-8Ci" id="0gT-Df-zBA"/>
+                        <outlet property="reStartButton" destination="4Pw-jd-VjH" id="T18-v5-Do3"/>
+                        <outlet property="tapLabel" destination="TKD-62-jyM" id="eGf-S5-6j2"/>
+                        <segue destination="Fsb-EZ-NoC" kind="show" identifier="reStart" id="Liz-KM-7jM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9S-hZ-ja7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5999999999999" y="-1299.400299850075"/>
+        </scene>
         <!--Trees-->
         <scene sceneID="c90-53-H5y">
             <objects>
@@ -289,7 +337,7 @@
         <!--Entries-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -384,10 +432,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SettingsScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-bu-qym">
-                                <rect key="frame" x="0.0" y="-37" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79g-62-3PO">
                                 <rect key="frame" x="112" y="378" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -509,7 +553,7 @@
         <!--Parent Tab Bar Controller-->
         <scene sceneID="SKy-d7-kSt">
             <objects>
-                <tabBarController id="Fsb-EZ-NoC" customClass="ParentTabBarController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="parentTabBarController" id="Fsb-EZ-NoC" customClass="ParentTabBarController" customModule="DayTree" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rxi-hh-B4Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -547,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWt-Kz-JwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-598" y="138"/>
+            <point key="canvasLocation" x="-641" y="139"/>
         </scene>
         <!--Item-->
         <scene sceneID="RRI-fD-clT">
@@ -597,14 +641,15 @@
         <image name="RainButton.png" width="100" height="100"/>
         <image name="RainFog.png" width="1000" height="1781"/>
         <image name="RainSky.png" width="1000" height="1781"/>
-        <image name="SettingsScreen.png" width="1000" height="1781"/>
         <image name="ShareButton.png" width="200" height="200"/>
         <image name="Sky.png" width="500" height="891"/>
         <image name="ThanksButton.png" width="200" height="200"/>
         <image name="White.png" width="500" height="227"/>
+        <image name="better-planet.png" width="900" height="1600"/>
+        <image name="frozen-planet.png" width="900" height="1600"/>
         <image name="snowFog.png" width="1000" height="1781"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q3Q-BD-x3q"/>
+        <segue reference="ML7-68-IBj"/>
     </inferredMetricsTieBreakers>
 </document>

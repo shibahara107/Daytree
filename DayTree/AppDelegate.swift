@@ -16,6 +16,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // UserDefaultsを使ってフラグを保持する
+        let userDefault = UserDefaults.standard
+        // "firstLaunch"をキーに、Bool型の値を保持する
+        let dict = ["firstLaunch": true]
+        // デフォルト値登録
+        // ※すでに値が更新されていた場合は、更新後の値のままになる
+        userDefault.register(defaults: dict)
+        
+        // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
+        if userDefault.bool(forKey: "firstLaunch") {
+            
+            //windowを生成
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //Viewcontrollerを指定
+            let IntroViewController = storyboard.instantiateViewController(withIdentifier: "IntroView")
+            //rootViewControllerに入れる
+            self.window?.rootViewController = IntroViewController
+            //表示
+            self.window?.makeKeyAndVisible()
+            
+            userDefault.set(false, forKey: "firstLaunch")
+            print("First Launch")
+        }
+        
+        print("Launch")
+        
         return true
     }
 

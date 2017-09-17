@@ -11,6 +11,8 @@ import EAIntroView
 
 class IntroViewController: UIViewController, EAIntroDelegate {
     
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let page1 = EAIntroPage()
@@ -43,6 +45,17 @@ class IntroViewController: UIViewController, EAIntroDelegate {
     func introDidFinish(_ introView: EAIntroView!, wasSkipped: Bool) {
         print("Finished")
         self.dismiss(animated: false, completion: nil)
+        
+        //windowを生成
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        //Storyboardを指定
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //Viewcontrollerを指定
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "parentTabBarController")
+        //rootViewControllerに入れる
+        self.window?.rootViewController = ViewController
+        //表示
+        self.window?.makeKeyAndVisible()
     }
     
     override func didReceiveMemoryWarning() {

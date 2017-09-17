@@ -29,6 +29,8 @@ class TreeViewController: UIViewController {
     
     let userdefaults = UserDefaults.standard
     
+    var window: UIWindow?
+    
     override func viewWillAppear(_ animated: Bool) {
         
         self.appearTreeTag = 0
@@ -106,6 +108,17 @@ class TreeViewController: UIViewController {
             self.currentTreeTag = 0
             self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
             print(self.currentTreeTag)
+            
+            //windowを生成
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //Viewcontrollerを指定
+            let planetViewController = storyboard.instantiateViewController(withIdentifier: "planetViewController")
+            //rootViewControllerに入れる
+            self.window?.rootViewController = planetViewController
+            //表示
+            self.window?.makeKeyAndVisible()
         }
     }
     
