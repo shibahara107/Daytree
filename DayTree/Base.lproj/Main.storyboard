@@ -73,6 +73,30 @@
                                 <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-Rc-yGB">
+                                <rect key="frame" x="128" y="96" width="130" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-ZL-WdP">
+                                <rect key="frame" x="-4" y="74" width="100" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderRight.png" translatesAutoresizingMaskIntoConstraints="NO" id="j1R-bT-Z5z">
+                                <rect key="frame" x="215" y="35" width="128" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderLeft.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Lq-1H-Nab">
+                                <rect key="frame" x="48" y="96" width="130" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="105" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderLeft.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpY-jR-4Qk">
+                                <rect key="frame" x="242" y="96" width="100" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ThunderClouds.png" translatesAutoresizingMaskIntoConstraints="NO" id="WjC-Mz-wlj">
+                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunWeatherSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-ap-yMD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -284,7 +308,7 @@
                                 <state key="normal" image="BrightButton.png"/>
                                 <connections>
                                     <action selector="closeParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Lue-U4-0AI"/>
-                                    <action selector="stopRain" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="yzN-4a-cWQ"/>
+                                    <action selector="normWeather" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="KcC-Xe-ZzT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iza-Xy-OkE">
@@ -320,17 +344,35 @@
                                     <action selector="to37" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="0cz-DS-SsZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-ec-j5K">
+                                <rect key="frame" x="235" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="setupParticle" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="p4z-bI-ta8"/>
+                                    <action selector="thunderSky" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="bvJ-lU-Z09"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-Rx-ZDJ">
+                                <rect key="frame" x="235" y="58" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="thunderDown" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="Ewz-Ad-hNH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trees" id="h7o-NW-fbE"/>
                     <connections>
                         <outlet property="cloudsButton" destination="P1F-c5-VzM" id="eFw-Lb-LlC"/>
+                        <outlet property="normWeatherButton" destination="3pH-Uc-W8k" id="02e-ht-cca"/>
                         <outlet property="rainButton" destination="iza-Xy-OkE" id="0b4-p5-9JU"/>
                         <outlet property="rainFogImageView" destination="fyU-MX-9pD" id="jD2-nc-yW2"/>
                         <outlet property="rainSkyImageView" destination="9rJ-Na-ho4" id="sF1-aw-idq"/>
-                        <outlet property="stopRainButton" destination="3pH-Uc-W8k" id="2dp-Wx-rgu"/>
                         <outlet property="sunnySkyImageView" destination="2HH-ap-yMD" id="dnY-aC-zd0"/>
+                        <outlet property="thunderCloudsImageView" destination="WjC-Mz-wlj" id="SZq-dQ-D0f"/>
                         <outlet property="to37Button" destination="fEE-tk-Tpb" id="Fmf-92-Nky"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
                     </connections>
@@ -650,6 +692,9 @@
         <image name="ShareButton.png" width="200" height="200"/>
         <image name="SunWeatherSky.png" width="500" height="891"/>
         <image name="ThanksButton.png" width="200" height="200"/>
+        <image name="ThunderClouds.png" width="500" height="891"/>
+        <image name="ThunderLeft.png" width="200" height="366"/>
+        <image name="ThunderRight.png" width="200" height="366"/>
         <image name="White.png" width="500" height="227"/>
         <image name="better-planet.png" width="900" height="1600"/>
         <image name="frozen-planet.png" width="900" height="1600"/>

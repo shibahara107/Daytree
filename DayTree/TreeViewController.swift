@@ -16,12 +16,17 @@ class TreeViewController: UIViewController {
     @IBOutlet var resetTag: UIButton!
     @IBOutlet var rainButton: UIButton!
     @IBOutlet var cloudsButton: UIButton!
-    @IBOutlet var stopRainButton: UIButton!
+    @IBOutlet var normWeatherButton: UIButton!
     @IBOutlet var rainSkyImageView: UIImageView!
     @IBOutlet var rainFogImageView: UIImageView!
     @IBOutlet var sunnySkyImageView: UIImageView!
+    @IBOutlet var thunderCloudsImageView: UIImageView!
+    @IBOutlet var thunderImageView: UIImageView!
     
     @IBOutlet var to37Button: UIButton!
+    
+    var thunderTag: Int = 0
+    var thunderTagArray: [Int] = []
     
     var currentTreeTag: Int = 0
     var appearTreeTag: Int = 0
@@ -145,7 +150,8 @@ class TreeViewController: UIViewController {
     }
     
     @IBAction func makeRain() {
-        UIView.animate(withDuration: 5.0) { () -> Void in
+        clearWeather()
+        UIView.animate(withDuration: 3.0) { () -> Void in
             _ = UIImage(named: "rainSky.png")
             self.rainSkyImageView.alpha = 1.0
             _ = UIImage(named: "rainFog.png")
@@ -153,14 +159,43 @@ class TreeViewController: UIViewController {
         }
     }
     
+    @IBAction func thunderSky() {
+        UIView.animate(withDuration: 3.0) { () -> Void in
+            _ = UIImage(named: "rainSky.png")
+            self.rainSkyImageView.alpha = 1.0
+            _ = UIImage(named: "rainFog.png")
+            self.rainFogImageView.alpha = 1.0
+            _ = UIImage(named: "ThunderClouds.png")
+            self.thunderCloudsImageView.alpha = 1.0
+        }
+    }
+    
+    @IBAction func thunderDown() {
+        clearWeather()
+        thunderTagArray = [101, 102, 103, 104, 105]
+        thunderTag = Int(arc4random_uniform(5))
+        print("thunderTag:", self.thunderTagArray[thunderTag])
+        let thunderImageView = self.view.viewWithTag(self.thunderTagArray[thunderTag]) as! UIImageView
+        thunderImageView.alpha = 1.0
+        UIView.animate(withDuration: 0.5) { () -> Void in
+            thunderImageView.alpha = 0.0
+        }
+        
+    }
+    
     @IBAction func makeSunny() {
+        clearWeather()
         UIView.animate(withDuration: 5.0) { () -> Void in
             _ = UIImage(named: "SunWeatherSky.png")
             self.sunnySkyImageView.alpha = 1.0
         }
     }
     
-    @IBAction func stopRain() {
+    @IBAction func normWeather() {
+        clearWeather()
+    }
+    
+    func clearWeather() {
         UIView.animate(withDuration: 2.0) { () -> Void in
             _ = UIImage(named: "rainSky.png")
             self.rainSkyImageView.alpha = 0.0
