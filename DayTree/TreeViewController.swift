@@ -17,6 +17,7 @@ class TreeViewController: UIViewController {
     @IBOutlet var rainButton: UIButton!
     @IBOutlet var cloudsButton: UIButton!
     @IBOutlet var normWeatherButton: UIButton!
+    @IBOutlet var normSkyImageView: UIImageView!
     @IBOutlet var rainSkyImageView: UIImageView!
     @IBOutlet var rainFogImageView: UIImageView!
     @IBOutlet var sunnySkyImageView: UIImageView!
@@ -27,6 +28,7 @@ class TreeViewController: UIViewController {
     
     var thunderTag: Int = 0
     var thunderTagArray: [Int] = []
+    let thunderDownButton = UIButton()
     
     var currentTreeTag: Int = 0
     var appearTreeTag: Int = 0
@@ -167,14 +169,26 @@ class TreeViewController: UIViewController {
             self.rainFogImageView.alpha = 1.0
             _ = UIImage(named: "ThunderClouds.png")
             self.thunderCloudsImageView.alpha = 1.0
+            
+            self.thunderDownButton.frame = CGRect(x: 0, y: 65, width: 900, height: 1600)
+            self.thunderDownButton.backgroundColor = UIColor.clear
+            self.thunderDownButton.addTarget(self, action: #selector(TreeViewController.thunderDown(sender:)), for: .touchUpInside)
+            self.view.addSubview(self.thunderDownButton)
+            print("thunderDownButton SUCCESS")
+            
         }
     }
     
-    @IBAction func thunderDown() {
+    func thunderDown (sender: Any) {
         _ = UIImage(named: "rainSky.png")
         rainSkyImageView.alpha = 0.0
-        UIView.animate(withDuration: 0.3 ) { () -> Void in
+        _ = UIImage(named: "SunWeatherSky.png")
+        self.sunnySkyImageView.alpha = 0.0
+        _ = UIImage(named: "NormWeatherSky.png")
+        self.normSkyImageView.alpha = 0.0
+        UIView.animate(withDuration: 0.1 ) { () -> Void in
             self.rainSkyImageView.alpha = 1.0
+            self.normSkyImageView.alpha = 1.0
         }
         thunderTagArray = [101, 102, 103, 104, 105]
         thunderTag = Int(arc4random_uniform(5))
@@ -189,7 +203,7 @@ class TreeViewController: UIViewController {
     
     @IBAction func makeSunny() {
         clearWeather()
-        UIView.animate(withDuration: 5.0) { () -> Void in
+        UIView.animate(withDuration: 3.0) { () -> Void in
             _ = UIImage(named: "SunWeatherSky.png")
             self.sunnySkyImageView.alpha = 1.0
         }
@@ -209,6 +223,10 @@ class TreeViewController: UIViewController {
             self.sunnySkyImageView.alpha = 0.0
             _ = UIImage(named: "ThundercClouds.png")
             self.thunderCloudsImageView.alpha = 0.0
+            self.thunderDownButton.removeFromSuperview()
+            print("thunderDownButton REMOVED")
+            
+            self.closeParticle()
         }
     }
     
@@ -238,7 +256,7 @@ class TreeViewController: UIViewController {
         self.view.addSubview(self.skView!)
     }
     
-    @IBAction func closeParticle() {
+    func closeParticle() {
         UIView.animate(withDuration: 2.0) { () -> Void in
             
             self.scene.removeAllChildren()
