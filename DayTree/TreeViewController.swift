@@ -171,7 +171,11 @@ class TreeViewController: UIViewController {
     }
     
     @IBAction func thunderDown() {
-        clearWeather()
+        _ = UIImage(named: "rainSky.png")
+        rainSkyImageView.alpha = 0.0
+        UIView.animate(withDuration: 0.3 ) { () -> Void in
+            self.rainSkyImageView.alpha = 1.0
+        }
         thunderTagArray = [101, 102, 103, 104, 105]
         thunderTag = Int(arc4random_uniform(5))
         print("thunderTag:", self.thunderTagArray[thunderTag])
@@ -203,6 +207,8 @@ class TreeViewController: UIViewController {
             self.rainFogImageView.alpha = 0.0
             _ = UIImage(named: "SunWeatherSky.png")
             self.sunnySkyImageView.alpha = 0.0
+            _ = UIImage(named: "ThundercClouds.png")
+            self.thunderCloudsImageView.alpha = 0.0
         }
     }
     
