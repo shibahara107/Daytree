@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fsb-EZ-NoC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fsb-EZ-NoC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,12 +29,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-jd-VjH">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-jd-VjH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="backToView" destination="zBX-p4-T68" eventType="touchUpInside" id="uWB-Pj-weE"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKD-62-jyM">
                                 <rect key="frame" x="136" y="494" width="102" height="52"/>
@@ -48,7 +45,6 @@
                     </view>
                     <connections>
                         <outlet property="betterPlanetImageView" destination="g5w-y3-8Ci" id="0gT-Df-zBA"/>
-                        <outlet property="reStartButton" destination="4Pw-jd-VjH" id="T18-v5-Do3"/>
                         <outlet property="tapLabel" destination="TKD-62-jyM" id="eGf-S5-6j2"/>
                         <segue destination="Fsb-EZ-NoC" kind="show" identifier="reStart" id="Liz-KM-7jM"/>
                     </connections>
@@ -316,6 +312,14 @@
                                     <action selector="makeSnow" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="IbD-Hk-VHm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-tk-Tpb">
+                                <rect key="frame" x="290" y="172" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="to37" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="0cz-DS-SsZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -327,6 +331,7 @@
                         <outlet property="rainSkyImageView" destination="9rJ-Na-ho4" id="sF1-aw-idq"/>
                         <outlet property="snowFogImageView" destination="hFH-ci-P4R" id="QYW-gz-KlW"/>
                         <outlet property="stopRainButton" destination="3pH-Uc-W8k" id="2dp-Wx-rgu"/>
+                        <outlet property="to37Button" destination="fEE-tk-Tpb" id="Fmf-92-Nky"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
                     </connections>
                 </viewController>

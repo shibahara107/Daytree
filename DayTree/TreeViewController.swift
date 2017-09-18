@@ -21,6 +21,8 @@ class TreeViewController: UIViewController {
     @IBOutlet var rainFogImageView: UIImageView!
     @IBOutlet var snowFogImageView: UIImageView!
     
+    @IBOutlet var to37Button: UIButton!
+    
     var currentTreeTag: Int = 0
     var appearTreeTag: Int = 0
     
@@ -129,6 +131,16 @@ class TreeViewController: UIViewController {
         self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
         print(self.currentTreeTag)
         self.appearTreeTag = 0
+        print("appearTreeTag:", appearTreeTag)
+    }
+    
+    @IBAction func to37() {
+        self.userdefaults.integer(forKey: "Tree")
+        self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
+        self.currentTreeTag = 37
+        self.userdefaults.set(self.currentTreeTag, forKey: "Tree")
+        print(self.currentTreeTag)
+        self.appearTreeTag = 37
         print("appearTreeTag:", appearTreeTag)
     }
     
