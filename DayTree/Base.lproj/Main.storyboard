@@ -65,12 +65,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sky.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Rm-i6-pjb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NormWeatherSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Rm-i6-pjb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="9rJ-Na-ho4">
                                 <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunWeatherSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-ap-yMD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White.png" translatesAutoresizingMaskIntoConstraints="NO" id="iir-Fd-D90">
@@ -274,10 +278,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowFog.png" translatesAutoresizingMaskIntoConstraints="NO" id="hFH-ci-P4R">
-                                <rect key="frame" x="-1" y="0.0" width="377" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-Uc-W8k">
                                 <rect key="frame" x="337" y="28" width="29" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -309,7 +309,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="makeSnow" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="IbD-Hk-VHm"/>
+                                    <action selector="makeSunny" destination="Xzu-ie-f4Z" eventType="touchUpInside" id="u5O-aK-axF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-tk-Tpb">
@@ -329,8 +329,8 @@
                         <outlet property="rainButton" destination="iza-Xy-OkE" id="0b4-p5-9JU"/>
                         <outlet property="rainFogImageView" destination="fyU-MX-9pD" id="jD2-nc-yW2"/>
                         <outlet property="rainSkyImageView" destination="9rJ-Na-ho4" id="sF1-aw-idq"/>
-                        <outlet property="snowFogImageView" destination="hFH-ci-P4R" id="QYW-gz-KlW"/>
                         <outlet property="stopRainButton" destination="3pH-Uc-W8k" id="2dp-Wx-rgu"/>
+                        <outlet property="sunnySkyImageView" destination="2HH-ap-yMD" id="dnY-aC-zd0"/>
                         <outlet property="to37Button" destination="fEE-tk-Tpb" id="Fmf-92-Nky"/>
                         <outlet property="treeButton" destination="60u-hr-vBp" id="SpP-Mv-QSa"/>
                     </connections>
@@ -643,16 +643,16 @@
         <image name="Green8.png" width="500" height="465"/>
         <image name="HelpButton.png" width="200" height="200"/>
         <image name="LightTree.png" width="500" height="1676"/>
+        <image name="NormWeatherSky.png" width="500" height="891"/>
         <image name="RainButton.png" width="100" height="100"/>
         <image name="RainFog.png" width="1000" height="1781"/>
         <image name="RainSky.png" width="1000" height="1781"/>
         <image name="ShareButton.png" width="200" height="200"/>
-        <image name="Sky.png" width="500" height="891"/>
+        <image name="SunWeatherSky.png" width="500" height="891"/>
         <image name="ThanksButton.png" width="200" height="200"/>
         <image name="White.png" width="500" height="227"/>
         <image name="better-planet.png" width="900" height="1600"/>
         <image name="frozen-planet.png" width="900" height="1600"/>
-        <image name="snowFog.png" width="1000" height="1781"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ML7-68-IBj"/>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		33CD4AD349C82F6DE594F0BB /* Pods_DayTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8619713DED6921AA6406FB63 /* Pods_DayTree.framework */; };
 		8EA0A365C2CDC600BA26019F /* Pods_DayTreeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3506DD321FEAF9BEF51F98A9 /* Pods_DayTreeTests.framework */; };
-		9224D2011F597140005147F5 /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2001F597140005147F5 /* snow.sks */; };
 		9224D2331F59754D005147F5 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2031F59754D005147F5 /* Add.png */; };
 		9224D2341F59754D005147F5 /* AuthorButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2041F59754D005147F5 /* AuthorButton.png */; };
 		9224D2351F59754D005147F5 /* Back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2051F59754D005147F5 /* Back2.png */; };
@@ -52,8 +51,6 @@
 		9224D25A1F59754D005147F5 /* settingsTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22A1F59754D005147F5 /* settingsTabUnselected.png */; };
 		9224D25B1F59754D005147F5 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22B1F59754D005147F5 /* ShareButton.png */; };
 		9224D25C1F59754D005147F5 /* Sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22C1F59754D005147F5 /* Sky.png */; };
-		9224D25D1F59754D005147F5 /* Snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22D1F59754D005147F5 /* Snow.png */; };
-		9224D25E1F59754D005147F5 /* snowFog.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22E1F59754D005147F5 /* snowFog.png */; };
 		9224D25F1F59754D005147F5 /* ThanksButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D22F1F59754D005147F5 /* ThanksButton.png */; };
 		9224D2601F59754D005147F5 /* treeTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2301F59754D005147F5 /* treeTabSelected.png */; };
 		9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2311F59754D005147F5 /* treeTabUnselected.png */; };
@@ -78,6 +75,8 @@
 		92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A441E4DDD3800E82D0B /* img5.jpg */; };
 		92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A451E4DDD3800E82D0B /* img6.jpg */; };
 		92428A4E1E4DDD3800E82D0B /* img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92428A461E4DDD3800E82D0B /* img7.jpg */; };
+		925420621F6FBDE700CDCEA5 /* NormWeatherSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 925420611F6FBDE700CDCEA5 /* NormWeatherSky.png */; };
+		925420641F6FC32D00CDCEA5 /* SunWeatherSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 925420631F6FC32D00CDCEA5 /* SunWeatherSky.png */; };
 		925655381F358F86005B5852 /* treeClear.png in Resources */ = {isa = PBXBuildFile; fileRef = 925655371F358F86005B5852 /* treeClear.png */; };
 		9256553A1F358FE2005B5852 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925655391F358FE2005B5852 /* TreeViewController.swift */; };
 		925D1DDB1F4FC775002E1CF7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */; };
@@ -114,7 +113,6 @@
 		4F5449FC280A79518A1552F6 /* Pods-DayTreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeTests/Pods-DayTreeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8619713DED6921AA6406FB63 /* Pods_DayTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9052B390CA62DDE1A2DA21CD /* Pods-DayTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTree/Pods-DayTree.release.xcconfig"; sourceTree = "<group>"; };
-		9224D2001F597140005147F5 /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		9224D2031F59754D005147F5 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		9224D2041F59754D005147F5 /* AuthorButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AuthorButton.png; sourceTree = "<group>"; };
 		9224D2051F59754D005147F5 /* Back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back2.png; sourceTree = "<group>"; };
@@ -157,8 +155,6 @@
 		9224D22A1F59754D005147F5 /* settingsTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsTabUnselected.png; sourceTree = "<group>"; };
 		9224D22B1F59754D005147F5 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareButton.png; sourceTree = "<group>"; };
 		9224D22C1F59754D005147F5 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
-		9224D22D1F59754D005147F5 /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snow.png; sourceTree = "<group>"; };
-		9224D22E1F59754D005147F5 /* snowFog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowFog.png; sourceTree = "<group>"; };
 		9224D22F1F59754D005147F5 /* ThanksButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThanksButton.png; sourceTree = "<group>"; };
 		9224D2301F59754D005147F5 /* treeTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeTabSelected.png; sourceTree = "<group>"; };
 		9224D2311F59754D005147F5 /* treeTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeTabUnselected.png; sourceTree = "<group>"; };
@@ -189,6 +185,8 @@
 		92428A441E4DDD3800E82D0B /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
 		92428A451E4DDD3800E82D0B /* img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img6.jpg; sourceTree = "<group>"; };
 		92428A461E4DDD3800E82D0B /* img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img7.jpg; sourceTree = "<group>"; };
+		925420611F6FBDE700CDCEA5 /* NormWeatherSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NormWeatherSky.png; path = Image/NormWeatherSky.png; sourceTree = SOURCE_ROOT; };
+		925420631F6FC32D00CDCEA5 /* SunWeatherSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SunWeatherSky.png; path = Image/SunWeatherSky.png; sourceTree = SOURCE_ROOT; };
 		925655371F358F86005B5852 /* treeClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treeClear.png; path = "../../../Desktop/New Folder With Items/treeClear.png"; sourceTree = "<group>"; };
 		925655391F358FE2005B5852 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
 		925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +259,7 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				925420611F6FBDE700CDCEA5 /* NormWeatherSky.png */,
 				9224D2031F59754D005147F5 /* Add.png */,
 				923934921F6E4A350046BA14 /* frozen-planet.png */,
 				923934941F6E4D150046BA14 /* better-planet.png */,
@@ -305,8 +304,6 @@
 				9224D22A1F59754D005147F5 /* settingsTabUnselected.png */,
 				9224D22B1F59754D005147F5 /* ShareButton.png */,
 				9224D22C1F59754D005147F5 /* Sky.png */,
-				9224D22D1F59754D005147F5 /* Snow.png */,
-				9224D22E1F59754D005147F5 /* snowFog.png */,
 				9224D22F1F59754D005147F5 /* ThanksButton.png */,
 				9224D2301F59754D005147F5 /* treeTabSelected.png */,
 				9224D2311F59754D005147F5 /* treeTabUnselected.png */,
@@ -340,10 +337,10 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
+				925420631F6FC32D00CDCEA5 /* SunWeatherSky.png */,
 				9224D2021F59754D005147F5 /* Image */,
 				92BD3C891F4AB4E600980251 /* rain.sks */,
 				92E122571F4D128100304727 /* rain2.sks */,
-				9224D2001F597140005147F5 /* snow.sks */,
 				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
 				923176291F36E68A002FE288 /* Green8.png */,
 				925655371F358F86005B5852 /* treeClear.png */,
@@ -521,6 +518,7 @@
 				9224D23D1F59754D005147F5 /* Blue7.png in Resources */,
 				9224D2591F59754D005147F5 /* settingsTabSelected.png in Resources */,
 				9224D24D1F59754D005147F5 /* HelpButton.png in Resources */,
+				925420621F6FBDE700CDCEA5 /* NormWeatherSky.png in Resources */,
 				9224D24E1F59754D005147F5 /* Intro1.png in Resources */,
 				9224D2621F59754D005147F5 /* White.png in Resources */,
 				92428A4E1E4DDD3800E82D0B /* img7.jpg in Resources */,
@@ -536,14 +534,12 @@
 				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
-				9224D25E1F59754D005147F5 /* snowFog.png in Resources */,
 				9224D2361F59754D005147F5 /* Blue0.png in Resources */,
 				9224D2371F59754D005147F5 /* Blue1.png in Resources */,
 				9224D2581F59754D005147F5 /* SettingsScreen.png in Resources */,
 				92428A1C1E4DD26700E82D0B /* LaunchScreen.storyboard in Resources */,
 				923176311F36E68A002FE288 /* Green8.png in Resources */,
 				9224D24B1F59754D005147F5 /* Green6.png in Resources */,
-				9224D2011F597140005147F5 /* snow.sks in Resources */,
 				923D8A451E810C1200981375 /* Main.storyboard in Resources */,
 				9224D25B1F59754D005147F5 /* ShareButton.png in Resources */,
 				92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */,
@@ -554,12 +550,12 @@
 				9224D2501F59754D005147F5 /* Intro3.png in Resources */,
 				9224D2601F59754D005147F5 /* treeTabSelected.png in Resources */,
 				9224D2531F59754D005147F5 /* LightTree.png in Resources */,
-				9224D25D1F59754D005147F5 /* Snow.png in Resources */,
 				9224D2541F59754D005147F5 /* RainButton.png in Resources */,
 				9224D23B1F59754D005147F5 /* Blue5.png in Resources */,
 				9224D2381F59754D005147F5 /* Blue2.png in Resources */,
 				9224D24F1F59754D005147F5 /* Intro2.png in Resources */,
 				9224D2421F59754D005147F5 /* Daytree2.png in Resources */,
+				925420641F6FC32D00CDCEA5 /* SunWeatherSky.png in Resources */,
 				9224D2431F59754D005147F5 /* DefaultEntry2.png in Resources */,
 				9224D2391F59754D005147F5 /* Blue3.png in Resources */,
 				925655381F358F86005B5852 /* treeClear.png in Resources */,

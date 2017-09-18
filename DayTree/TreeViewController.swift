@@ -19,7 +19,7 @@ class TreeViewController: UIViewController {
     @IBOutlet var stopRainButton: UIButton!
     @IBOutlet var rainSkyImageView: UIImageView!
     @IBOutlet var rainFogImageView: UIImageView!
-    @IBOutlet var snowFogImageView: UIImageView!
+    @IBOutlet var sunnySkyImageView: UIImageView!
     
     @IBOutlet var to37Button: UIButton!
     
@@ -145,7 +145,7 @@ class TreeViewController: UIViewController {
     }
     
     @IBAction func makeRain() {
-        UIView.animate(withDuration: 2.0) { () -> Void in
+        UIView.animate(withDuration: 5.0) { () -> Void in
             _ = UIImage(named: "rainSky.png")
             self.rainSkyImageView.alpha = 1.0
             _ = UIImage(named: "rainFog.png")
@@ -153,21 +153,10 @@ class TreeViewController: UIViewController {
         }
     }
     
-    @IBAction func makeSnow(){
-        UIView.animate(withDuration: 2.0) { () -> Void in
-            _ = UIImage (named: "rainSky.png")
-            self.rainSkyImageView.alpha = 1.0
-            _ = UIImage (named: "snowFog.png")
-            self.snowFogImageView.alpha = 1.0
-        }
-        
-    }
-    @IBAction func makeClouds() {
-        UIView.animate(withDuration: 2.0) { () -> Void in
-            _ = UIImage(named: "rainSky.png")
-            self.rainSkyImageView.alpha = 1.0
-            _ = UIImage(named: "rainFog.png")
-            self.rainFogImageView.alpha = 1.0
+    @IBAction func makeSunny() {
+        UIView.animate(withDuration: 5.0) { () -> Void in
+            _ = UIImage(named: "SunWeatherSky.png")
+            self.sunnySkyImageView.alpha = 1.0
         }
     }
     
@@ -177,8 +166,8 @@ class TreeViewController: UIViewController {
             self.rainSkyImageView.alpha = 0.0
             _ = UIImage(named: "rainFog.png")
             self.rainFogImageView.alpha = 0.0
-            _ = UIImage(named: "snowFog.png")
-            self.snowFogImageView.alpha = 0.0
+            _ = UIImage(named: "SunWeatherSky.png")
+            self.sunnySkyImageView.alpha = 0.0
         }
     }
     

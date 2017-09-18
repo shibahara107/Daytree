@@ -24,19 +24,23 @@ class PlanetViewController: UIViewController {
             self.betterPlanetImageView.alpha = 1.0
         }
         
-        UIView.animate(withDuration: 6.0) { () -> Void in
-            self.reStartButton.frame = CGRect(x: 0, y: 0, width: 900, height: 1600)
-            self.reStartButton.backgroundColor = UIColor.clear
-            self.reStartButton.addTarget(self, action: #selector(PlanetViewController.backToView(sender:)), for: .touchUpInside)
-            self.view.addSubview(self.reStartButton)
-            print("reStartButton SUCCESS")
+        let dispatchTime: DispatchTime = DispatchTime.now() + 5.0
+        DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
+            print("delay")
+            UIView.animate(withDuration: 2.0) { () -> Void in
+                self.reStartButton.frame = CGRect(x: 0, y: 0, width: 900, height: 1600)
+                self.reStartButton.backgroundColor = UIColor.clear
+                self.reStartButton.addTarget(self, action: #selector(PlanetViewController.backToView(sender:)), for: .touchUpInside)
+                self.view.addSubview(self.reStartButton)
+                print("reStartButton SUCCESS")
+                
+            }
             
-        }
-        
-        UIView.animate(withDuration: 7.0) { () -> Void in
-            self.tapLabel.alpha = 1.0
-            
-        }
+            UIView.animate(withDuration: 3.0) { () -> Void in
+                self.tapLabel.alpha = 1.0
+                
+            }
+        })
         
     }
     
