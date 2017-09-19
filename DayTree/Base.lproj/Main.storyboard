@@ -457,6 +457,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SettingsScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-S7-DO3">
+                                <rect key="frame" x="0.0" y="-32" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79g-62-3PO">
                                 <rect key="frame" x="112" y="378" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -485,15 +489,17 @@
                                 <rect key="frame" x="213" y="476" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ThanksButton.png"/>
+                                <connections>
+                                    <action selector="toURLWithSender:" destination="eBi-gG-rhp" eventType="touchUpInside" id="GDf-As-ryM"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SettingsScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-S7-DO3">
-                                <rect key="frame" x="0.0" y="-32" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Y4k-Jv-Uof"/>
+                    <connections>
+                        <outlet property="urlButton" destination="8d0-lM-aQY" id="5lm-AM-fML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynp-4e-xbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

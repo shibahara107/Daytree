@@ -46,9 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy/MM/dd"
-//            self.firstLaunchDateString = dateFormatter.string(from: Date(self.firstLaunchDate))
+            self.firstLaunchDateString = dateFormatter.string(from: (self.firstLaunchDate))
             
-            self.userdefaults.string(forKey: "firstDateString")
+            self.userdefaults.set(String(self.firstLaunchDateString), forKey: "firstDateString")
             
             print("First Launch:", firstLaunchDateString)
             

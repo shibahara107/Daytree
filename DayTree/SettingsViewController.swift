@@ -14,8 +14,11 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet var IntroButton: UIButton!
 //    var firstLaunchDate = Date()
+    
+    @IBOutlet var urlButton: UIButton!
 
     let userdefaults = UserDefaults.standard
+    var firstLaunch = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +28,20 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         print(self.userdefaults.string(forKey: "firstDateString"))
+        let firstLaunchDate = self.userdefaults.string(forKey: "firstDateString")
         
-//        print("yo:", firstLaunchDate)
-//        
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy/MM/dd"
-//        let firstLaunch = (dateFormatter.date(from: String(firstLaunchDate)))
-//
-//        let now = Date()
-//        
-//        let span = firstLaunch!.timeIntervalSince(now as Date)
-//        let daySpan = span/60/60/24
-//        print(daySpan)
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        self.firstLaunch = dateFormatter.date(from: firstLaunchDate!)!
+
+        let now = Date()
+        
+        let span = firstLaunch.timeIntervalSince(now as Date)
+        let daySpan = span/60/60/24
+        print(daySpan)
+        
+        urlButton.addTarget(self, action: "toURL", for: .touchUpInside)
         
     }
 
@@ -58,6 +62,10 @@ class SettingsViewController: UIViewController {
 //        print(daySpan)
 //    }
 //    
+    @IBAction func toURL(sender: AnyObject) {
+        UIApplication.shared.openURL(URL(string: "https://twitter.com/ANGLEprojects")!)
+    }
+    
     @IBAction func showReviewAlert() {
         let alert = UIAlertController(title: "Review",
                                       message: "Thank you for using DayTree. We'd love to hear your feedback!",
