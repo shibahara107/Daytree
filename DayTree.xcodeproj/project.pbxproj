@@ -55,7 +55,7 @@
 		9224D2601F59754D005147F5 /* treeTabSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2301F59754D005147F5 /* treeTabSelected.png */; };
 		9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2311F59754D005147F5 /* treeTabUnselected.png */; };
 		9224D2621F59754D005147F5 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2321F59754D005147F5 /* White.png */; };
-		923176311F36E68A002FE288 /* Green8.png in Resources */ = {isa = PBXBuildFile; fileRef = 923176291F36E68A002FE288 /* Green8.png */; };
+		923084BD1F715699008505C0 /* Green8.png in Resources */ = {isa = PBXBuildFile; fileRef = 923084BC1F715699008505C0 /* Green8.png */; };
 		923934931F6E4A350046BA14 /* frozen-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934921F6E4A350046BA14 /* frozen-planet.png */; };
 		923934951F6E4D150046BA14 /* better-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934941F6E4D150046BA14 /* better-planet.png */; };
 		923934971F6E71F60046BA14 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934961F6E71F60046BA14 /* PlanetViewController.swift */; };
@@ -164,7 +164,7 @@
 		9224D2301F59754D005147F5 /* treeTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeTabSelected.png; sourceTree = "<group>"; };
 		9224D2311F59754D005147F5 /* treeTabUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treeTabUnselected.png; sourceTree = "<group>"; };
 		9224D2321F59754D005147F5 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
-		923176291F36E68A002FE288 /* Green8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Green8.png; path = ../../../Desktop/Green8.png; sourceTree = "<group>"; };
+		923084BC1F715699008505C0 /* Green8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green8.png; sourceTree = "<group>"; };
 		923934921F6E4A350046BA14 /* frozen-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frozen-planet.png"; path = "Image/frozen-planet.png"; sourceTree = SOURCE_ROOT; };
 		923934941F6E4D150046BA14 /* better-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "better-planet.png"; path = "Image/better-planet.png"; sourceTree = SOURCE_ROOT; };
 		923934961F6E71F60046BA14 /* PlanetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +269,12 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				92EC3AED1F702F4300C1DA1D /* normButton.png */,
+				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
+				925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */,
+				925420661F6FD0BE00CDCEA5 /* ThunderLeft.png */,
+				925420671F6FD0BE00CDCEA5 /* ThunderRight.png */,
+				925420631F6FC32D00CDCEA5 /* SunWeatherSky.png */,
 				925420611F6FBDE700CDCEA5 /* NormWeatherSky.png */,
 				9224D2031F59754D005147F5 /* Add.png */,
 				923934921F6E4A350046BA14 /* frozen-planet.png */,
@@ -298,6 +304,7 @@
 				9224D21A1F59754D005147F5 /* Green4.png */,
 				9224D21B1F59754D005147F5 /* Green6.png */,
 				9224D21C1F59754D005147F5 /* Green7.png */,
+				923084BC1F715699008505C0 /* Green8.png */,
 				9224D21D1F59754D005147F5 /* HelpButton.png */,
 				9224D21E1F59754D005147F5 /* Intro1.png */,
 				9224D21F1F59754D005147F5 /* Intro2.png */,
@@ -347,17 +354,10 @@
 		92428A101E4DD26700E82D0B /* DayTree */ = {
 			isa = PBXGroup;
 			children = (
-				92EC3AED1F702F4300C1DA1D /* normButton.png */,
-				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
-				925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */,
-				925420661F6FD0BE00CDCEA5 /* ThunderLeft.png */,
-				925420671F6FD0BE00CDCEA5 /* ThunderRight.png */,
-				925420631F6FC32D00CDCEA5 /* SunWeatherSky.png */,
 				9224D2021F59754D005147F5 /* Image */,
 				92BD3C891F4AB4E600980251 /* rain.sks */,
 				92E122571F4D128100304727 /* rain2.sks */,
 				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
-				923176291F36E68A002FE288 /* Green8.png */,
 				925655371F358F86005B5852 /* treeClear.png */,
 				925FFF741E91EA13002F8223 /* NoImage.png */,
 				925FFF721E91EA0C002F8223 /* green.png */,
@@ -547,6 +547,7 @@
 				923934931F6E4A350046BA14 /* frozen-planet.png in Resources */,
 				9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */,
 				92428A471E4DDD3800E82D0B /* img0.jpg in Resources */,
+				923084BD1F715699008505C0 /* Green8.png in Resources */,
 				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
@@ -554,7 +555,6 @@
 				9224D2371F59754D005147F5 /* Blue1.png in Resources */,
 				9224D2581F59754D005147F5 /* SettingsScreen.png in Resources */,
 				92428A1C1E4DD26700E82D0B /* LaunchScreen.storyboard in Resources */,
-				923176311F36E68A002FE288 /* Green8.png in Resources */,
 				9224D24B1F59754D005147F5 /* Green6.png in Resources */,
 				923D8A451E810C1200981375 /* Main.storyboard in Resources */,
 				9224D25B1F59754D005147F5 /* ShareButton.png in Resources */,
