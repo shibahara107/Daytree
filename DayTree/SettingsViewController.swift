@@ -24,20 +24,20 @@ class SettingsViewController: UIViewController {
     
         // Do any additional setup after loading the view.
         
-        let firstLaunchDate = self.userdefaults.string(forKey: "firstDateString")!
+        print(self.userdefaults.string(forKey: "firstDateString"))
         
-        print("yo:", firstLaunchDate)
-        
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        let firstLaunch = (dateFormatter.date(from: String(firstLaunchDate)))
-
-        let now = Date()
-        
-        let span = firstLaunch!.timeIntervalSince(now as Date)
-        let daySpan = span/60/60/24
-        print(daySpan)
+//        print("yo:", firstLaunchDate)
+//        
+//        let date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy/MM/dd"
+//        let firstLaunch = (dateFormatter.date(from: String(firstLaunchDate)))
+//
+//        let now = Date()
+//        
+//        let span = firstLaunch!.timeIntervalSince(now as Date)
+//        let daySpan = span/60/60/24
+//        print(daySpan)
         
     }
 
