@@ -13,11 +13,32 @@ import StoreKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet var IntroButton: UIButton!
+//    var firstLaunchDate = Date()
+
+    let userdefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("SettingsView")
+    
         // Do any additional setup after loading the view.
+        
+        let firstLaunchDate = self.userdefaults.string(forKey: "firstDateString")!
+        
+        print("yo:", firstLaunchDate)
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let firstLaunch = (dateFormatter.date(from: String(firstLaunchDate)))
+
+        let now = Date()
+        
+        let span = firstLaunch!.timeIntervalSince(now as Date)
+        let daySpan = span/60/60/24
+        print(daySpan)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +46,18 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    @IBAction func usedDays() {
+//        self.userdefaults.object(forKey: "firstLaunch") as! Date
+//        self.firstLaunchDate = (self.userdefaults.object(forKey: "firstLaunch")) as! Date as NSDate
+//
+//        let firstLaunch = firstLaunchDate
+//        let now = NSDate()
+//        
+//        let span = firstLaunch.timeIntervalSince(now as Date)
+//        let daySpan = span/60/60/24
+//        print(daySpan)
+//    }
+//    
     @IBAction func showReviewAlert() {
         let alert = UIAlertController(title: "Review",
                                       message: "Thank you for using DayTree. We'd love to hear your feedback!",

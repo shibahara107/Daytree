@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    let userdefaults = UserDefaults.standard
+    let firstLaunchDate = Date()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -39,10 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //表示
             self.window?.makeKeyAndVisible()
             
-            userDefault.set(false, forKey: "firstLaunch")
+            self.userdefaults.string(forKey: "firstDateString")
+            self.userdefaults.set(self.firstLaunchDate, forKey: "firstDateString")
+
+            print("First Launch:", firstLaunchDate)
+
             print("First Launch")
         }
         
+        print(firstLaunchDate)
         print("Launch")
         
         return true
