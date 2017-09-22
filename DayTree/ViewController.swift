@@ -211,7 +211,6 @@ extension ViewController : UITableViewDelegate {
         
     }
     
-    
 }
 
 extension ViewController : UISearchBarDelegate {
@@ -231,10 +230,6 @@ extension ViewController : UISearchBarDelegate {
         searchBar.text = ""
         self.dateTableView.reloadData()
     }
-    
-    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    //        searchActive = false;
-    //    }
     
     // 検索ボタンが押された時に呼ばれる
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -351,7 +346,7 @@ extension ViewController : UITableViewDataSource {
         
         return cell
     }
-
+    
     //Cellが選択された場合
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         //[indexPath.row]から日付を探し値を設定
@@ -369,6 +364,6 @@ extension ViewController : UITableViewDataSource {
         print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
         
     }
-
-
+    
+    
 }

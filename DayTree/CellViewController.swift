@@ -95,11 +95,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: selectedDate))
         
         imageFromCameraRoll.contentMode = .scaleAspectFit
-        //        self.imageFromCameraRoll.layer.borderColor = UIColor.gray.cgColor
-        //        self.imageFromCameraRoll.layer.borderWidth = 1
-        
-        
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -107,7 +103,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         entryArray[number0][1] = cellContentTextField.text
         self.userDefaults.set(self.entryArray, forKey: "Key")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -135,7 +131,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageFromCameraRoll.contentMode = .scaleAspectFit
             imageFromCameraRoll.image = pickedImage
-
+            
             saveImage(image: pickedImage, path: fileInDocumentsDirectory(filename: selectedDate))
             
         }
@@ -157,10 +153,10 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     //入る場所を指定してる
     func fileInDocumentsDirectory(filename: String) -> String {
-    
+        
         let fileURL = getDocumentsURL().appendingPathComponent(filename)
         return fileURL!.path
-    
+        
     }
     
     //保存
@@ -170,12 +166,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         pngImageData?.write(toFile: path, atomically: true)
         //    let result = pngImageData!.writeToFile(path, atomically: true)
     }
-    
-    
-    
 }
-
-
 
 /*
  // MARK: - Navigation

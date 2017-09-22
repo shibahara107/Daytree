@@ -80,13 +80,10 @@
 		925420681F6FD0BE00CDCEA5 /* ThunderClouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */; };
 		925420691F6FD0BE00CDCEA5 /* ThunderLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 925420661F6FD0BE00CDCEA5 /* ThunderLeft.png */; };
 		9254206A1F6FD0BE00CDCEA5 /* ThunderRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 925420671F6FD0BE00CDCEA5 /* ThunderRight.png */; };
-		925655381F358F86005B5852 /* treeClear.png in Resources */ = {isa = PBXBuildFile; fileRef = 925655371F358F86005B5852 /* treeClear.png */; };
 		9256553A1F358FE2005B5852 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925655391F358FE2005B5852 /* TreeViewController.swift */; };
 		925D1DDB1F4FC775002E1CF7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */; };
 		925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */; };
 		925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */; };
-		925FFF731E91EA0C002F8223 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF721E91EA0C002F8223 /* green.png */; };
-		925FFF751E91EA13002F8223 /* NoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 925FFF741E91EA13002F8223 /* NoImage.png */; };
 		92BB79F81F492741000A55F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB79F71F492741000A55F1 /* Extensions.swift */; };
 		92BB79FA1F4936AA000A55F1 /* ANGLE.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F91F4936AA000A55F1 /* ANGLE.png */; };
 		92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92BD3C891F4AB4E600980251 /* rain.sks */; };
@@ -195,13 +192,10 @@
 		925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThunderClouds.png; path = Image/ThunderClouds.png; sourceTree = SOURCE_ROOT; };
 		925420661F6FD0BE00CDCEA5 /* ThunderLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThunderLeft.png; path = Image/ThunderLeft.png; sourceTree = SOURCE_ROOT; };
 		925420671F6FD0BE00CDCEA5 /* ThunderRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThunderRight.png; path = Image/ThunderRight.png; sourceTree = SOURCE_ROOT; };
-		925655371F358F86005B5852 /* treeClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = treeClear.png; path = "../../../Desktop/New Folder With Items/treeClear.png"; sourceTree = "<group>"; };
 		925655391F358FE2005B5852 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
 		925D1DDA1F4FC775002E1CF7 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTabBarController.swift; sourceTree = "<group>"; };
 		925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		925FFF721E91EA0C002F8223 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		925FFF741E91EA13002F8223 /* NoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoImage.png; sourceTree = "<group>"; };
 		92BB79F71F492741000A55F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		92BB79F91F4936AA000A55F1 /* ANGLE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ANGLE.png; path = ../../../Desktop/ANGLE.png; sourceTree = "<group>"; };
 		92BD3C891F4AB4E600980251 /* rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain.sks; sourceTree = "<group>"; };
@@ -269,6 +263,7 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
 				92EC3AED1F702F4300C1DA1D /* normButton.png */,
 				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
 				925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */,
@@ -357,10 +352,6 @@
 				9224D2021F59754D005147F5 /* Image */,
 				92BD3C891F4AB4E600980251 /* rain.sks */,
 				92E122571F4D128100304727 /* rain2.sks */,
-				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
-				925655371F358F86005B5852 /* treeClear.png */,
-				925FFF741E91EA13002F8223 /* NoImage.png */,
-				925FFF721E91EA0C002F8223 /* green.png */,
 				92428A111E4DD26700E82D0B /* AppDelegate.swift */,
 				92BB79F71F492741000A55F1 /* Extensions.swift */,
 				92428A131E4DD26700E82D0B /* ViewController.swift */,
@@ -576,8 +567,6 @@
 				9224D2431F59754D005147F5 /* DefaultEntry2.png in Resources */,
 				9224D2391F59754D005147F5 /* Blue3.png in Resources */,
 				925420681F6FD0BE00CDCEA5 /* ThunderClouds.png in Resources */,
-				925655381F358F86005B5852 /* treeClear.png in Resources */,
-				925FFF751E91EA13002F8223 /* NoImage.png in Resources */,
 				9224D2451F59754D005147F5 /* entryTabUnselected.png in Resources */,
 				9224D2461F59754D005147F5 /* Green0.png in Resources */,
 				9224D2481F59754D005147F5 /* Green2.png in Resources */,
@@ -585,7 +574,6 @@
 				9224D2571F59754D005147F5 /* RainSky.png in Resources */,
 				9224D25A1F59754D005147F5 /* settingsTabUnselected.png in Resources */,
 				9224D2521F59754D005147F5 /* IntroButton.png in Resources */,
-				925FFF731E91EA0C002F8223 /* green.png in Resources */,
 				9224D2401F59754D005147F5 /* Camera2.png in Resources */,
 				9224D2471F59754D005147F5 /* Green1.png in Resources */,
 				9224D2561F59754D005147F5 /* RainFog.png in Resources */,

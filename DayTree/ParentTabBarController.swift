@@ -19,7 +19,6 @@ class ParentTabBarController: UITabBarController, UITabBarControllerDelegate {
         setupBigCenterButton()
         self.delegate = self
         
-        
         if let count = self.tabBar.items?.count {
             for i in 0...count-1 {
                 let imageNameForSelectedState   = selectesIconNames[i]
@@ -63,9 +62,7 @@ class ParentTabBarController: UITabBarController, UITabBarControllerDelegate {
         button.isUserInteractionEnabled = false
         button.backgroundColor = UIColor(rgb: 0x00A651)
         button.setImage(UIImage(named: "Image-1"), for: .normal)
-        
-        //button.addTarget(self, action: #selector(self.tapBigCenter(sender:)), for: .touchUpInside)
-        
+
         tabBar.addSubview(button)
     }
     

@@ -13,10 +13,10 @@ import StoreKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet var IntroButton: UIButton!
-//    var firstLaunchDate = Date()
+    //    var firstLaunchDate = Date()
     
     @IBOutlet var urlButton: UIButton!
-
+    
     let userdefaults = UserDefaults.standard
     var firstLaunch = Date()
     
@@ -24,44 +24,33 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         print("SettingsView")
-    
+        
         // Do any additional setup after loading the view.
         
-        print(self.userdefaults.string(forKey: "firstDateString"))
+        print(self.userdefaults.string(forKey: "firstDateString")!)
         let firstLaunchDate = self.userdefaults.string(forKey: "firstDateString")
         
-        let date = Date()
+        _ = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         self.firstLaunch = dateFormatter.date(from: firstLaunchDate!)!
-
+        
         let now = Date()
         
         let span = firstLaunch.timeIntervalSince(now as Date)
         let daySpan = span/60/60/24
+        print(span)
         print(daySpan)
         
-        urlButton.addTarget(self, action: "toURL", for: .touchUpInside)
+        urlButton.addTarget(self, action: Selector(("toURL")), for: .touchUpInside)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func usedDays() {
-//        self.userdefaults.object(forKey: "firstLaunch") as! Date
-//        self.firstLaunchDate = (self.userdefaults.object(forKey: "firstLaunch")) as! Date as NSDate
-//
-//        let firstLaunch = firstLaunchDate
-//        let now = NSDate()
-//        
-//        let span = firstLaunch.timeIntervalSince(now as Date)
-//        let daySpan = span/60/60/24
-//        print(daySpan)
-//    }
-//    
     @IBAction func toURL(sender: AnyObject) {
         UIApplication.shared.openURL(URL(string: "https://twitter.com/ANGLEprojects")!)
     }
@@ -81,7 +70,7 @@ class SettingsViewController: UIViewController {
                                          style: .default,
                                          handler: {
                                             (action:UIAlertAction!) -> Void in
-                                                // iOS 10.3未満の処理
+                                            // iOS 10.3未満の処理
                                             if let url = URL(string: "itms-apps://itunes.apple.com/app/id{アプリのID}?action=write-review") {
                                                 if #available(iOS 10.0, *) {
                                                     UIApplication.shared.open(url, options: [:])
@@ -106,7 +95,7 @@ class SettingsViewController: UIViewController {
         let shareWebsite = NSURL(string: "")!
         let shareImage = UIImage(named: "Intro1.png")
         
-        let activityItems = [shareText, shareWebsite, shareImage] as [Any]
+        let activityItems = [shareText, shareWebsite, shareImage!] as [Any]
         
         // 初期化処理
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
@@ -123,15 +112,15 @@ class SettingsViewController: UIViewController {
         self.present(activityVC, animated: true, completion: nil)
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
