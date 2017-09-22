@@ -59,6 +59,7 @@
 		923934931F6E4A350046BA14 /* frozen-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934921F6E4A350046BA14 /* frozen-planet.png */; };
 		923934951F6E4D150046BA14 /* better-planet.png in Resources */ = {isa = PBXBuildFile; fileRef = 923934941F6E4D150046BA14 /* better-planet.png */; };
 		923934971F6E71F60046BA14 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923934961F6E71F60046BA14 /* PlanetViewController.swift */; };
+		923C4E051F7514050065330D /* ANGLE.png in Resources */ = {isa = PBXBuildFile; fileRef = 923C4E041F7514050065330D /* ANGLE.png */; };
 		923D8A421E80F08B00981375 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D8A411E80F08B00981375 /* CellViewController.swift */; };
 		923D8A451E810C1200981375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923D8A431E810C1200981375 /* Main.storyboard */; };
 		92428A121E4DD26700E82D0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92428A111E4DD26700E82D0B /* AppDelegate.swift */; };
@@ -85,7 +86,6 @@
 		925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */; };
 		925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */; };
 		92BB79F81F492741000A55F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB79F71F492741000A55F1 /* Extensions.swift */; };
-		92BB79FA1F4936AA000A55F1 /* ANGLE.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BB79F91F4936AA000A55F1 /* ANGLE.png */; };
 		92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92BD3C891F4AB4E600980251 /* rain.sks */; };
 		92E122581F4D128100304727 /* rain2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E122571F4D128100304727 /* rain2.sks */; };
 		92EC3AEF1F702F4300C1DA1D /* normButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EC3AED1F702F4300C1DA1D /* normButton.png */; };
@@ -165,6 +165,7 @@
 		923934921F6E4A350046BA14 /* frozen-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frozen-planet.png"; path = "Image/frozen-planet.png"; sourceTree = SOURCE_ROOT; };
 		923934941F6E4D150046BA14 /* better-planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "better-planet.png"; path = "Image/better-planet.png"; sourceTree = SOURCE_ROOT; };
 		923934961F6E71F60046BA14 /* PlanetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		923C4E041F7514050065330D /* ANGLE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANGLE.png; sourceTree = "<group>"; };
 		923D8A411E80F08B00981375 /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		923D8A441E810C1200981375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92428A0E1E4DD26700E82D0B /* DayTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +198,6 @@
 		925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTabBarController.swift; sourceTree = "<group>"; };
 		925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		92BB79F71F492741000A55F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		92BB79F91F4936AA000A55F1 /* ANGLE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ANGLE.png; path = ../../../Desktop/ANGLE.png; sourceTree = "<group>"; };
 		92BD3C891F4AB4E600980251 /* rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain.sks; sourceTree = "<group>"; };
 		92E122571F4D128100304727 /* rain2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain2.sks; sourceTree = "<group>"; };
 		92EC3AED1F702F4300C1DA1D /* normButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normButton.png; path = Image/normButton.png; sourceTree = SOURCE_ROOT; };
@@ -263,7 +263,6 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				92BB79F91F4936AA000A55F1 /* ANGLE.png */,
 				92EC3AED1F702F4300C1DA1D /* normButton.png */,
 				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
 				925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */,
@@ -350,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				9224D2021F59754D005147F5 /* Image */,
+				923C4E041F7514050065330D /* ANGLE.png */,
 				92BD3C891F4AB4E600980251 /* rain.sks */,
 				92E122571F4D128100304727 /* rain2.sks */,
 				92428A111E4DD26700E82D0B /* AppDelegate.swift */,
@@ -514,7 +514,6 @@
 			files = (
 				9224D2331F59754D005147F5 /* Add.png in Resources */,
 				9224D2511F59754D005147F5 /* Intro4.png in Resources */,
-				92BB79FA1F4936AA000A55F1 /* ANGLE.png in Resources */,
 				9224D23C1F59754D005147F5 /* Blue6.png in Resources */,
 				92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */,
 				9224D2551F59754D005147F5 /* rainDrops.png in Resources */,
@@ -540,6 +539,7 @@
 				92428A471E4DDD3800E82D0B /* img0.jpg in Resources */,
 				923084BD1F715699008505C0 /* Green8.png in Resources */,
 				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
+				923C4E051F7514050065330D /* ANGLE.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
 				9224D2361F59754D005147F5 /* Blue0.png in Resources */,
