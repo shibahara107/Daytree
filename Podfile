@@ -7,6 +7,7 @@ target 'DayTree' do
 
   # Pods for DayTree
   pod  'EAIntroView'
+  pod  ‘FSCalendar’
 
   target 'DayTreeTests' do
     inherit! :search_paths

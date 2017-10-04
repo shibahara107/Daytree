@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3D3AADF399C0C832BF06BE3E8EBC6AD"
+               BlueprintIdentifier = "D3A78CC1D5B07503297AD472B218F691"
                BuildableName = "Pods_DayTree.framework"
                BlueprintName = "Pods-DayTree"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3D3AADF399C0C832BF06BE3E8EBC6AD"
+            BlueprintIdentifier = "D3A78CC1D5B07503297AD472B218F691"
             BuildableName = "Pods_DayTree.framework"
             BlueprintName = "Pods-DayTree"
             ReferencedContainer = "container:Pods.xcodeproj">
