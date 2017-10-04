@@ -1,5 +1,5 @@
 //
-//  CalendarCell.swift
+//  CalendarCellCollectionViewCell.swift
 //  DayTree
 //
 //  Created by Yoshi on 2017/10/04.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CalendarCell: UICollectionViewCell {
+class CalendarCellCollectionViewCell: UICollectionViewCell {
     
 }

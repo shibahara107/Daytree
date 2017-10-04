@@ -19,7 +19,6 @@
 		6194D195FCD9253BBD2C640AD48A6532 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E56F42BB48D77D056DA933BC0C3F555 /* Foundation.framework */; };
 		6859057A8DADE8C26EA4A3AE0892616C /* Pods-DayTree-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD494C969A400CF369EB8FEE31C3481 /* Pods-DayTree-dummy.m */; };
 		88D765C02C87EFBB236003AB780C49FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E56F42BB48D77D056DA933BC0C3F555 /* Foundation.framework */; };
-		92F092211F83CFF7009DFB56 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F092201F83CFF7009DFB56 /* CalendarCell.swift */; };
 		A478E5EBAE50F3EA1506CDB2D33A5657 /* Pods-DayTreeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D8AA0F3C754771588875E67C2B03E8 /* Pods-DayTreeTests-dummy.m */; };
 		C41EB9232CC9C9A7A1D5A6F221D1EDB4 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A15185785BB645A1B5F82A6260D86 /* EAIntroPage.m */; };
 		CCD230BC815C775651F2054A0DAE32E7 /* EARestrictedScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E94109EC092E0F99134443A672DB5D /* EARestrictedScrollView-dummy.m */; };
@@ -93,7 +92,6 @@
 		8E56F42BB48D77D056DA933BC0C3F555 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		91EEDA699809CD7D319D433B6766B995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D8AA0F3C754771588875E67C2B03E8 /* Pods-DayTreeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DayTreeTests-dummy.m"; sourceTree = "<group>"; };
-		92F092201F83CFF7009DFB56 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarCell.swift; path = ../DayTree/CalendarCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9935596849657E6EF4876BE3E47D78CB /* Pods-DayTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DayTree.debug.xcconfig"; sourceTree = "<group>"; };
 		99A53AB076F3D716505DA0096ECE5059 /* Pods-DayTreeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DayTreeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				92F092201F83CFF7009DFB56 /* CalendarCell.swift */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				161092595C9F7FCC74AC9A68F699F491 /* Frameworks */,
 				B54D46A865F99294C44F3650DBD5721F /* Pods */,
@@ -522,7 +519,6 @@
 				C41EB9232CC9C9A7A1D5A6F221D1EDB4 /* EAIntroPage.m in Sources */,
 				342FD0CF5A19992200CDCD679F2D71C6 /* EAIntroView-dummy.m in Sources */,
 				EA705D6826863CE9297E92D5673EEDCE /* EAIntroView.m in Sources */,
-				92F092211F83CFF7009DFB56 /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
