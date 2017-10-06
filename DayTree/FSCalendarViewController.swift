@@ -33,7 +33,6 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     let userDefaults = UserDefaults.standard
     var entryArray = [[String]]()
-    var number0: Int!
     var addedDateStringCompare: String = ""
     
     override func viewDidLoad() {
@@ -57,9 +56,6 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         navigationController?.navigationBar.tintColor = UIColor.white
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : Any]
-        
-        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
-        addedDateStringCompare = entryArray[number0][2]
         
     }
     
@@ -93,7 +89,33 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         print("selected dates is \(selectedDates)")
         
-//        if selectedDates ==
+        var number0: Int = 0
+        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        
+        for _ in 0...Int(entryArray.count-1) {
+            if selectedDates.contains(entryArray[number0][2]) {
+            print("BOYAH")
+            break
+        }else {
+            number0 = number0+1
+            print("NOPE")
+        }
+        }
+        
+//        if selectedDates.contains(entryArray[number0][2]) {
+//            print("YEAH")
+//        }else {
+//            for _ in 0...Int(entryArray.count-1) {
+//                number0 = number0 + 1
+//                if selectedDates.contains(entryArray[number0][2]) {
+//                    print("BOYA")
+//                    break
+//                }else{
+//                    print("NOPE")
+//                    break
+//                }
+//            }
+//        }
         
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
@@ -116,10 +138,10 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-//            let identifier = ["cell_month", "cell_week"][indexPath.row]
-//            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
+            //            let identifier = ["cell_month", "cell_week"][indexPath.row]
+            //            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
@@ -154,14 +176,14 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
 }
 
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
 

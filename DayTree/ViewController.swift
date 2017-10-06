@@ -369,7 +369,7 @@ extension ViewController : UITableViewDataSource {
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)
         
-        print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
+        print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1])  セル作成日：\(entryArray[entryArray.count - indexPath.row-1][2])")
         
     }
     
