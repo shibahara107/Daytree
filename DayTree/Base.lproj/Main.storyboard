@@ -690,7 +690,7 @@
                                 <rect key="frame" x="0.0" y="380" width="375" height="287"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="1Tp-jv-5jI" userLabel="Footer">
-                                    <rect key="frame" x="0.0" y="254.5" width="375" height="69"/>
+                                    <rect key="frame" x="0.0" y="256.5" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRx-a3-Dr7">
@@ -746,11 +746,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="101" id="x55-VX-oAG">
-                                        <rect key="frame" x="0.0" y="143.5" width="375" height="101"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="103" id="x55-VX-oAG">
+                                        <rect key="frame" x="0.0" y="143.5" width="375" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x55-VX-oAG" id="r2v-UR-rXz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN6-0S-fTh">
@@ -801,7 +801,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="8mo-r5-qGj">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="97a-II-Idx">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="97a-II-Idx">
                             <connections>
                                 <segue destination="eBi-gG-rhp" kind="presentation" id="ED5-Hz-Eee"/>
                             </connections>
@@ -816,6 +816,7 @@
                         <outlet property="animationSwitch" destination="xRx-a3-Dr7" id="r3Q-HJ-kNW"/>
                         <outlet property="calendar" destination="KFf-Y2-ewo" id="Ten-Eo-2WB"/>
                         <outlet property="calendarHeightConstraint" destination="3ET-HH-6Iy" id="Sdf-Mb-htM"/>
+                        <outlet property="dateTableView" destination="X9v-oc-30m" id="ShP-D1-Khy"/>
                         <outlet property="tableView" destination="X9v-oc-30m" id="r99-BM-dzu"/>
                     </connections>
                 </viewController>

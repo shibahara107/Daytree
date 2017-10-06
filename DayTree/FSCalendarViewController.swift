@@ -35,6 +35,10 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     var entryArray = [[String]]()
     var addedDateStringCompare: String = ""
     
+    var filtered: [[String]] = []
+    @IBOutlet var dateTableView: UITableView!
+    var selectedDates: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,8 +89,11 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        filtered.removeAll()
+        self.dateTableView.reloadData()
         print("did select date \(self.dateFormatter.string(from: date))")
-        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+//        selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+        selectedDates = self.dateFormatter.string(from: date)
         print("selected dates is \(selectedDates)")
         
         var number0: Int = 0
@@ -94,28 +101,33 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         
         for _ in 0...Int(entryArray.count-1) {
             if selectedDates.contains(entryArray[number0][2]) {
-            print("BOYAH")
+            print("Found Same Date")
+                
+                print("Filter Start")
+                
+                filtered.removeAll()
+                
+                for i in entryArray {
+                    
+                    if i[2].contains(selectedDates) {
+                        
+                        filtered.append(i)
+                        
+                    } else {
+                        
+                    }
+                    
+                }
+                
+                print("Filter End")
+                self.dateTableView.reloadData()
+                
             break
         }else {
             number0 = number0+1
-            print("NOPE")
+            print("No Date Found")
         }
         }
-        
-//        if selectedDates.contains(entryArray[number0][2]) {
-//            print("YEAH")
-//        }else {
-//            for _ in 0...Int(entryArray.count-1) {
-//                number0 = number0 + 1
-//                if selectedDates.contains(entryArray[number0][2]) {
-//                    print("BOYA")
-//                    break
-//                }else{
-//                    print("NOPE")
-//                    break
-//                }
-//            }
-//        }
         
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
@@ -129,24 +141,104 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     // MARK:- UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return [0,5][section]
+        return filtered.count
+
+//        return [0,5][section]
     }
     
+//    func switchTableView() {
+//        print("Filter Start")
+//
+//        filtered.removeAll()
+//
+//        for i in entryArray {
+//
+//            if i[2].contains(selectedDates) {
+//
+//                filtered.append(i)
+//
+//            } else {
+//
+//            }
+//
+//        }
+//
+//        print("Filter End")
+//        self.dateTableView.reloadData()
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            //            let identifier = ["cell_month", "cell_week"][indexPath.row]
-            //            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-            
-            return cell
+        
+        var temporaryArray = [[String]]()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell;
+            temporaryArray = filtered
+
+        
+        // セルを取得する
+        // セルに表示する値を設定する
+        // cell.textLabel!.text = fruits[indexPath.row]
+        
+        
+        
+        // Tag番号 1 で UIImageView インスタンスの生成
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
+            imageView.image = image
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-            return cell
+            imageView.image = UIImage(named: "DefaultEntry2.png")
         }
+        cell.viewWithTag(1)!.layer.masksToBounds = true
+        cell.viewWithTag(1)!.layer.cornerRadius = cell.viewWithTag(1)!.frame.height/2
+        
+        // Tag番号 ２ で UILabel インスタンスの生成
+        let label1 = cell.viewWithTag(2) as! UILabel
+        label1.text = "\(temporaryArray[temporaryArray.count - indexPath.row-1][0])"
+        
+        // Tag番号 ３ で UILabel インスタンスの生成
+        let entry = cell.viewWithTag(3) as! UILabel
+        entry.text = "\(temporaryArray[temporaryArray.count - indexPath.row-1][1])"
+        
+        let label2 = cell.viewWithTag(4) as! UILabel
+        label2.text = "No.\(temporaryArray.count - indexPath.row)"
+        
+        return cell
+        
+//        if indexPath.section == 0 {
+//            //            let identifier = ["cell_month", "cell_week"][indexPath.row]
+//            //            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+//
+//            return cell
+//        } else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+//            return cell
+//        }
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            print("missing image at: \(path)")
+        }
+        return image
+    }
+    
+    //入る場所を指定してる
+    func fileInDocumentsDirectory(filename: String) -> String {
+        
+        let fileURL = getDocumentsURL().appendingPathComponent(filename)
+        return fileURL!.path
+        
+    }
+    
+    func getDocumentsURL() -> NSURL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return documentsURL as NSURL
     }
     
     
