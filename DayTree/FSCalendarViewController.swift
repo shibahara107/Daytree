@@ -13,7 +13,6 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: FSCalendar!
-    @IBOutlet weak var animationSwitch: UISwitch!
     
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
@@ -38,6 +37,13 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     var filtered: [[String]] = []
     @IBOutlet var dateTableView: UITableView!
     var selectedDates: String!
+    
+    var selectedDateText: String = ""
+    var selectedContentText: String = ""
+    var selectedNumberText: String = ""
+    var number: Int = 0
+    
+    var temporaryArray = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,31 +152,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filtered.count
-
-//        return [0,5][section]
     }
-    
-//    func switchTableView() {
-//        print("Filter Start")
-//
-//        filtered.removeAll()
-//
-//        for i in entryArray {
-//
-//            if i[2].contains(selectedDates) {
-//
-//                filtered.append(i)
-//
-//            } else {
-//
-//            }
-//
-//        }
-//
-//        print("Filter End")
-//        self.dateTableView.reloadData()
-//    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var temporaryArray = [[String]]()
@@ -178,14 +161,6 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell;
             temporaryArray = filtered
 
-        
-        // セルを取得する
-        // セルに表示する値を設定する
-        // cell.textLabel!.text = fruits[indexPath.row]
-        
-        
-        
-        // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
         if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
             imageView.image = image
@@ -207,17 +182,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         label2.text = "No.\(temporaryArray.count - indexPath.row)"
         
         return cell
-        
-//        if indexPath.section == 0 {
-//            //            let identifier = ["cell_month", "cell_week"][indexPath.row]
-//            //            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-//
-//            return cell
-//        } else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-//            return cell
-//        }
+
     }
     
     func loadImageFromPath(path: String) -> UIImage? {
@@ -246,10 +211,21 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 0 {
-            let scope: FSCalendarScope = (indexPath.row == 0) ? .month : .week
-            self.calendar.setScope(scope, animated: self.animationSwitch.isOn)
-        }
+        
+        temporaryArray = filtered
+
+        //[indexPath.row]から日付を探し値を設定
+        selectedDateText = "\(temporaryArray[temporaryArray.count - indexPath.row-1][0])"
+        
+        selectedContentText = "\(temporaryArray[temporaryArray.count - indexPath.row-1][1])"
+        
+        selectedNumberText = "No.\(temporaryArray.count - indexPath.row)"
+        
+        //CellViewControllerへ遷移するためにSegueを呼び出す
+        performSegue(withIdentifier: "toCalendarCellViewController",sender: nil)
+        
+        print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1])  セル作成日：\(entryArray[entryArray.count - indexPath.row-1][2])")
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -260,12 +236,23 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     @IBAction func toggleClicked(sender: AnyObject) {
         if self.calendar.scope == .month {
-            self.calendar.setScope(.week, animated: self.animationSwitch.isOn)
+            self.calendar.setScope(.week, animated: true)
         } else {
-            self.calendar.setScope(.month, animated: self.animationSwitch.isOn)
+            self.calendar.setScope(.month, animated: true)
         }
     }
     
+    //Segue準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toCalendarCellViewController") {
+            let subVC: CalendarCellViewController = (segue.destination as? CalendarCellViewController)!
+            //CellViewControllerのselectedDateTextに選択された値を設定する
+            subVC.selectedDate = selectedDateText
+            subVC.selectedContent = selectedContentText
+            subVC.selectedNumber = selectedNumberText
+        }
+    }
+
 }
 
 /*

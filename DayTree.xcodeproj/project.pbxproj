@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33CD4AD349C82F6DE594F0BB /* Pods_DayTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8619713DED6921AA6406FB63 /* Pods_DayTree.framework */; };
 		8EA0A365C2CDC600BA26019F /* Pods_DayTreeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3506DD321FEAF9BEF51F98A9 /* Pods_DayTreeTests.framework */; };
+		921AAA671F87961A00E17D86 /* settingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 921AAA661F87961900E17D86 /* settingsButton.png */; };
 		9224D2331F59754D005147F5 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2031F59754D005147F5 /* Add.png */; };
 		9224D2341F59754D005147F5 /* AuthorButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2041F59754D005147F5 /* AuthorButton.png */; };
 		9224D2351F59754D005147F5 /* Back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2051F59754D005147F5 /* Back2.png */; };
@@ -86,6 +87,7 @@
 		925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */; };
 		925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */; };
 		92698B111F84F252000487BB /* FSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92698B101F84F252000487BB /* FSCalendarViewController.swift */; };
+		9282B5CB1F87856E0046F0A6 /* CalendarCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */; };
 		92BB79F81F492741000A55F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB79F71F492741000A55F1 /* Extensions.swift */; };
 		92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92BD3C891F4AB4E600980251 /* rain.sks */; };
 		92E122581F4D128100304727 /* rain2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E122571F4D128100304727 /* rain2.sks */; };
@@ -116,6 +118,7 @@
 		4F5449FC280A79518A1552F6 /* Pods-DayTreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeTests/Pods-DayTreeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8619713DED6921AA6406FB63 /* Pods_DayTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9052B390CA62DDE1A2DA21CD /* Pods-DayTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTree/Pods-DayTree.release.xcconfig"; sourceTree = "<group>"; };
+		921AAA661F87961900E17D86 /* settingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsButton.png; path = Image/settingsButton.png; sourceTree = SOURCE_ROOT; };
 		9224D2031F59754D005147F5 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		9224D2041F59754D005147F5 /* AuthorButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AuthorButton.png; sourceTree = "<group>"; };
 		9224D2051F59754D005147F5 /* Back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back2.png; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 		925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTabBarController.swift; sourceTree = "<group>"; };
 		925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		92698B101F84F252000487BB /* FSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewController.swift; sourceTree = "<group>"; };
+		9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellViewController.swift; sourceTree = "<group>"; };
 		92BB79F71F492741000A55F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		92BD3C891F4AB4E600980251 /* rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain.sks; sourceTree = "<group>"; };
 		92E122571F4D128100304727 /* rain2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain2.sks; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				921AAA661F87961900E17D86 /* settingsButton.png */,
 				92EC3AED1F702F4300C1DA1D /* normButton.png */,
 				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
 				925420651F6FD0BE00CDCEA5 /* ThunderClouds.png */,
@@ -363,6 +368,7 @@
 				925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */,
 				925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */,
 				923934961F6E71F60046BA14 /* PlanetViewController.swift */,
+				9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */,
 				92698B101F84F252000487BB /* FSCalendarViewController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
@@ -580,6 +586,7 @@
 				9224D2401F59754D005147F5 /* Camera2.png in Resources */,
 				9224D2471F59754D005147F5 /* Green1.png in Resources */,
 				9224D2561F59754D005147F5 /* RainFog.png in Resources */,
+				921AAA671F87961A00E17D86 /* settingsButton.png in Resources */,
 				92428A191E4DD26700E82D0B /* Assets.xcassets in Resources */,
 				9224D2441F59754D005147F5 /* entryTabSelected.png in Resources */,
 				92428A491E4DDD3800E82D0B /* img2.jpg in Resources */,
@@ -747,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9282B5CB1F87856E0046F0A6 /* CalendarCellViewController.swift in Sources */,
 				92BB79F81F492741000A55F1 /* Extensions.swift in Sources */,
 				92698B111F84F252000487BB /* FSCalendarViewController.swift in Sources */,
 				923D8A421E80F08B00981375 /* CellViewController.swift in Sources */,

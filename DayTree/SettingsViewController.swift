@@ -112,6 +112,11 @@ class SettingsViewController: UIViewController {
         self.present(activityVC, animated: true, completion: nil)
     }
     
+    @IBAction func backToCalendar() {
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
     
     /*
      // MARK: - Navigation

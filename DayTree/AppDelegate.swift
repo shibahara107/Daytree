@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // UserDefaultsを使ってフラグを保持する
         let userDefault = UserDefaults.standard
+
         // "firstLaunch"をキーに、Bool型の値を保持する
         let dict = ["firstLaunch": true]
         // デフォルト値登録

@@ -38,7 +38,14 @@ class TreeViewController: UIViewController {
     
     let userdefaults = UserDefaults.standard
     
+    let userDefaults = UserDefaults.standard
+    var entryArray = [[String]]()
+    var selectedWeather = String()
+    var weatherRecord = String()
+    
     var window: UIWindow?
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -76,12 +83,15 @@ class TreeViewController: UIViewController {
         self.currentTreeTag = (self.userdefaults.integer(forKey: "Tree"))
         print("viewDidLoad:", currentTreeTag)
         
-        
         // Do any additional setup after loading the view.
+        
+        entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+        selectedWeather = weatherRecord
+//        weatherArray.set
     }
     
     override func didReceiveMemoryWarning() {
@@ -158,6 +168,9 @@ class TreeViewController: UIViewController {
             _ = UIImage(named: "rainFog.png")
             self.rainFogImageView.alpha = 1.0
         }
+        selectedWeather = "Rain"
+        print(selectedWeather)
+        
     }
     
     @IBAction func thunderSky() {
@@ -174,8 +187,9 @@ class TreeViewController: UIViewController {
             self.thunderDownButton.addTarget(self, action: #selector(TreeViewController.thunderDown(sender:)), for: .touchUpInside)
             self.view.addSubview(self.thunderDownButton)
             print("thunderDownButton SUCCESS")
-            
         }
+        selectedWeather = "Thunder"
+        print(selectedWeather)
     }
     
     func thunderDown (sender: Any) {
@@ -206,10 +220,14 @@ class TreeViewController: UIViewController {
             _ = UIImage(named: "SunWeatherSky.png")
             self.sunnySkyImageView.alpha = 1.0
         }
+        selectedWeather = "Sunny"
+        print(selectedWeather)
     }
     
     @IBAction func normWeather() {
         clearWeather()
+        selectedWeather = "Normal"
+        print(selectedWeather)
     }
     
     func clearWeather() {
