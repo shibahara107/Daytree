@@ -2,14 +2,17 @@ PODS:
   - EAIntroView (2.10.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
+  - FSCalendar (2.7.9)
 
 DEPENDENCIES:
   - EAIntroView
+  - FSCalendar
 
 SPEC CHECKSUMS:
   EAIntroView: 3494b7bbd1212e3a4f7e8d16194a1b00e7b9abb2
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
 
-PODFILE CHECKSUM: ad7fe1cffdb8ad8634099f67837343966f317c40
+PODFILE CHECKSUM: 272f2b938af7e20230033ad9c68d9df8ff1ab559
 
 COCOAPODS: 1.2.1

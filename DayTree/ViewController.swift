@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     
     var number: Int = 0
     
+    let addedDate = Date()
+    var addedDateString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -104,7 +107,12 @@ class ViewController: UIViewController {
                                                             let dataText = alert.textFields![0].text! as String
                                                             let contentText = alert.textFields![1].text! as String
                                                             
-                                                            self.entryArray.append([dataText,contentText,])
+                                                            let dateFormatter = DateFormatter()
+                                                            dateFormatter.dateFormat = "yyyy/MM/dd"
+                                                            self.addedDateString = dateFormatter.string(from: (self.addedDate))
+                                                            
+                                                            self.entryArray.append([dataText,contentText,self.addedDateString,])
+                                                            print(dataText, contentText, self.addedDateString)
                                                             self.userDefaults.set(self.entryArray, forKey: "Key")
                                                             
                                                             self.dateTableView.reloadData()
@@ -361,7 +369,7 @@ extension ViewController : UITableViewDataSource {
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)
         
-        print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1]) ")
+        print("セル番号：\(entryArray[entryArray.count - indexPath.row-1][0]) セルの内容：\(entryArray[entryArray.count - indexPath.row-1][1])  セル作成日：\(entryArray[entryArray.count - indexPath.row-1][2])")
         
     }
     
