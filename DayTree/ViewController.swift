@@ -44,7 +44,12 @@ class ViewController: UIViewController {
     var number: Int = 0
     
     let addedDate = Date()
+    var addedDate2 = Date()
     var addedDateString = String()
+    var addedDateString2 = String()
+    var selectedAddedDateString = String()
+    
+    var identifier = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,8 +113,10 @@ class ViewController: UIViewController {
                                                             let contentText = alert.textFields![1].text! as String
                                                             
                                                             let dateFormatter = DateFormatter()
-                                                            dateFormatter.dateFormat = "yyyy/MM/dd"
-                                                            self.addedDateString = dateFormatter.string(from: (self.addedDate))
+                                                            dateFormatter.dateFormat = "yyyyMMddHHmmss"
+                                                            print(self.addedDate)
+                                                            self.addedDate2 = Date()
+                                                            self.addedDateString = dateFormatter.string(from: (self.addedDate2))
                                                             
                                                             self.entryArray.append([dataText,contentText,self.addedDateString,])
                                                             print(dataText, contentText, self.addedDateString)
@@ -170,7 +177,7 @@ class ViewController: UIViewController {
     func loadImageFromPath(path: String) -> UIImage? {
         let image = UIImage(contentsOfFile: path)
         if image == nil {
-            print("missing image at: \(path)")
+            print("missing image at: \(path) @ViewController")
         }
         return image
     }
@@ -196,6 +203,7 @@ class ViewController: UIViewController {
             subVC.selectedContent = selectedContentText
             subVC.selectedNumber = selectedNumberText
             subVC.number0 = number
+            subVC.addedDateString2 = identifier
         }
     }
     
@@ -326,14 +334,14 @@ extension ViewController : UITableViewDataSource {
         }
         
         // セルを取得する
-        // セルに表示する値を設定する
+        // セルに表示する値を設定するÏ
         // cell.textLabel!.text = fruits[indexPath.row]
         
         
         
         // Tag番号 1 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(1) as! UIImageView
-        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
+        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][2])) {
             imageView.image = image
         } else {
             imageView.image = UIImage(named: "DefaultEntry2.png")
@@ -365,6 +373,8 @@ extension ViewController : UITableViewDataSource {
         selectedNumberText = "No.\(entryArray.count - indexPath.row)"
         
         number = entryArray.count - indexPath.row-1
+        
+        identifier = "\(entryArray[entryArray.count - indexPath.row-1][2])"
         
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCellViewController",sender: nil)

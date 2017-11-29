@@ -82,6 +82,9 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var entryArray = [[String]]()
     var number0: Int!
     
+    var addedDateString2 = String()
+    var selectedAddedDateString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,8 +94,8 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         cellDateLabel.text = selectedDate
         cellContentTextField.text = selectedContent
         cellNumberLabel.text = selectedNumber
-        
-        imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: selectedDate))
+
+        imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: addedDateString2))
         
         imageFromCameraRoll.contentMode = .scaleAspectFit
 
@@ -132,7 +135,8 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             imageFromCameraRoll.contentMode = .scaleAspectFit
             imageFromCameraRoll.image = pickedImage
             
-            saveImage(image: pickedImage, path: fileInDocumentsDirectory(filename: selectedDate))
+            saveImage(image: pickedImage, path: fileInDocumentsDirectory(filename: addedDateString2))
+            print("YOU ARE:", fileInDocumentsDirectory(filename: addedDateString2))
             
         }
         
@@ -144,9 +148,10 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func loadImageFromPath(path: String) -> UIImage? {
+        print("I AM:", path)
         let image = UIImage(contentsOfFile: path)
         if image == nil {
-            print("missing image at: \(path)")
+            print("missing image at: \(path) @CellViewController")
         }
         return image
     }
@@ -164,7 +169,7 @@ class CellViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //pngで保存する場合
         let pngImageData = UIImagePNGRepresentation(image)
         pngImageData?.write(toFile: path, atomically: true)
-        //    let result = pngImageData!.writeToFile(path, atomically: true)
+//            let result = pngImageData!.writeToFile(path, atomically: true)
     }
 }
 

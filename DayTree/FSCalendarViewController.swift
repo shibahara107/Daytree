@@ -45,6 +45,10 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     
     var temporaryArray = [[String]]()
     
+    var madeDates: String = ""
+    var number0: Int = 0
+//    var date2: Date
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,12 +105,13 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
 //        selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         selectedDates = self.dateFormatter.string(from: date)
         print("selected dates is \(selectedDates)")
-        
-        var number0: Int = 0
+//        date2 = entryArray[number0][2]
+//        madeDates = self.dateFormatter.string(from: date2)
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
+        madeDates = String(entryArray[number0][2])
         
         for _ in 0...Int(entryArray.count-1) {
-            if selectedDates.contains(entryArray[number0][2]) {
+            if selectedDates.contains(madeDates) {
             print("Found Same Date")
                 
                 print("Filter Start")
@@ -188,7 +193,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     func loadImageFromPath(path: String) -> UIImage? {
         let image = UIImage(contentsOfFile: path)
         if image == nil {
-            print("missing image at: \(path)")
+            print("missing image at: \(path) @FSCalendarViewController")
         }
         return image
     }

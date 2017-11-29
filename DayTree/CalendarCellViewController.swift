@@ -46,7 +46,7 @@ class CalendarCellViewController: UIViewController {
     func loadImageFromPath(path: String) -> UIImage? {
         let image = UIImage(contentsOfFile: path)
         if image == nil {
-            print("missing image at: \(path)")
+            print("missing image at: \(path) @CalendarCellViewController")
         }
         return image
     }
