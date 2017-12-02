@@ -18,6 +18,8 @@ class CalendarCellViewController: UIViewController {
     var selectedContent: String = ""
     var selectedNumber: String = ""
     
+    var selectedDateForPathText: String = ""
+    
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
     
     override func viewDidLoad() {
@@ -29,7 +31,9 @@ class CalendarCellViewController: UIViewController {
         textView.text = selectedContent
         numberLabel.text = selectedNumber
         
-        imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: selectedDate))
+        imageFromCameraRoll.image = loadImageFromPath(path: fileInDocumentsDirectory(filename: selectedDateForPathText))
+        imageFromCameraRoll.contentMode = .scaleAspectFit
+
         
     }
 

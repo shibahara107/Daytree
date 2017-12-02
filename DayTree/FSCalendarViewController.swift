@@ -49,6 +49,9 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
     var number0: Int = 0
 //    var date2: Date
     
+    var selectedDateForPath: String = ""
+    var selectedDateForPathText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -108,7 +111,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
 //        date2 = entryArray[number0][2]
 //        madeDates = self.dateFormatter.string(from: date2)
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
-        madeDates = String(entryArray[number0][2])
+        number0 = 0
+        madeDates = String(entryArray[number0][3])
         
         for _ in 0...Int(entryArray.count-1) {
             if selectedDates.contains(madeDates) {
@@ -120,7 +124,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
                 
                 for i in entryArray {
                     
-                    if i[2].contains(selectedDates) {
+                    if i[3].contains(selectedDates) {
                         
                         filtered.append(i)
                         
@@ -167,7 +171,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
             temporaryArray = filtered
 
         let imageView = cell.viewWithTag(1) as! UIImageView
-        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][0])) {
+        if let image = loadImageFromPath(path: fileInDocumentsDirectory(filename: temporaryArray[temporaryArray.count - indexPath.row-1][2])) {
             imageView.image = image
         } else {
             imageView.image = UIImage(named: "DefaultEntry2.png")
@@ -226,6 +230,8 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         
         selectedNumberText = "No.\(temporaryArray.count - indexPath.row)"
         
+        selectedDateForPath = "\(temporaryArray[temporaryArray.count - indexPath.row-1][2])"
+        
         //CellViewControllerへ遷移するためにSegueを呼び出す
         performSegue(withIdentifier: "toCalendarCellViewController",sender: nil)
         
@@ -255,6 +261,7 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
             subVC.selectedDate = selectedDateText
             subVC.selectedContent = selectedContentText
             subVC.selectedNumber = selectedNumberText
+            subVC.selectedDateForPathText = selectedDateForPath
         }
     }
 

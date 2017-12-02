@@ -49,6 +49,9 @@ class ViewController: UIViewController {
     var addedDateString2 = String()
     var selectedAddedDateString = String()
     
+    var dateForCalendar = Date()
+    var addedDateForCalendar = String()
+    
     var identifier = String()
     
     override func viewDidLoad() {
@@ -118,8 +121,13 @@ class ViewController: UIViewController {
                                                             self.addedDate2 = Date()
                                                             self.addedDateString = dateFormatter.string(from: (self.addedDate2))
                                                             
-                                                            self.entryArray.append([dataText,contentText,self.addedDateString,])
-                                                            print(dataText, contentText, self.addedDateString)
+                                                            let dateFormatterForCalendar = DateFormatter()
+                                                            dateFormatterForCalendar.dateFormat = "yyyy/MM/dd"
+                                                            self.dateForCalendar = Date()
+                                                            self.addedDateForCalendar = dateFormatterForCalendar.string(from: (self.dateForCalendar))
+                                                            
+                                                            self.entryArray.append([dataText, contentText, self.addedDateString, self.addedDateForCalendar])
+                                                            print(dataText, contentText, self.addedDateString, self.addedDateForCalendar)
                                                             self.userDefaults.set(self.entryArray, forKey: "Key")
                                                             
                                                             self.dateTableView.reloadData()
