@@ -473,7 +473,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ThanksButton.png"/>
                                 <connections>
-                                    <action selector="toURLWithSender:" destination="eBi-gG-rhp" eventType="touchUpInside" id="GDf-As-ryM"/>
+                                    <action selector="toURLWithSender:" destination="eBi-gG-rhp" eventType="touchUpInside" id="jgd-rF-7Dc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-2c-J0U">

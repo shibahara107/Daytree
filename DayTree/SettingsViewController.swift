@@ -42,7 +42,7 @@ class SettingsViewController: UIViewController {
         print(span)
         print(daySpan)
         
-        urlButton.addTarget(self, action: Selector(("toURL")), for: .touchUpInside)
+        
         
     }
     
@@ -52,7 +52,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toURL(sender: AnyObject) {
-        UIApplication.shared.openURL(URL(string: "https://twitter.com/ANGLEprojects")!)
+        UIApplication.shared.open(URL(string: "https://twitter.com/ANGLEprojects")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func showReviewAlert() {
