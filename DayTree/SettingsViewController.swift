@@ -42,7 +42,10 @@ class SettingsViewController: UIViewController {
         print(span)
         print(daySpan)
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.hidesBottomBarWhenPushed = true
         
     }
     
@@ -52,7 +55,9 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toURL(sender: AnyObject) {
-        UIApplication.shared.open(URL(string: "https://twitter.com/ANGLEprojects")!, options: [:], completionHandler: nil)
+        if let url = URL(string: "https://twitter.com/ANGLEprojects") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     @IBAction func showReviewAlert() {
@@ -70,15 +75,18 @@ class SettingsViewController: UIViewController {
                                          style: .default,
                                          handler: {
                                             (action:UIAlertAction!) -> Void in
-                                            // iOS 10.3未満の処理
                                             if let url = URL(string: "itms-apps://itunes.apple.com/app/id{アプリのID}?action=write-review") {
-                                                if #available(iOS 10.0, *) {
-                                                    UIApplication.shared.open(url, options: [:])
-                                                }
-                                                else {
-                                                    UIApplication.shared.openURL(url)
-                                                }
+                                                UIApplication.shared.open(url, options: [:])
                                             }
+//                                            // iOS 10.3未満の処理
+//                                            if let url = URL(string: "itms-apps://itunes.apple.com/app/id{アプリのID}?action=write-review") {
+//                                                if #available(iOS 10.0, *) {
+//                                                    UIApplication.shared.open(url, options: [:])
+//                                                }
+//                                                else {
+//                                                    UIApplication.shared.openURL(url)
+//                                                }
+//                                            }
         })
         
         alert.addAction(reviewAction)
@@ -110,6 +118,10 @@ class SettingsViewController: UIViewController {
         
         // UIActivityViewControllerを表示
         self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.hidesBottomBarWhenPushed = true
     }
     
     @IBAction func backToCalendar() {

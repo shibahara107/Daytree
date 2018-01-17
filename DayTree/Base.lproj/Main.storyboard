@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fsb-EZ-NoC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fsb-EZ-NoC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -495,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynp-4e-xbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-550.07496251874068"/>
+            <point key="canvasLocation" x="2062" y="-552"/>
         </scene>
         <!--Cell View Controller-->
         <scene sceneID="ryL-Fg-Xrl">
@@ -743,7 +743,7 @@
                     <navigationItem key="navigationItem" title="Calendar" id="8mo-r5-qGj">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="settingsButton.png" id="wTx-pG-5ik">
                             <connections>
-                                <segue destination="eBi-gG-rhp" kind="show" id="43c-mQ-0wA"/>
+                                <segue destination="eBi-gG-rhp" kind="presentation" id="uUd-L8-hwk"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="KIT-ab-vpI">

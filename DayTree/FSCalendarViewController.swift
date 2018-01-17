@@ -76,6 +76,12 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.dateTableView.reloadData()
+
+    }
+    
     deinit {
         print("\(#function)")
     }
@@ -112,6 +118,9 @@ class FSCalendarScopeExampleViewController: UIViewController, UITableViewDataSou
 //        madeDates = self.dateFormatter.string(from: date2)
         entryArray = userDefaults.array(forKey: "Key") as? [[String]] ?? []
         number0 = 0
+        
+//        forでnumber0を1からcountまで繰り返す
+        
         madeDates = String(entryArray[number0][3])
         
         for _ in 0...Int(entryArray.count-1) {
