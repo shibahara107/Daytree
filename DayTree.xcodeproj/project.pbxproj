@@ -17,7 +17,6 @@
 		9224D2371F59754D005147F5 /* Blue1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2071F59754D005147F5 /* Blue1.png */; };
 		9224D2381F59754D005147F5 /* Blue2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2081F59754D005147F5 /* Blue2.png */; };
 		9224D2391F59754D005147F5 /* Blue3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D2091F59754D005147F5 /* Blue3.png */; };
-		9224D23A1F59754D005147F5 /* Blue4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D20A1F59754D005147F5 /* Blue4.png */; };
 		9224D23B1F59754D005147F5 /* Blue5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D20B1F59754D005147F5 /* Blue5.png */; };
 		9224D23C1F59754D005147F5 /* Blue6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D20C1F59754D005147F5 /* Blue6.png */; };
 		9224D23D1F59754D005147F5 /* Blue7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9224D20D1F59754D005147F5 /* Blue7.png */; };
@@ -87,12 +86,43 @@
 		925D1DE51F4FF3C8002E1CF7 /* ParentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */; };
 		925D1DFD1F5006F3002E1CF7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */; };
 		92698B111F84F252000487BB /* FSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92698B101F84F252000487BB /* FSCalendarViewController.swift */; };
+		9272332C202B16E40035150B /* DarkTree7.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723321202B16E00035150B /* DarkTree7.png */; };
+		9272332D202B16E40035150B /* DarkTree2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723322202B16E00035150B /* DarkTree2.png */; };
+		9272332E202B16E40035150B /* DarkTree8.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723323202B16E10035150B /* DarkTree8.png */; };
+		9272332F202B16E40035150B /* DarkTree10.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723324202B16E10035150B /* DarkTree10.png */; };
+		92723330202B16E40035150B /* DarkTree4.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723325202B16E10035150B /* DarkTree4.png */; };
+		92723331202B16E40035150B /* DarkTree6.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723326202B16E20035150B /* DarkTree6.png */; };
+		92723332202B16E40035150B /* DarkTree3.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723327202B16E20035150B /* DarkTree3.png */; };
+		92723333202B16E40035150B /* DarkTree5.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723328202B16E20035150B /* DarkTree5.png */; };
+		92723334202B16E40035150B /* DarkTree1.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723329202B16E30035150B /* DarkTree1.png */; };
+		92723335202B16E40035150B /* DarkTree9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272332A202B16E30035150B /* DarkTree9.png */; };
+		92723336202B16E40035150B /* DarkTree11.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272332B202B16E40035150B /* DarkTree11.png */; };
+		9272334A202B16FD0035150B /* LightTree10.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723337202B16F60035150B /* LightTree10.png */; };
+		9272334B202B16FD0035150B /* LightTree16.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723338202B16F60035150B /* LightTree16.png */; };
+		9272334C202B16FD0035150B /* LightTree1.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723339202B16F60035150B /* LightTree1.png */; };
+		9272334D202B16FD0035150B /* LightTree2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333A202B16F70035150B /* LightTree2.png */; };
+		9272334E202B16FD0035150B /* LightTree13.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333B202B16F70035150B /* LightTree13.png */; };
+		9272334F202B16FD0035150B /* LightTree8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333C202B16F80035150B /* LightTree8.png */; };
+		92723350202B16FD0035150B /* LightTree17.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333D202B16F80035150B /* LightTree17.png */; };
+		92723351202B16FD0035150B /* LightTree15.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333E202B16F80035150B /* LightTree15.png */; };
+		92723352202B16FD0035150B /* LightTree3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9272333F202B16F90035150B /* LightTree3.png */; };
+		92723353202B16FD0035150B /* LightTree5.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723340202B16F90035150B /* LightTree5.png */; };
+		92723354202B16FD0035150B /* LightTree12.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723341202B16F90035150B /* LightTree12.png */; };
+		92723355202B16FD0035150B /* LightTree14.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723342202B16FA0035150B /* LightTree14.png */; };
+		92723356202B16FD0035150B /* LightTree4.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723343202B16FA0035150B /* LightTree4.png */; };
+		92723357202B16FD0035150B /* LightTree7.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723344202B16FB0035150B /* LightTree7.png */; };
+		92723358202B16FD0035150B /* LightTree11.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723345202B16FB0035150B /* LightTree11.png */; };
+		92723359202B16FD0035150B /* LightTree18.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723346202B16FB0035150B /* LightTree18.png */; };
+		9272335A202B16FD0035150B /* LightTree9.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723347202B16FC0035150B /* LightTree9.png */; };
+		9272335B202B16FD0035150B /* LightTree19.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723348202B16FC0035150B /* LightTree19.png */; };
+		9272335C202B16FD0035150B /* LightTree6.png in Resources */ = {isa = PBXBuildFile; fileRef = 92723349202B16FC0035150B /* LightTree6.png */; };
 		9282B5CB1F87856E0046F0A6 /* CalendarCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */; };
 		92BB79F81F492741000A55F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB79F71F492741000A55F1 /* Extensions.swift */; };
 		92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92BD3C891F4AB4E600980251 /* rain.sks */; };
 		92E122581F4D128100304727 /* rain2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E122571F4D128100304727 /* rain2.sks */; };
 		92EC3AEF1F702F4300C1DA1D /* normButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EC3AED1F702F4300C1DA1D /* normButton.png */; };
 		92EC3AF01F702F4300C1DA1D /* thunderButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EC3AEE1F702F4300C1DA1D /* thunderButton.png */; };
+		92EC60502021D52800394039 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EC604F2021D52800394039 /* Storyboard.storyboard */; };
 		9BAE8EBCBC997E0AFB24C8BF /* Pods_DayTreeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10E5290EC5F071C86D39C75 /* Pods_DayTreeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,7 +156,6 @@
 		9224D2071F59754D005147F5 /* Blue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue1.png; sourceTree = "<group>"; };
 		9224D2081F59754D005147F5 /* Blue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue2.png; sourceTree = "<group>"; };
 		9224D2091F59754D005147F5 /* Blue3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue3.png; sourceTree = "<group>"; };
-		9224D20A1F59754D005147F5 /* Blue4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue4.png; sourceTree = "<group>"; };
 		9224D20B1F59754D005147F5 /* Blue5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue5.png; sourceTree = "<group>"; };
 		9224D20C1F59754D005147F5 /* Blue6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue6.png; sourceTree = "<group>"; };
 		9224D20D1F59754D005147F5 /* Blue7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue7.png; sourceTree = "<group>"; };
@@ -202,12 +231,43 @@
 		925D1DE41F4FF3C8002E1CF7 /* ParentTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTabBarController.swift; sourceTree = "<group>"; };
 		925D1DFC1F5006F3002E1CF7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		92698B101F84F252000487BB /* FSCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarViewController.swift; sourceTree = "<group>"; };
+		92723321202B16E00035150B /* DarkTree7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree7.png; sourceTree = "<group>"; };
+		92723322202B16E00035150B /* DarkTree2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree2.png; sourceTree = "<group>"; };
+		92723323202B16E10035150B /* DarkTree8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree8.png; sourceTree = "<group>"; };
+		92723324202B16E10035150B /* DarkTree10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree10.png; sourceTree = "<group>"; };
+		92723325202B16E10035150B /* DarkTree4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree4.png; sourceTree = "<group>"; };
+		92723326202B16E20035150B /* DarkTree6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree6.png; sourceTree = "<group>"; };
+		92723327202B16E20035150B /* DarkTree3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree3.png; sourceTree = "<group>"; };
+		92723328202B16E20035150B /* DarkTree5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree5.png; sourceTree = "<group>"; };
+		92723329202B16E30035150B /* DarkTree1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree1.png; sourceTree = "<group>"; };
+		9272332A202B16E30035150B /* DarkTree9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree9.png; sourceTree = "<group>"; };
+		9272332B202B16E40035150B /* DarkTree11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkTree11.png; sourceTree = "<group>"; };
+		92723337202B16F60035150B /* LightTree10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree10.png; sourceTree = "<group>"; };
+		92723338202B16F60035150B /* LightTree16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree16.png; sourceTree = "<group>"; };
+		92723339202B16F60035150B /* LightTree1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree1.png; sourceTree = "<group>"; };
+		9272333A202B16F70035150B /* LightTree2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree2.png; sourceTree = "<group>"; };
+		9272333B202B16F70035150B /* LightTree13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree13.png; sourceTree = "<group>"; };
+		9272333C202B16F80035150B /* LightTree8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree8.png; sourceTree = "<group>"; };
+		9272333D202B16F80035150B /* LightTree17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree17.png; sourceTree = "<group>"; };
+		9272333E202B16F80035150B /* LightTree15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree15.png; sourceTree = "<group>"; };
+		9272333F202B16F90035150B /* LightTree3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree3.png; sourceTree = "<group>"; };
+		92723340202B16F90035150B /* LightTree5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree5.png; sourceTree = "<group>"; };
+		92723341202B16F90035150B /* LightTree12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree12.png; sourceTree = "<group>"; };
+		92723342202B16FA0035150B /* LightTree14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree14.png; sourceTree = "<group>"; };
+		92723343202B16FA0035150B /* LightTree4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree4.png; sourceTree = "<group>"; };
+		92723344202B16FB0035150B /* LightTree7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree7.png; sourceTree = "<group>"; };
+		92723345202B16FB0035150B /* LightTree11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree11.png; sourceTree = "<group>"; };
+		92723346202B16FB0035150B /* LightTree18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree18.png; sourceTree = "<group>"; };
+		92723347202B16FC0035150B /* LightTree9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree9.png; sourceTree = "<group>"; };
+		92723348202B16FC0035150B /* LightTree19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree19.png; sourceTree = "<group>"; };
+		92723349202B16FC0035150B /* LightTree6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightTree6.png; sourceTree = "<group>"; };
 		9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellViewController.swift; sourceTree = "<group>"; };
 		92BB79F71F492741000A55F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		92BD3C891F4AB4E600980251 /* rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain.sks; sourceTree = "<group>"; };
 		92E122571F4D128100304727 /* rain2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain2.sks; sourceTree = "<group>"; };
 		92EC3AED1F702F4300C1DA1D /* normButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normButton.png; path = Image/normButton.png; sourceTree = SOURCE_ROOT; };
 		92EC3AEE1F702F4300C1DA1D /* thunderButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thunderButton.png; path = Image/thunderButton.png; sourceTree = SOURCE_ROOT; };
+		92EC604F2021D52800394039 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		A10E5290EC5F071C86D39C75 /* Pods_DayTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4BA796C7C7CDE38A09EDD5 /* Pods-DayTreeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeTests/Pods-DayTreeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDFA0D6AF4BCCE03FC696C5 /* Pods-DayTreeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeUITests/Pods-DayTreeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +329,36 @@
 		9224D2021F59754D005147F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				92723339202B16F60035150B /* LightTree1.png */,
+				9272333A202B16F70035150B /* LightTree2.png */,
+				9272333F202B16F90035150B /* LightTree3.png */,
+				92723343202B16FA0035150B /* LightTree4.png */,
+				92723340202B16F90035150B /* LightTree5.png */,
+				92723349202B16FC0035150B /* LightTree6.png */,
+				92723344202B16FB0035150B /* LightTree7.png */,
+				9272333C202B16F80035150B /* LightTree8.png */,
+				92723347202B16FC0035150B /* LightTree9.png */,
+				92723337202B16F60035150B /* LightTree10.png */,
+				92723345202B16FB0035150B /* LightTree11.png */,
+				92723341202B16F90035150B /* LightTree12.png */,
+				9272333B202B16F70035150B /* LightTree13.png */,
+				92723342202B16FA0035150B /* LightTree14.png */,
+				9272333E202B16F80035150B /* LightTree15.png */,
+				92723338202B16F60035150B /* LightTree16.png */,
+				9272333D202B16F80035150B /* LightTree17.png */,
+				92723346202B16FB0035150B /* LightTree18.png */,
+				92723348202B16FC0035150B /* LightTree19.png */,
+				92723329202B16E30035150B /* DarkTree1.png */,
+				92723322202B16E00035150B /* DarkTree2.png */,
+				92723327202B16E20035150B /* DarkTree3.png */,
+				92723325202B16E10035150B /* DarkTree4.png */,
+				92723328202B16E20035150B /* DarkTree5.png */,
+				92723326202B16E20035150B /* DarkTree6.png */,
+				92723321202B16E00035150B /* DarkTree7.png */,
+				92723323202B16E10035150B /* DarkTree8.png */,
+				9272332A202B16E30035150B /* DarkTree9.png */,
+				92723324202B16E10035150B /* DarkTree10.png */,
+				9272332B202B16E40035150B /* DarkTree11.png */,
 				921AAA661F87961900E17D86 /* settingsButton.png */,
 				92EC3AED1F702F4300C1DA1D /* normButton.png */,
 				92EC3AEE1F702F4300C1DA1D /* thunderButton.png */,
@@ -286,7 +376,6 @@
 				9224D2071F59754D005147F5 /* Blue1.png */,
 				9224D2081F59754D005147F5 /* Blue2.png */,
 				9224D2091F59754D005147F5 /* Blue3.png */,
-				9224D20A1F59754D005147F5 /* Blue4.png */,
 				9224D20B1F59754D005147F5 /* Blue5.png */,
 				9224D20C1F59754D005147F5 /* Blue6.png */,
 				9224D20D1F59754D005147F5 /* Blue7.png */,
@@ -371,6 +460,7 @@
 				9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */,
 				92698B101F84F252000487BB /* FSCalendarViewController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
+				92EC604F2021D52800394039 /* Storyboard.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
 				92428A1D1E4DD26700E82D0B /* Info.plist */,
@@ -523,11 +613,12 @@
 			files = (
 				9224D2331F59754D005147F5 /* Add.png in Resources */,
 				9224D2511F59754D005147F5 /* Intro4.png in Resources */,
+				92723358202B16FD0035150B /* LightTree11.png in Resources */,
 				9224D23C1F59754D005147F5 /* Blue6.png in Resources */,
 				92BD3C8A1F4AB4E600980251 /* rain.sks in Resources */,
+				92723359202B16FD0035150B /* LightTree18.png in Resources */,
 				9224D2551F59754D005147F5 /* rainDrops.png in Resources */,
 				9224D24C1F59754D005147F5 /* Green7.png in Resources */,
-				9224D23A1F59754D005147F5 /* Blue4.png in Resources */,
 				9224D25C1F59754D005147F5 /* Sky.png in Resources */,
 				9224D23D1F59754D005147F5 /* Blue7.png in Resources */,
 				9224D2591F59754D005147F5 /* settingsTabSelected.png in Resources */,
@@ -535,45 +626,70 @@
 				925420621F6FBDE700CDCEA5 /* NormWeatherSky.png in Resources */,
 				9224D24E1F59754D005147F5 /* Intro1.png in Resources */,
 				9224D2621F59754D005147F5 /* White.png in Resources */,
+				92723350202B16FD0035150B /* LightTree17.png in Resources */,
 				92428A4E1E4DDD3800E82D0B /* img7.jpg in Resources */,
 				9224D25F1F59754D005147F5 /* ThanksButton.png in Resources */,
+				9272332D202B16E40035150B /* DarkTree2.png in Resources */,
 				92EC3AEF1F702F4300C1DA1D /* normButton.png in Resources */,
 				9224D2351F59754D005147F5 /* Back2.png in Resources */,
+				9272334D202B16FD0035150B /* LightTree2.png in Resources */,
 				92E122581F4D128100304727 /* rain2.sks in Resources */,
+				9272334B202B16FD0035150B /* LightTree16.png in Resources */,
 				92428A4B1E4DDD3800E82D0B /* img4.jpg in Resources */,
+				9272334C202B16FD0035150B /* LightTree1.png in Resources */,
+				92723330202B16E40035150B /* DarkTree4.png in Resources */,
 				9224D23E1F59754D005147F5 /* Blue8.png in Resources */,
 				9224D2491F59754D005147F5 /* Green3.png in Resources */,
+				92723336202B16E40035150B /* DarkTree11.png in Resources */,
+				92723356202B16FD0035150B /* LightTree4.png in Resources */,
 				923934931F6E4A350046BA14 /* frozen-planet.png in Resources */,
 				9224D2611F59754D005147F5 /* treeTabUnselected.png in Resources */,
 				92428A471E4DDD3800E82D0B /* img0.jpg in Resources */,
+				92723351202B16FD0035150B /* LightTree15.png in Resources */,
 				923084BD1F715699008505C0 /* Green8.png in Resources */,
 				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
 				923C4E051F7514050065330D /* ANGLE.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
+				92EC60502021D52800394039 /* Storyboard.storyboard in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
 				9224D2361F59754D005147F5 /* Blue0.png in Resources */,
+				9272334E202B16FD0035150B /* LightTree13.png in Resources */,
+				9272332C202B16E40035150B /* DarkTree7.png in Resources */,
+				92723334202B16E40035150B /* DarkTree1.png in Resources */,
 				9224D2371F59754D005147F5 /* Blue1.png in Resources */,
 				9224D2581F59754D005147F5 /* SettingsScreen.png in Resources */,
 				92428A1C1E4DD26700E82D0B /* LaunchScreen.storyboard in Resources */,
+				92723353202B16FD0035150B /* LightTree5.png in Resources */,
 				9224D24B1F59754D005147F5 /* Green6.png in Resources */,
 				923D8A451E810C1200981375 /* Main.storyboard in Resources */,
 				9224D25B1F59754D005147F5 /* ShareButton.png in Resources */,
 				92428A4C1E4DDD3800E82D0B /* img5.jpg in Resources */,
+				9272335A202B16FD0035150B /* LightTree9.png in Resources */,
+				92723354202B16FD0035150B /* LightTree12.png in Resources */,
 				92428A4A1E4DDD3800E82D0B /* img3.jpg in Resources */,
 				9224D2411F59754D005147F5 /* DarkTree.png in Resources */,
 				92428A4D1E4DDD3800E82D0B /* img6.jpg in Resources */,
+				9272334A202B16FD0035150B /* LightTree10.png in Resources */,
+				9272335B202B16FD0035150B /* LightTree19.png in Resources */,
 				9224D2341F59754D005147F5 /* AuthorButton.png in Resources */,
 				9224D2501F59754D005147F5 /* Intro3.png in Resources */,
+				92723352202B16FD0035150B /* LightTree3.png in Resources */,
+				92723357202B16FD0035150B /* LightTree7.png in Resources */,
 				9224D2601F59754D005147F5 /* treeTabSelected.png in Resources */,
 				92EC3AF01F702F4300C1DA1D /* thunderButton.png in Resources */,
+				9272332F202B16E40035150B /* DarkTree10.png in Resources */,
 				9224D2531F59754D005147F5 /* LightTree.png in Resources */,
 				9224D2541F59754D005147F5 /* RainButton.png in Resources */,
+				92723335202B16E40035150B /* DarkTree9.png in Resources */,
 				9224D23B1F59754D005147F5 /* Blue5.png in Resources */,
 				9224D2381F59754D005147F5 /* Blue2.png in Resources */,
+				92723355202B16FD0035150B /* LightTree14.png in Resources */,
 				9224D24F1F59754D005147F5 /* Intro2.png in Resources */,
+				92723333202B16E40035150B /* DarkTree5.png in Resources */,
 				9224D2421F59754D005147F5 /* Daytree2.png in Resources */,
 				925420641F6FC32D00CDCEA5 /* SunWeatherSky.png in Resources */,
 				9224D2431F59754D005147F5 /* DefaultEntry2.png in Resources */,
+				9272334F202B16FD0035150B /* LightTree8.png in Resources */,
 				9224D2391F59754D005147F5 /* Blue3.png in Resources */,
 				925420681F6FD0BE00CDCEA5 /* ThunderClouds.png in Resources */,
 				9224D2451F59754D005147F5 /* entryTabUnselected.png in Resources */,
@@ -583,6 +699,7 @@
 				9224D2571F59754D005147F5 /* RainSky.png in Resources */,
 				9224D25A1F59754D005147F5 /* settingsTabUnselected.png in Resources */,
 				9224D2521F59754D005147F5 /* IntroButton.png in Resources */,
+				92723332202B16E40035150B /* DarkTree3.png in Resources */,
 				9224D2401F59754D005147F5 /* Camera2.png in Resources */,
 				9224D2471F59754D005147F5 /* Green1.png in Resources */,
 				9224D2561F59754D005147F5 /* RainFog.png in Resources */,
@@ -590,8 +707,11 @@
 				92428A191E4DD26700E82D0B /* Assets.xcassets in Resources */,
 				9224D2441F59754D005147F5 /* entryTabSelected.png in Resources */,
 				92428A491E4DDD3800E82D0B /* img2.jpg in Resources */,
+				92723331202B16E40035150B /* DarkTree6.png in Resources */,
 				9224D23F1F59754D005147F5 /* BrightButton.png in Resources */,
+				9272335C202B16FD0035150B /* LightTree6.png in Resources */,
 				925420691F6FD0BE00CDCEA5 /* ThunderLeft.png in Resources */,
+				9272332E202B16E40035150B /* DarkTree8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

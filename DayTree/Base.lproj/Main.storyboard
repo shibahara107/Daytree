@@ -21,42 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frozen-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzT-gM-vfu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frozen-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzT-gM-vfu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="better-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="g5w-y3-8Ci">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="better-planet.png" translatesAutoresizingMaskIntoConstraints="NO" id="g5w-y3-8Ci">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-jd-VjH">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-jd-VjH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKD-62-jyM">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKD-62-jyM">
                                 <rect key="frame" x="122.5" y="510" width="130" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="C15-qi-owN"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="g5w-y3-8Ci" secondAttribute="trailing" id="48a-cI-yqK"/>
-                            <constraint firstItem="dzT-gM-vfu" firstAttribute="leading" secondItem="c5i-4G-SkF" secondAttribute="leading" id="5sN-Dl-k1K"/>
-                            <constraint firstItem="4Pw-jd-VjH" firstAttribute="top" secondItem="c5i-4G-SkF" secondAttribute="top" id="GYQ-F0-LPx"/>
-                            <constraint firstItem="TKD-62-jyM" firstAttribute="centerX" secondItem="c5i-4G-SkF" secondAttribute="centerX" id="N5Z-dg-xJ7"/>
-                            <constraint firstItem="D2U-YV-Xxl" firstAttribute="top" secondItem="g5w-y3-8Ci" secondAttribute="bottom" id="R4A-b1-hkK"/>
-                            <constraint firstItem="4Pw-jd-VjH" firstAttribute="leading" secondItem="c5i-4G-SkF" secondAttribute="leading" id="RSD-TF-8gv"/>
-                            <constraint firstItem="g5w-y3-8Ci" firstAttribute="leading" secondItem="c5i-4G-SkF" secondAttribute="leading" id="UFi-8i-88e"/>
-                            <constraint firstItem="D2U-YV-Xxl" firstAttribute="top" secondItem="4Pw-jd-VjH" secondAttribute="bottom" id="W1J-CV-l4F"/>
-                            <constraint firstItem="g5w-y3-8Ci" firstAttribute="top" secondItem="c5i-4G-SkF" secondAttribute="top" id="Xi4-k4-XSA"/>
-                            <constraint firstAttribute="trailing" secondItem="dzT-gM-vfu" secondAttribute="trailing" id="ioh-SR-aHk"/>
-                            <constraint firstItem="D2U-YV-Xxl" firstAttribute="top" secondItem="TKD-62-jyM" secondAttribute="bottom" constant="121" id="kSF-fi-mED"/>
-                            <constraint firstAttribute="trailing" secondItem="4Pw-jd-VjH" secondAttribute="trailing" id="qgN-n3-9T0"/>
-                            <constraint firstItem="D2U-YV-Xxl" firstAttribute="top" secondItem="dzT-gM-vfu" secondAttribute="bottom" id="uMV-r5-l4H"/>
-                            <constraint firstItem="dzT-gM-vfu" firstAttribute="top" secondItem="c5i-4G-SkF" secondAttribute="top" id="vNR-4w-I3F"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="betterPlanetImageView" destination="g5w-y3-8Ci" id="0gT-Df-zBA"/>
@@ -85,195 +70,191 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunWeatherSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-ap-yMD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="9rJ-Na-ho4">
-                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                                <rect key="frame" x="-4" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White.png" translatesAutoresizingMaskIntoConstraints="NO" id="iir-Fd-D90">
-                                <rect key="frame" x="0.0" y="174" width="325" height="147"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue7.png" translatesAutoresizingMaskIntoConstraints="NO" id="FQ8-ki-Bem">
-                                <rect key="frame" x="109" y="179" width="180" height="253"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="38" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green7.png" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-Ek-Ial">
-                                <rect key="frame" x="109" y="179" width="180" height="253"/>
+                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue8.png" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-M6-Sjz">
-                                <rect key="frame" x="237" y="223" width="138" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="34" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green8.png" translatesAutoresizingMaskIntoConstraints="NO" id="x5A-ds-n3X">
-                                <rect key="frame" x="237" y="223" width="138" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue6.png" translatesAutoresizingMaskIntoConstraints="NO" id="222-vc-5f8">
-                                <rect key="frame" x="0.0" y="189" width="229" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="37" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green6.png" translatesAutoresizingMaskIntoConstraints="NO" id="jRE-vx-jCQ">
-                                <rect key="frame" x="0.0" y="189" width="229" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue5.png" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-3d-E1l">
-                                <rect key="frame" x="0.0" y="271" width="289" height="208"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="35" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green4.png" translatesAutoresizingMaskIntoConstraints="NO" id="PSB-JX-wbO">
-                                <rect key="frame" x="0.0" y="271" width="289" height="208"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue3.png" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-4u-gJw">
-                                <rect key="frame" x="0.0" y="300" width="256" height="232"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="36" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bjo-PB-nqq">
-                                <rect key="frame" x="0.0" y="300" width="256" height="232"/>
+                                <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="7j1-9Q-0qs">
-                                <rect key="frame" x="95" y="365" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Y4-cSA">
+                                <rect key="frame" x="-4" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="VsM-VY-DCS">
-                                <rect key="frame" x="109" y="382" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="iqj-1b-qyd">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="cat-BT-2Oe">
-                                <rect key="frame" x="84" y="355" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ma1-tn-O1p">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-Lt-0tf">
-                                <rect key="frame" x="73" y="361" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree4.png" translatesAutoresizingMaskIntoConstraints="NO" id="etL-9h-Wx0">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="CQV-QB-wQd">
-                                <rect key="frame" x="63" y="341" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree5.png" translatesAutoresizingMaskIntoConstraints="NO" id="vUR-AL-zax">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-IL-JA6">
-                                <rect key="frame" x="40" y="313" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree6.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-VP-9Cg">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="pvA-yB-w90">
-                                <rect key="frame" x="30" y="316" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree7.png" translatesAutoresizingMaskIntoConstraints="NO" id="jCB-cA-9uC">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-gr-kVd">
-                                <rect key="frame" x="18" y="286" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree8.png" translatesAutoresizingMaskIntoConstraints="NO" id="EGF-pB-q8D">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-Mq-F6b">
-                                <rect key="frame" x="8" y="290" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree9.png" translatesAutoresizingMaskIntoConstraints="NO" id="uTu-4P-u7g">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="m0H-Bb-1Fs">
-                                <rect key="frame" x="-4" y="271" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree10.png" translatesAutoresizingMaskIntoConstraints="NO" id="DI1-Dp-Tlq">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-c2-5gY">
-                                <rect key="frame" x="124" y="397" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree11.png" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-Kg-DPK">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="SIS-zJ-16R">
-                                <rect key="frame" x="133" y="419" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree12.png" translatesAutoresizingMaskIntoConstraints="NO" id="nV6-Ol-SQV">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="A9c-xJ-3UK">
-                                <rect key="frame" x="142" y="437" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="19" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree13.png" translatesAutoresizingMaskIntoConstraints="NO" id="yE0-Xb-zts">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="zVf-B9-FsW">
-                                <rect key="frame" x="151" y="431" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree14.png" translatesAutoresizingMaskIntoConstraints="NO" id="XWg-ow-33e">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="M8S-UK-Zum">
-                                <rect key="frame" x="162" y="442" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree15.png" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-t9-xmF">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHC-p1-9lB">
-                                <rect key="frame" x="173" y="465" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree16.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4h-pA-5br">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIk-KB-afX">
-                                <rect key="frame" x="182" y="469" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree17.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQm-Hz-m0i">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="18" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="PV0-t5-mKs">
-                                <rect key="frame" x="196" y="469" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="18" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree18.png" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-EU-Aw9">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="19" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="i6O-KK-G99">
-                                <rect key="frame" x="54" y="325" width="28" height="95"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LightTree19.png" translatesAutoresizingMaskIntoConstraints="NO" id="jnl-pU-6lw">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-M8-Gd3">
-                                <rect key="frame" x="249" y="416" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QWR-BW-V2J">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="a91-Wn-oXn">
-                                <rect key="frame" x="259" y="409" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="27" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree2.png" translatesAutoresizingMaskIntoConstraints="NO" id="OT4-z6-Izu">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="8LD-7U-Xnb">
-                                <rect key="frame" x="235" y="448" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ebj-hl-Gbx">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="FIF-2D-8h0">
-                                <rect key="frame" x="220" y="448" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kpe-JA-vic">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="iOA-IW-qLb">
-                                <rect key="frame" x="266" y="406" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree5.png" translatesAutoresizingMaskIntoConstraints="NO" id="nSA-Eu-Mwu">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-3k-ZZe">
-                                <rect key="frame" x="282" y="304" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree6.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dpz-ah-0xU">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="26" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="SM7-6Q-nKc">
-                                <rect key="frame" x="290" y="296" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree7.png" translatesAutoresizingMaskIntoConstraints="NO" id="jaZ-e6-6lB">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="27" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="P6N-Ck-t6M">
-                                <rect key="frame" x="297" y="300" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="29" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree8.png" translatesAutoresizingMaskIntoConstraints="NO" id="cux-q1-BMJ">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="28" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="52n-n5-o0B">
-                                <rect key="frame" x="310" y="279" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="26" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree9.png" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-xy-CN1">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="29" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="UGx-Ix-WXR">
-                                <rect key="frame" x="327" y="250" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="28" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree10.png" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-yl-QXA">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="0aw-IW-pqA">
-                                <rect key="frame" x="337" y="247" width="27" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree.png" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-PM-oOK">
-                                <rect key="frame" x="350" y="223" width="27" height="91"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DarkTree11.png" translatesAutoresizingMaskIntoConstraints="NO" id="QRd-6q-SAQ">
+                                <rect key="frame" x="-3" y="0.0" width="381" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue2.png" translatesAutoresizingMaskIntoConstraints="NO" id="GjX-Ro-KpL">
-                                <rect key="frame" x="220" y="296" width="155" height="371"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="33" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green2.png" translatesAutoresizingMaskIntoConstraints="NO" id="EIf-x7-dY3">
-                                <rect key="frame" x="220" y="294" width="155" height="373"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Pn-mJ-935">
-                                <rect key="frame" x="0.0" y="300" width="222" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.0" tag="32" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z7V-eI-L0k">
-                                <rect key="frame" x="0.0" y="298" width="222" height="369"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -389,7 +370,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BS-iR-8BV">
-                                                    <rect key="frame" x="103" y="56" width="151" height="21"/>
+                                                    <rect key="frame" x="103" y="56" width="151" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <nil key="textColor"/>
@@ -590,7 +571,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTA-tw-5EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4ib-ex-MLl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="155"/>
+            <point key="canvasLocation" x="1894" y="152"/>
         </scene>
         <!--Parent Tab Bar Controller-->
         <scene sceneID="SKy-d7-kSt">
@@ -652,7 +633,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXw-fa-Nj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="138"/>
+            <point key="canvasLocation" x="137" y="310"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="K0L-5T-tJU">
@@ -867,39 +848,67 @@
         <image name="Add.png" width="500" height="500"/>
         <image name="AuthorButton.png" width="200" height="200"/>
         <image name="Back2.png" width="100" height="134"/>
-        <image name="Blue1.png" width="500" height="829"/>
-        <image name="Blue2.png" width="500" height="1192"/>
-        <image name="Blue3.png" width="500" height="454"/>
-        <image name="Blue5.png" width="500" height="351"/>
-        <image name="Blue6.png" width="500" height="376"/>
-        <image name="Blue7.png" width="500" height="699"/>
-        <image name="Blue8.png" width="500" height="465"/>
+        <image name="Blue1.png" width="900" height="1600"/>
+        <image name="Blue2.png" width="900" height="1600"/>
+        <image name="Blue3.png" width="900" height="1600"/>
+        <image name="Blue5.png" width="900" height="1600"/>
+        <image name="Blue6.png" width="900" height="1600"/>
+        <image name="Blue7.png" width="900" height="1600"/>
+        <image name="Blue8.png" width="900" height="1600"/>
         <image name="BrightButton.png" width="100" height="100"/>
         <image name="Camera2.png" width="100" height="86"/>
-        <image name="DarkTree.png" width="500" height="1667"/>
+        <image name="DarkTree1.png" width="900" height="1600"/>
+        <image name="DarkTree10.png" width="900" height="1600"/>
+        <image name="DarkTree11.png" width="900" height="1600"/>
+        <image name="DarkTree2.png" width="900" height="1600"/>
+        <image name="DarkTree3.png" width="900" height="1600"/>
+        <image name="DarkTree4.png" width="900" height="1600"/>
+        <image name="DarkTree5.png" width="900" height="1600"/>
+        <image name="DarkTree6.png" width="900" height="1600"/>
+        <image name="DarkTree7.png" width="900" height="1600"/>
+        <image name="DarkTree8.png" width="900" height="1600"/>
+        <image name="DarkTree9.png" width="900" height="1600"/>
         <image name="Daytree2.png" width="1000" height="1778"/>
         <image name="DefaultEntry2.png" width="500" height="500"/>
-        <image name="Green1.png" width="500" height="829"/>
-        <image name="Green2.png" width="500" height="1192"/>
-        <image name="Green3.png" width="500" height="454"/>
-        <image name="Green4.png" width="500" height="351"/>
-        <image name="Green6.png" width="500" height="376"/>
-        <image name="Green7.png" width="500" height="699"/>
-        <image name="Green8.png" width="500" height="465"/>
+        <image name="Green1.png" width="900" height="1600"/>
+        <image name="Green2.png" width="900" height="1600"/>
+        <image name="Green3.png" width="900" height="1600"/>
+        <image name="Green4.png" width="900" height="1600"/>
+        <image name="Green6.png" width="900" height="1600"/>
+        <image name="Green7.png" width="900" height="1600"/>
+        <image name="Green8.png" width="900" height="1600"/>
         <image name="HelpButton.png" width="200" height="200"/>
-        <image name="LightTree.png" width="500" height="1676"/>
-        <image name="NormWeatherSky.png" width="500" height="891"/>
+        <image name="LightTree1.png" width="900" height="1600"/>
+        <image name="LightTree10.png" width="900" height="1600"/>
+        <image name="LightTree11.png" width="900" height="1600"/>
+        <image name="LightTree12.png" width="900" height="1600"/>
+        <image name="LightTree13.png" width="900" height="1600"/>
+        <image name="LightTree14.png" width="900" height="1600"/>
+        <image name="LightTree15.png" width="900" height="1600"/>
+        <image name="LightTree16.png" width="900" height="1600"/>
+        <image name="LightTree17.png" width="900" height="1600"/>
+        <image name="LightTree18.png" width="900" height="1600"/>
+        <image name="LightTree19.png" width="900" height="1600"/>
+        <image name="LightTree2.png" width="900" height="1600"/>
+        <image name="LightTree3.png" width="900" height="1600"/>
+        <image name="LightTree4.png" width="900" height="1600"/>
+        <image name="LightTree5.png" width="900" height="1600"/>
+        <image name="LightTree6.png" width="900" height="1600"/>
+        <image name="LightTree7.png" width="900" height="1600"/>
+        <image name="LightTree8.png" width="900" height="1600"/>
+        <image name="LightTree9.png" width="900" height="1600"/>
+        <image name="NormWeatherSky.png" width="900" height="1600"/>
         <image name="RainButton.png" width="100" height="100"/>
-        <image name="RainFog.png" width="1000" height="1781"/>
-        <image name="RainSky.png" width="1000" height="1781"/>
+        <image name="RainFog.png" width="900" height="1600"/>
+        <image name="RainSky.png" width="900" height="1600"/>
         <image name="SettingsScreen.png" width="1000" height="1781"/>
         <image name="ShareButton.png" width="200" height="200"/>
-        <image name="SunWeatherSky.png" width="500" height="891"/>
+        <image name="SunWeatherSky.png" width="900" height="1600"/>
         <image name="ThanksButton.png" width="200" height="200"/>
         <image name="ThunderClouds.png" width="500" height="891"/>
         <image name="ThunderLeft.png" width="200" height="366"/>
         <image name="ThunderRight.png" width="200" height="366"/>
-        <image name="White.png" width="500" height="227"/>
+        <image name="White.png" width="900" height="1600"/>
         <image name="better-planet.png" width="900" height="1600"/>
         <image name="frozen-planet.png" width="900" height="1600"/>
         <image name="normButton.png" width="100" height="100"/>
