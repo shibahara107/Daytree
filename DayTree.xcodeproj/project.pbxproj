@@ -122,7 +122,6 @@
 		92E122581F4D128100304727 /* rain2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92E122571F4D128100304727 /* rain2.sks */; };
 		92EC3AEF1F702F4300C1DA1D /* normButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EC3AED1F702F4300C1DA1D /* normButton.png */; };
 		92EC3AF01F702F4300C1DA1D /* thunderButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EC3AEE1F702F4300C1DA1D /* thunderButton.png */; };
-		92EC60502021D52800394039 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EC604F2021D52800394039 /* Storyboard.storyboard */; };
 		9BAE8EBCBC997E0AFB24C8BF /* Pods_DayTreeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10E5290EC5F071C86D39C75 /* Pods_DayTreeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -267,7 +266,6 @@
 		92E122571F4D128100304727 /* rain2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain2.sks; sourceTree = "<group>"; };
 		92EC3AED1F702F4300C1DA1D /* normButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normButton.png; path = Image/normButton.png; sourceTree = SOURCE_ROOT; };
 		92EC3AEE1F702F4300C1DA1D /* thunderButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = thunderButton.png; path = Image/thunderButton.png; sourceTree = SOURCE_ROOT; };
-		92EC604F2021D52800394039 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		A10E5290EC5F071C86D39C75 /* Pods_DayTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4BA796C7C7CDE38A09EDD5 /* Pods-DayTreeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeTests/Pods-DayTreeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDFA0D6AF4BCCE03FC696C5 /* Pods-DayTreeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTreeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTreeUITests/Pods-DayTreeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -460,7 +458,6 @@
 				9282B5CA1F87856E0046F0A6 /* CalendarCellViewController.swift */,
 				92698B101F84F252000487BB /* FSCalendarViewController.swift */,
 				923D8A431E810C1200981375 /* Main.storyboard */,
-				92EC604F2021D52800394039 /* Storyboard.storyboard */,
 				92428A181E4DD26700E82D0B /* Assets.xcassets */,
 				92428A1A1E4DD26700E82D0B /* LaunchScreen.storyboard */,
 				92428A1D1E4DD26700E82D0B /* Info.plist */,
@@ -650,7 +647,6 @@
 				923934951F6E4D150046BA14 /* better-planet.png in Resources */,
 				923C4E051F7514050065330D /* ANGLE.png in Resources */,
 				9224D24A1F59754D005147F5 /* Green4.png in Resources */,
-				92EC60502021D52800394039 /* Storyboard.storyboard in Resources */,
 				92428A481E4DDD3800E82D0B /* img1.jpg in Resources */,
 				9224D2361F59754D005147F5 /* Blue0.png in Resources */,
 				9272334E202B16FD0035150B /* LightTree13.png in Resources */,
